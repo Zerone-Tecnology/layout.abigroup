@@ -1,0 +1,122 @@
+@import "bourbon/bourbon"
+
+html.js .loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+body
+	font-family: 'Montserrat'
+	font-style: normal
+	font-weight: 700
+	font-size: 36px
+	line-height: 44px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	-webkit-font-smoothing: antialiased
+	overflow-x: hidden
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+.hidden
+	display: none
+ul,a,h1,h2,h3,h4,h5,li,p
+	margin: 0
+	padding: 0
+a
+	color: #061B38
+	transition: all .3s ease
+	&:hover, &:focus
+		color: #FFFFFF
+		text-decoration: none
+ul
+	list-style: none
+.wrapper
+	.header
+		background-color: #FFC629
+		.header_container
+			margin: 0 50px
+			.header_inner
+				display: flex
+				align-items: center
+				justify-content: space-between
+				padding: 6px 0
+				.hedaer_menu
+					display: flex
+					&>li
+						a
+							font-family: 'Oswald'
+							font-style: normal
+							font-weight: 400
+							font-size: 24.1546px
+							line-height: 36px
+							margin: 0 28px
+						&.active>ul 
+							display: block
+							
+						&>ul
+							display: none
+							position: absolute
+							background-color: #FFFFFF
+							top: 100%
+							max-width: 297px
+							width: 100%
+							&>li:hover
+								background-color: #FFC629
+
+				.header_contact
+					display: flex
+					a
+						position: relative
+						font-family: 'Montserrat'
+						font-style: normal
+						font-weight: 500
+						font-size: 18.1271px
+						line-height: 22px
+						margin: 0 17.5px
+						img
+							margin-right: 13px
+				.header_networks
+					a
+						margin: 0 23px
+	.banner
+		.owl-carousel
+			.item
+				img
+					border-radius: 0 0 0 150px
+				.banner_articles
+					position: absolute
+					z-index: 9
+					.banner_article_left
+			.owl-dots
+				position: absolute
+				top:90%
+				left: 45%
+				right: 45%
+			.owl-nav
+				position: absolute
