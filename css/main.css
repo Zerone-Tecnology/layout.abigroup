@@ -151,7 +151,7 @@ ul {
   z-index: 99;
   width: -webkit-fill-available;
   top: 0;
-  padding: 228px 205px 0 205px;
+  padding: 12% 11% 0 11%;
 }
 .wrapper .banner .owl-carousel .item .banner_articles .banner_article_left h1 {
   font-family: "Oswald";
@@ -207,10 +207,12 @@ ul {
 .wrapper .banner .owl-carousel .item .banner_articles .banner_articles_call_back .call_back .call_back_button:hover::before {
   content: "";
   position: absolute;
-  width: -webkit-fill-available;
-  height: -webkit-fill-available;
+  width: 220px;
+  height: 40px;
   background-image: url("../img/call_back_arrow.png");
   background-repeat: no-repeat;
+  left: -70%;
+  top: 45%;
 }
 .wrapper .banner .owl-carousel .owl-dots {
   position: absolute;
