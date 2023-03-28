@@ -66,7 +66,8 @@ ul
 				align-items: center
 				justify-content: space-between
 				padding: 6px 0
-				.hedaer_menu
+				position: relative
+				.header_menu
 					display: flex
 					&>li
 						a
@@ -78,6 +79,7 @@ ul
 							margin: 0 28px
 						&.active>ul 
 							display: block
+
 							
 						&>ul
 							display: none
@@ -86,8 +88,14 @@ ul
 							top: 100%
 							max-width: 297px
 							width: 100%
-							&>li:hover
-								background-color: #FFC629
+							z-index: 99
+
+							&>li
+								cursor: pointer
+								&:hover
+									background-color: #FFC629
+									&>a 
+										color: white
 
 				.header_contact
 					display: flex
@@ -109,14 +117,100 @@ ul
 			.item
 				img
 					border-radius: 0 0 0 150px
+				
+				&::before
+						background: rgba(0, 0, 0, 0.33)    					
+						background-repeat: no-repeat    					
+						background-position: center center    					
+						background-size: cover    					
+						content: ""    					
+						display: block    					
+						width: 100%    					
+						height: 100%    					
+						position: absolute
 				.banner_articles
 					position: absolute
-					z-index: 9
+					z-index: 99
+					width: -webkit-fill-available
+					top: 0
+					padding: 228px 205px 0 205px
 					.banner_article_left
+						h1
+							font-family: 'Oswald'
+							font-style: normal
+							font-weight: 400
+							font-size: 96px
+							line-height: 114.7%
+							color: #FFFFFF
+							margin:  0 0 17px 0
+						ul
+							list-style: disc
+							padding: 0 0 0 26px
+							font-family: 'Montserrat'
+							font-style: normal
+							font-weight: 500
+							font-size: 24.1546px
+							line-height: 194.9%
+							color: #FFFFFF
+					.banner_articles_call_back
+						position: relative
+						h3
+							font-family: 'Montserrat'
+							font-style: normal
+							font-weight: 700
+							font-size: 36px
+							line-height: 44px
+							color: #FFFFFF
+						.call_back
+							position: absolute
+							right: 0
+							top: -200%
+							.call_back_button
+								font-family: 'Oswald'
+								font-style: normal
+								font-weight: 400
+								font-size: 50px
+								line-height: 115.7%
+								text-align: center
+								text-transform: uppercase
+								color: #FFFFFF
+								background: transparent
+								border: 5.93633px solid #FFFFFF
+								border-radius: 50%
+								width: 367px
+								height: 367px
+								cursor: pointer
+								&:hover
+									&::before
+										content: ""
+										position: absolute
+										width: -webkit-fill-available
+										height: -webkit-fill-available
+										background-image: url('../img/call_back_arrow.png')
+										background-repeat: no-repeat
+
+
 			.owl-dots
 				position: absolute
 				top:90%
 				left: 45%
 				right: 45%
+				display: flex
+				align-items: center
+				justify-content: center
+				.owl-dot
+					display: flex
+					align-content: center
+					justify-content: center
+					padding: 10px
+					span
+						background: #FFC629
+						width: 11px 
+						height: 11px
+					&.active
+						span
+							width: 21px
+							height: 21px
+
 			.owl-nav
 				position: absolute

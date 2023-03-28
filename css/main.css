@@ -80,11 +80,12 @@ ul {
   align-items: center;
   justify-content: space-between;
   padding: 6px 0;
+  position: relative;
 }
-.wrapper .header .header_container .header_inner .hedaer_menu {
+.wrapper .header .header_container .header_inner .header_menu {
   display: flex;
 }
-.wrapper .header .header_container .header_inner .hedaer_menu > li a {
+.wrapper .header .header_container .header_inner .header_menu > li a {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
@@ -92,19 +93,26 @@ ul {
   line-height: 36px;
   margin: 0 28px;
 }
-.wrapper .header .header_container .header_inner .hedaer_menu > li.active > ul {
+.wrapper .header .header_container .header_inner .header_menu > li.active > ul {
   display: block;
 }
-.wrapper .header .header_container .header_inner .hedaer_menu > li > ul {
+.wrapper .header .header_container .header_inner .header_menu > li > ul {
   display: none;
   position: absolute;
   background-color: #FFFFFF;
   top: 100%;
   max-width: 297px;
   width: 100%;
+  z-index: 99;
 }
-.wrapper .header .header_container .header_inner .hedaer_menu > li > ul > li:hover {
+.wrapper .header .header_container .header_inner .header_menu > li > ul > li {
+  cursor: pointer;
+}
+.wrapper .header .header_container .header_inner .header_menu > li > ul > li:hover {
   background-color: #FFC629;
+}
+.wrapper .header .header_container .header_inner .header_menu > li > ul > li:hover > a {
+  color: white;
 }
 .wrapper .header .header_container .header_inner .header_contact {
   display: flex;
@@ -127,15 +135,106 @@ ul {
 .wrapper .banner .owl-carousel .item img {
   border-radius: 0 0 0 150px;
 }
+.wrapper .banner .owl-carousel .item::before {
+  background: rgba(0, 0, 0, 0.33);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
 .wrapper .banner .owl-carousel .item .banner_articles {
   position: absolute;
-  z-index: 9;
+  z-index: 99;
+  width: -webkit-fill-available;
+  top: 0;
+  padding: 228px 205px 0 205px;
+}
+.wrapper .banner .owl-carousel .item .banner_articles .banner_article_left h1 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 114.7%;
+  color: #FFFFFF;
+  margin: 0 0 17px 0;
+}
+.wrapper .banner .owl-carousel .item .banner_articles .banner_article_left ul {
+  list-style: disc;
+  padding: 0 0 0 26px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24.1546px;
+  line-height: 194.9%;
+  color: #FFFFFF;
+}
+.wrapper .banner .owl-carousel .item .banner_articles .banner_articles_call_back {
+  position: relative;
+}
+.wrapper .banner .owl-carousel .item .banner_articles .banner_articles_call_back h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #FFFFFF;
+}
+.wrapper .banner .owl-carousel .item .banner_articles .banner_articles_call_back .call_back {
+  position: absolute;
+  right: 0;
+  top: -200%;
+}
+.wrapper .banner .owl-carousel .item .banner_articles .banner_articles_call_back .call_back .call_back_button {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 115.7%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: transparent;
+  border: 5.93633px solid #FFFFFF;
+  border-radius: 50%;
+  width: 367px;
+  height: 367px;
+  cursor: pointer;
+}
+.wrapper .banner .owl-carousel .item .banner_articles .banner_articles_call_back .call_back .call_back_button:hover::before {
+  content: "";
+  position: absolute;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  background-image: url("../img/call_back_arrow.png");
+  background-repeat: no-repeat;
 }
 .wrapper .banner .owl-carousel .owl-dots {
   position: absolute;
   top: 90%;
   left: 45%;
   right: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .banner .owl-carousel .owl-dots .owl-dot {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 10px;
+}
+.wrapper .banner .owl-carousel .owl-dots .owl-dot span {
+  background: #FFC629;
+  width: 11px;
+  height: 11px;
+}
+.wrapper .banner .owl-carousel .owl-dots .owl-dot.active span {
+  width: 21px;
+  height: 21px;
 }
 .wrapper .banner .owl-carousel .owl-nav {
   position: absolute;

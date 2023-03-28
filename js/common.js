@@ -44,7 +44,7 @@ $(window).load(function() {
 	$(".loader_inner").fadeOut();
 	$(".loader").delay(400).fadeOut("slow");
 
-	$("#hedaer_menu > li").click(function(){
+	$("#header_menu > li").click(function(){
 		$(this).toggleClass("active");
 	});
 	$('.owl-carousel').owlCarousel({
