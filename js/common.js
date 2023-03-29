@@ -26,14 +26,14 @@ $(function() {
 	});
 
 	//Chrome Smooth Scroll
-	try {
-		$.browserSelector();
-		if($("html").hasClass("chrome")) {
-			$.smoothScroll();
-		}
-	} catch(err) {
+	// try {
+	// 	$.browserSelector();
+	// 	if($("html").hasClass("chrome")) {
+	// 		$.smoothScroll();
+	// 	}
+	// } catch(err) {
 
-	};
+	// };
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 	
@@ -51,6 +51,7 @@ $(window).load(function() {
 		loop:true,
 		margin:10,
 		nav:true,
+		navText:['<img src="img/left_arrow.png">', '<img src="img/right_arrow.png">'],
 		responsive:{
 			0:{
 				items:1
