@@ -26,14 +26,14 @@ $(function() {
 	});
 
 	//Chrome Smooth Scroll
-	try {
-		$.browserSelector();
-		if($("html").hasClass("chrome")) {
-			$.smoothScroll();
-		}
-	} catch(err) {
+	// try {
+	// 	$.browserSelector();
+	// 	if($("html").hasClass("chrome")) {
+	// 		$.smoothScroll();
+	// 	}
+	// } catch(err) {
 
-	};
+	// };
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 	
@@ -47,15 +47,26 @@ $(window).load(function() {
 	$("#header_menu > li").click(function(){
 		$(this).toggleClass("active");
 	});
-	$('.owl-carousel').owlCarousel({
+	$('.review-carousel').owlCarousel({
+		loop:true,
+		margin:100,
+		stagePadding:100,
+		nav:true,
+		dots: false,
+		navText:['<img src="img/prev_arrow_yellow.png">', '<img src="img/next_arrow_yellow.png">'],
+		items:3
+	})
+	$('.banner-carousel').owlCarousel({
 		loop:true,
 		margin:10,
 		nav:true,
-		responsive:{
-			0:{
-				items:1
-			}
-		}
+		navText:['<img src="img/left_arrow.png">', '<img src="img/right_arrow.png">'],
+		items:1
 	})
+	
+	$('.grid').masonry({
+		itemSelector: '.grid-item',
+		columnWidth: 200
+	  });
 	
 });

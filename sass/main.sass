@@ -24,6 +24,8 @@ html.js .loader
 		top: 50%
 		position: absolute
 
+
+
 body
 	font-family: 'Montserrat'
 	font-style: normal
@@ -45,7 +47,7 @@ body textarea:required:valid
 
 .hidden
 	display: none
-ul,a,h1,h2,h3,h4,h5,li,p
+ul,a,h1,h2,h3,h4,h5,h6,li,p
 	margin: 0
 	padding: 0
 a
@@ -54,13 +56,208 @@ a
 	&:hover, &:focus
 		color: #FFFFFF
 		text-decoration: none
+h1
+	font-family: 'Oswald'
+	font-style: normal
+	font-weight: 400
+	font-size: 96px
+	line-height: 114.7%
+	color: #FFC629
+	margin:  0 0 17px 0
+h2
+	font-family: 'Oswald'
+	font-style: normal
+	font-weight: 600
+	font-size: 96px
+	line-height: 77.9%
+	color: #FFFFFF
+h3
+	font-family: 'Montserrat'
+	font-style: normal
+	font-weight: 700
+	font-size: 142.026px
+	line-height: 103px
+	text-transform: uppercase
+	color: #FFFFFF
+
+h5
+	font-weight: 700
+	font-size: 36px
+	line-height: 44px
+h6
+	font-family: 'Montserrat'
+	font-style: normal
+	font-weight: 700
+	font-size: 297.26px
+	// line-height: 362px
+	text-transform: uppercase
+	color: rgba(255, 198, 41, 0.74)
+p
+	font-weight: 500
+	font-size: 24.15px
+	line-height: 29px
+	color: #515151
+
 ul
-	list-style: none
+	list-style: disc
+	padding: 0 0 0 26px
+	font-family: 'Montserrat'
+	font-style: normal
+	font-weight: 500
+	font-size: 24.1546px
+	line-height: 194.9%
+	color: #FFFFFF
+.sm_container
+	margin: 0 2.6045%
+.know_price_btn_wrap
+	position: absolute
+	top: -200%
+	right: 0
+	.know_price_btn
+		font-family: 'Oswald'
+		font-style: normal
+		font-weight: 400
+		font-size: 50px
+		line-height: 115.7%
+		text-align: center
+		text-transform: uppercase
+		color: #FFFFFF
+		background: transparent
+		border: 5.93633px solid #FFFFFF
+		border-radius: 50%
+		width: 367px
+		height: 367px
+		cursor: pointer
+		transition: all .3s ease
+		&:hover
+			background-color: #fff
+			color: #061B38
+			transition: all .3s ease
+			&::before
+				content: ""
+				position: absolute
+				width: 220px
+				height: 40px
+				background-image: url('../img/call_back_arrow.png')
+				background-repeat: no-repeat
+				left: -70%
+				top: 45%
+				transition: all .3s ease
+div.title_circle
+	&::before
+		background: #FFC629	
+		border-radius: 0px 150px 150px 0px	
+		width: 50px
+		height: 107px
+		content: ""
+		position: absolute
+	h1
+		margin-left: 25px
+.grid
+	.grid-item 
+		width: 200px
+	.grid-item--width2
+		width: 400px
+
+				
+.banner-carousel
+	.item
+		img
+			border-radius: 0 0 0 150px
+		&::before
+			background: rgba(0, 0, 0, 0.33)    					
+			background-repeat: no-repeat    					
+			background-position: center center    					
+			background-size: cover    					
+			content: ""    					
+			display: block    					
+			width: 100%    					
+			height: 100%    					
+			position: absolute
+			border-radius: 0 0 0 150px
+		.banner_articles
+			position: absolute
+			z-index: 99
+			width: -webkit-fill-available
+			top: 0
+			padding: 12% 11% 0 11%
+			.banner_article_left
+				h1
+					color: #fff
+			.banner_articles_call_back
+				position: relative
+				margin: 10px 0 0 0 
+				h3
+					font-family: 'Montserrat'
+					font-style: normal
+					font-weight: 700
+					font-size: 36px
+					line-height: 44px
+					color: #FFFFFF
+	.owl-dots
+		position: absolute
+		top:90%
+		left: 45%
+		right: 45%
+		display: flex
+		align-items: center
+		justify-content: center
+		.owl-dot
+			display: flex
+			align-content: center
+			justify-content: center
+			padding: 10px
+			span
+				background: #FFC629 !important
+				width: 11px
+				height: 11px 
+			&.active
+				span
+					width: 21px
+					height: 21px
+.bg_right_img
+	position: absolute
+	top: 0
+	right: 0
+.review-carousel
+	.item
+		img
+			// box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.25)
+.owl-nav
+	position: absolute
+	top: 45%
+	bottom: 45%
+	width: -webkit-fill-available
+	button
+		&:hover
+			background-color: transparent !important
+	.owl-prev
+		position: absolute
+		left: 1%
+	.owl-next
+		position: absolute
+		right: 1%
+.default_btn
+	font-family: 'Oswald'
+	font-style: normal
+	font-weight: 400
+	font-size: 50px
+	line-height: 100.2%
+	text-align: center
+	text-transform: uppercase
+	color: #162539
+	background: #FFC629
+	border: 0
+	width: 894px
+	padding: 46px 0
+	border-radius: 100px
+	margin: auto
+	margin-top: 192px
+	display: block
 .wrapper
 	.header
 		background-color: #FFC629
-		.header_container
-			margin: 0 50px
+		.sm_container
 			.header_inner
 				display: flex
 				align-items: center
@@ -69,6 +266,8 @@ ul
 				position: relative
 				.header_menu
 					display: flex
+					padding: 0
+					list-style: none
 					&>li
 						a
 							font-family: 'Oswald'
@@ -89,6 +288,8 @@ ul
 							max-width: 297px
 							width: 100%
 							z-index: 99
+							padding: 0
+							list-style: none
 
 							&>li
 								cursor: pointer
@@ -112,107 +313,229 @@ ul
 				.header_networks
 					a
 						margin: 0 23px
-	.banner
-		.owl-carousel
-			.item
-				img
-					border-radius: 0 0 0 150px
-				
-				&::before
-						background: rgba(0, 0, 0, 0.33)    					
-						background-repeat: no-repeat    					
-						background-position: center center    					
-						background-size: cover    					
-						content: ""    					
-						display: block    					
-						width: 100%    					
-						height: 100%    					
-						position: absolute
-				.banner_articles
-					position: absolute
-					z-index: 99
-					width: -webkit-fill-available
-					top: 0
-					padding: 12% 11% 0 11%
-					.banner_article_left
-						h1
-							font-family: 'Oswald'
-							font-style: normal
-							font-weight: 400
-							font-size: 96px
-							line-height: 114.7%
-							color: #FFFFFF
-							margin:  0 0 17px 0
-						ul
-							list-style: disc
-							padding: 0 0 0 26px
-							font-family: 'Montserrat'
-							font-style: normal
-							font-weight: 500
-							font-size: 24.1546px
-							line-height: 194.9%
-							color: #FFFFFF
-					.banner_articles_call_back
-						position: relative
-						h3
-							font-family: 'Montserrat'
-							font-style: normal
-							font-weight: 700
-							font-size: 36px
-							line-height: 44px
-							color: #FFFFFF
-						.call_back
-							position: absolute
-							right: 0
-							top: -200%
-							.call_back_button
-								font-family: 'Oswald'
-								font-style: normal
-								font-weight: 400
-								font-size: 50px
-								line-height: 115.7%
-								text-align: center
-								text-transform: uppercase
-								color: #FFFFFF
-								background: transparent
-								border: 5.93633px solid #FFFFFF
-								border-radius: 50%
-								width: 367px
-								height: 367px
-								cursor: pointer
-								&:hover
-									&::before
-										content: ""
-										position: absolute
-										width: 220px
-										height: 40px
-										background-image: url('../img/call_back_arrow.png')
-										background-repeat: no-repeat
-										left: -70%
-										top: 45%
-
-
-			.owl-dots
+	.about_us
+		margin-top: 40px
+		position: relative
+		&::before
+			background: #FFC629	
+			border-radius: 0px 150px 150px 0px	
+			width: 50px
+			height: 107px
+			content: ""
+			position: absolute
+		.about_us_inner
+			display: flex
+			.about_us_left
+				max-width: 65%
+				.about_us_title
+					h1
+						margin-left: 25px
+					p
+						margin-top: 42px
+				.about_us_description
+					display: flex
+					flex-wrap: wrap
+					margin-top: 60px
+					justify-content: space-between
+					.description_blog
+						max-width: 590px
+						margin-bottom: 59px
+						h5
+							color: #FFC629
+			.about_us_right
 				position: absolute
-				top:90%
-				left: 45%
-				right: 45%
+				right: 0
+				top: 8%
+				img
+					border-radius: 150px 0 0 150px
+	.trust_us
+		margin-top: 10%
+		position: relative
+		.trust_us_inner
+			.trust_us_cards
+				.trust_us_card
+					background: rgba(217, 31, 37, 0.9)
+					border-radius: 200px 0px 0px 200px
+					height: 328px
+					padding: 24px 0
+					padding-left: 85px
+					display: flex
+					flex-direction: column
+					justify-content: center
+					margin-bottom: 15px
+					h2
+						margin-bottom: 20px
+
+					p
+						color: #fff
+						width: 50%
+					&:nth-child(2)				
+						margin-left: 6%
+						background: rgba(240, 129, 67, 0.9)
+					&:nth-child(3)				
+						margin-left: 12%
+						background: rgba(255, 198, 41, 0.9)
+			img
+				position: absolute
+				top:2%
+				right: 0
+				border-radius: 150px 0px 0px 0px
+	.know_price
+		background-color: #FFC629
+		overflow: hidden
+		position: relative
+		&.leave_request
+			.know_price_inner
+				padding: 45px 120px
+		.know_price_inner
+			padding: 66px 120px
+
+			p
+				max-width: 775px
+			.know_price_btn_wrap
+				top: -40%
+				bottom: -40%
+				right: 12%
+				.know_price_btn
+					color: #061B38
+					border: 5px solid #061B38
+
+					&:hover
+						background: #061B38
+						color: #fff
+						&::before
+							top: 60%
+							background: url("../img/call_back_arrow_blue.png")
+							background-repeat: no-repeat
+			p
+				font-family: 'Montserrat'
+				font-style: normal
+				font-weight: 700
+				font-size: 32px
+				line-height: 39px
+				color: #061B38
+	.our_services
+		margin-top: 72px
+		.our_services_inner
+			.our_services_price
 				display: flex
+				flex-wrap: wrap
+				justify-content: space-evenly
+				.price_box
+					max-width: 504px
+					max-height: 504px
+					padding: 10% 95px
+					border-radius: 50%
+					display: flex
+					flex-direction: column
+					align-items: center
+					justify-content: center
+					transition: all .3s ease
+					margin-bottom: 22px
+					img
+						border-radius: 50%
+						position: absolute
+						z-index: -9
+						filter: blur()
+						max-width: 504px
+						max-height: 504px
+						width: 100%
+						height: 100%
+
+					h4,p
+						text-align: center
+						color: #FFFFFF
+					&:hover
+						cursor: pointer
+						background: #FFC629
+						transition: all .3s ease
+						img
+							display: none
+						h4,p
+							color: #061B38
+	.working_process
+		margin-top: 186px
+		position: relative
+
+	.company_features
+		background: #FFC629
+		margin-top: 96px
+		.company_features_inner
+			display: flex
+			justify-content: space-between
+			align-items: center
+			max-height: 277px
+			overflow: hidden
+			.features_block
+				max-width: 345.57px
+				max-height: 345.57px
+				width: 100%
+				height: 100vh
+				display: flex
+				flex-direction: column
 				align-items: center
 				justify-content: center
-				.owl-dot
+				border: 6px solid #FFFFFF
+				border-radius: 50%
+				p
+					font-weight: 700
+					font-size: 37.9673px
+					line-height: 106.9%
+					text-align: center
+					text-transform: uppercase
+					color: #FFFFFF
+					max-width: 286px
+	.footer
+		background: #616161
+		margin-top: 36px
+		.footer_inner
+			.footer_info
+				display: flex
+				justify-content: space-between
+				padding-top: 96px
+				h5
+					color: #fff
+					text-transform: uppercase
+				p
+					color: #fff
+					font-weight: 500
+					font-size: 24.1546px
+					line-height: 131.4%
+					max-width: 436px
+				a
+					font-family: 'Montserrat'
+					font-style: normal
+					font-weight: 500
+					font-size: 24px
+					line-height: 29px
+					color: #FFFFFF
+				.footer_title,.footer_contact
 					display: flex
-					align-content: center
-					justify-content: center
-					padding: 10px
-					span
-						background: #FFC629
-						width: 11px 
-						height: 11px
-					&.active
-						span
-							width: 21px
-							height: 21px
+					flex-direction: column
+			.footer_networks
+				display: flex
+				justify-content: flex-end
+				border-bottom: 3px solid #FFFFFF
 
-			.owl-nav
-				position: absolute
+				a
+					margin-left: 56.84px
+					margin-bottom: 25.5px
+			.footer_copyright_item
+				img
+					width: 50px
+					height: 50px
+				p
+					font-weight: 500
+					font-size: 24.1546px
+					line-height: 131.4%
+					color: #fff
+					margin-top: 20px
+					a
+						color: #fff
+						margin-right: 8px
+				
+
+
+
+			
+	
