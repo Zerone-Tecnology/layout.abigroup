@@ -1,5 +1,8 @@
 @import "bourbon/bourbon"
 
+$accent: #FFC629
+$blue: #061B38
+
 html.js .loader
 	background: none repeat scroll 0 0 #ffffff
 	bottom: 0
@@ -27,9 +30,9 @@ html.js .loader
 body
 	font-family: 'Montserrat'
 	font-style: normal
-	font-weight: 700
-	font-size: 36px
-	line-height: 44px
+	font-weight: 400
+	font-size: 16px
+	line-height: 18px
 	min-width: 320px
 	position: relative
 	line-height: 1.6
@@ -56,6 +59,43 @@ a
 		text-decoration: none
 ul
 	list-style: none
+h1, .title-head
+	font-family: Oswald
+	font-size: 96px
+	font-weight: 400
+	line-height: 110px
+	letter-spacing: 0em
+	text-align: left
+	color: #FFC629
+h2
+	font-family: Oswald
+	font-size: 36px
+	font-weight: 400
+	line-height: 53px
+	letter-spacing: 0em
+	text-align: left
+h3
+	font-family: Montserrat
+	font-size: 36px
+	font-weight: 700
+	line-height: 44px
+	letter-spacing: 0em
+	text-align: left
+.btn
+	&.circle
+		position: relative
+		text-align: center
+		&::after
+			content: ''
+			position: absolute
+			border: 5px solid $blue
+			width: 300px
+			height: 300px
+			left: 0
+			top: 0
+			margin-top: -150px
+			border-radius: 50%
+
 .wrapper
 	.header
 		background-color: #FFC629
@@ -216,3 +256,97 @@ ul
 
 			.owl-nav
 				position: absolute
+.section
+	padding: 45px 0
+	.title-wrap
+		padding-left: 100px
+		margin-bottom: 25px
+	.title-head
+		position: relative
+		text-transform: uppercase
+		&::before
+			content: ''
+			position: absolute
+			width: 70px
+			height: 70px
+			border-radius: 50%
+			background-color: $accent
+			top: 50%
+			left: -135px
+			margin-top: -35px
+.about
+	.block
+		padding: 15px 45px
+		.title
+			color: $accent
+			font-weight: 500
+			font-size: 26px
+	.about_img
+		border-top-left-radius: 5em
+		border-bottom-left-radius: 5em
+		overflow: hidden
+		float: right
+.rep
+	.block-wrap
+		text-align: right
+	.block
+		color: #fff
+		padding: 35px
+		border-top-left-radius: 15em
+		border-bottom-left-radius: 15em
+		margin-bottom: 15px
+		display: inline-block
+		text-align: left
+		padding-left: 70px
+		.title
+			font-size: 66px
+			font-weight: 600
+			line-height: 55px
+			margin-bottom: 25px
+	.bgcol-1
+		background-color: #D91F25E5
+	.bgcol-2
+		background-color: #F08143E5
+		width: 80%
+	.bgcol-3
+		background-color: $accent
+		width: 70%
+	.rep_img
+		border-top-left-radius: 5em
+		overflow: hidden
+		float: right
+.ads
+	background-color: $accent
+	color: $blue
+	padding: 45px 0
+	font-size: 22px
+	font-weight: 700
+	overflow: hidden
+	p
+		width: 70%
+		float: left
+	.btn
+		width: 300px
+		float: right
+.service
+	background-image: url('../img/bg_logo.png')
+	background-repeat: no-repeat
+	background-position: 100% 0
+	background-size: contain
+	.block-wrap
+		width: 80%
+		margin: 0 auto
+		.block
+			width: 30%
+			aspect-ratio : 1 / 1
+			margin: 15px
+			padding: 25px
+			background-color: $accent
+			border-radius: 50%
+			display: inline-block
+			text-align: center
+			vertical-align: middle
+			.title
+				text-transform: uppercase
+				font-size: 24px
+				margin-top: 55px
