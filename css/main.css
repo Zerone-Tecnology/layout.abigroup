@@ -324,6 +324,9 @@ h3 {
   float: right;
 }
 
+.rep .col-md-7, .rep .col-md-5 {
+  padding: 0;
+}
 .rep .block-wrap {
   text-align: right;
 }
@@ -353,11 +356,13 @@ h3 {
 .rep .bgcol-3 {
   background-color: #FFC629;
   width: 70%;
+  color: #000;
 }
 .rep .rep_img {
   border-top-left-radius: 5em;
   overflow: hidden;
   float: right;
+  width: 100%;
 }
 
 .ads {
