@@ -75,7 +75,7 @@ h3
 	font-family: 'Montserrat'
 	font-style: normal
 	font-weight: 700
-	font-size: 142.026px
+	font-size: 115px
 	line-height: 103px
 	text-transform: uppercase
 	color: #FFFFFF
@@ -109,6 +109,11 @@ ul
 	color: #FFFFFF
 .sm_container
 	margin: 0 2.6045%
+@media only screen and (min-width: 1920px)
+	.container
+		width: 1560px
+
+	
 .know_price_btn_wrap
 	position: absolute
 	top: -200%
@@ -144,6 +149,11 @@ ul
 				top: 45%
 				transition: all .3s ease
 div.title_circle
+	h1
+		margin-left: 75px
+	.sm_container
+		h1
+			margin-left: 25px
 	&::before
 		background: #FFC629	
 		border-radius: 0px 150px 150px 0px	
@@ -151,8 +161,8 @@ div.title_circle
 		height: 107px
 		content: ""
 		position: absolute
-	h1
-		margin-left: 25px
+
+
 .grid
 	.grid-item 
 		width: 200px
@@ -221,6 +231,18 @@ div.title_circle
 	right: 0
 .review-carousel
 	.item
+		cursor: pointer
+		&:hover
+			&::before
+				content: url("../img/popup_icon.png")
+				width: 100%
+				height: 100%
+				z-index: 9
+				position: absolute
+				background: rgba(255, 198, 41, 0.71)
+				display: flex
+				align-items: center
+				justify-content: center
 		img
 			// box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.25)
 .owl-nav
@@ -228,6 +250,7 @@ div.title_circle
 	top: 45%
 	bottom: 45%
 	width: -webkit-fill-available
+	height: min-content
 	button
 		&:hover
 			background-color: transparent !important
@@ -390,6 +413,10 @@ div.title_circle
 					border-radius: 25em
 					display: inline-block
 					margin-bottom: 15px
+					cursor: pointer
+					display: flex
+					align-items: center
+					justify-content: center
 					&:nth-child(1)
 						height: 800px
 					&:nth-child(2)
@@ -400,6 +427,26 @@ div.title_circle
 						width: 65%
 					&:nth-child(4)
 						border-radius: 50%
+					p
+						font-family: 'Oswald'
+						font-weight: 400
+						font-size: 36px
+						line-height: 41px
+						text-align: center
+						text-transform: uppercase
+						color: #FFFFFF
+						position: absolute
+						align-items: center
+						justify-content: center
+						z-index: 9
+						display: none
+						border-bottom: 8px #FFC629 solid
+
+					&:hover
+						p
+							display: flex
+						img
+							filter: blur(14.1582px)
 	.know_price
 		background-color: #FFC629
 		overflow: hidden
@@ -440,11 +487,11 @@ div.title_circle
 			.our_services_price
 				display: flex
 				flex-wrap: wrap
-				justify-content: space-evenly
+				justify-content: space-between
 				.price_box
 					max-width: 504px
 					max-height: 504px
-					padding: 10% 95px
+					padding: 192px 95px
 					border-radius: 50%
 					display: flex
 					flex-direction: column
@@ -476,6 +523,22 @@ div.title_circle
 	.working_process
 		margin-top: 186px
 		position: relative
+		.working_process_inner
+			.stages_of_work
+				display: flex
+				justify-content: space-between
+				width: 84%
+				.row
+					width:50%
+					.stages
+						position: relative
+						p
+							position: absolute
+							bottom: 25%
+							font-weight: 700
+							font-size: 36px
+							line-height: 44px
+							color: #515151
 
 	.company_features
 		background: #FFC629
@@ -499,7 +562,7 @@ div.title_circle
 				border-radius: 50%
 				p
 					font-weight: 700
-					font-size: 37.9673px
+					font-size: 30px
 					line-height: 106.9%
 					text-align: center
 					text-transform: uppercase
@@ -509,13 +572,14 @@ div.title_circle
 		background: #616161
 		margin-top: 36px
 		.footer_inner
+			padding: 96px 0 20px 0
 			.footer_info
 				display: flex
 				justify-content: space-between
-				padding-top: 96px
 				h5
 					color: #fff
 					text-transform: uppercase
+					margin-bottom: 51px
 				p
 					color: #fff
 					font-weight: 500
@@ -533,12 +597,36 @@ div.title_circle
 					display: flex
 					flex-direction: column
 				.footer_contact
-					justify-content: space-between
+					p,a 
+						margin-bottom: 51px
+					.presentation_download
+						display: flex
+						flex-direction: column
+						a
+							margin-bottom: 32px
+				.footer_title
+					p
+						margin-bottom: 35px
+				ul
+					list-style: none
+					padding: 0
+					margin: 0
+					li
+						margin-bottom: 35px
+						&::before
+							content: ''
+							display: inline-block
+							height:16px
+							width: 16px
+							vertical-align: middle
+							border-radius:50%
+							background-color:#fff
+							margin-right:28px
+							
 			.footer_networks
 				display: flex
 				justify-content: flex-end
 				border-bottom: 3px solid #FFFFFF
-				margin-top: 38px
 
 				a
 					margin-left: 56.84px
