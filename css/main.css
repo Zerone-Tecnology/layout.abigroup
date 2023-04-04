@@ -439,6 +439,28 @@ div.title_circle h1 {
   right: 0;
   border-radius: 150px 0px 0px 0px;
 }
+.wrapper .our_portfoli .portfolio .grid-item {
+  width: 25%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 25em;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.wrapper .our_portfoli .portfolio .grid-item:nth-child(1) {
+  height: 800px;
+}
+.wrapper .our_portfoli .portfolio .grid-item:nth-child(2) {
+  width: 65%;
+  height: 800px;
+  border-radius: 5em;
+}
+.wrapper .our_portfoli .portfolio .grid-item:nth-child(3) {
+  width: 65%;
+}
+.wrapper .our_portfoli .portfolio .grid-item:nth-child(4) {
+  border-radius: 50%;
+}
 .wrapper .know_price {
   background-color: #FFC629;
   overflow: hidden;
