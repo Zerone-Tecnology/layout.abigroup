@@ -23,9 +23,6 @@ html.js .loader
 		left: 50%
 		top: 50%
 		position: absolute
-
-
-
 body
 	font-family: 'Montserrat'
 	font-style: normal
@@ -45,6 +42,24 @@ body input:required:valid,
 body textarea:required:valid
 	color: green
 
+// respond mixin
+@mixin respond($size)
+	@if $size == _599
+		@media (max-width: 599px)
+			@content
+	@else if $size == _1024
+		@media (max-width: 1024px)
+			@content
+	@else if $size == _1300
+		@media (max-width: 1300px)
+			@content
+	@else if $size == _1440
+		@media (max-width: 1440px)
+			@content
+	@else if $size == _1560
+		@media (min-width: 1560px)
+			@content
+
 .hidden
 	display: none
 ul,a,h1,h2,h3,h4,h5,h6,li,p
@@ -63,21 +78,28 @@ h1
 	font-size: 96px
 	line-height: 114.7%
 	color: #FFC629
-	margin:  0 0 17px 0
+	margin: 0 0 17px 0
+	@include respond(_1300)
+		font-size: 64px
+
 h2
-	font-family: 'Oswald'
-	font-style: normal
-	font-weight: 600
-	font-size: 96px
-	line-height: 77.9%
+	font-weight: 700
+	font-size: 50px
+	line-height: 131.4%
 	color: #FFFFFF
 h3
-	font-family: 'Montserrat'
-	font-style: normal
 	font-weight: 700
 	font-size: 115px
 	line-height: 103px
 	text-transform: uppercase
+	color: #FFFFFF
+h4
+	font-family: 'Oswald'
+	font-style: normal
+	font-weight: 400
+	font-size: 48px
+	line-height: 115%
+	text-align: center
 	color: #FFFFFF
 
 h5
@@ -85,8 +107,6 @@ h5
 	font-size: 36px
 	line-height: 44px
 h6
-	font-family: 'Montserrat'
-	font-style: normal
 	font-weight: 700
 	font-size: 297.26px
 	// line-height: 362px
@@ -101,23 +121,26 @@ p
 ul
 	list-style: disc
 	padding: 0 0 0 26px
-	font-family: 'Montserrat'
-	font-style: normal
 	font-weight: 500
 	font-size: 24.1546px
 	line-height: 194.9%
 	color: #FFFFFF
 .sm_container
 	margin: 0 2.6045%
-@media only screen and (min-width: 1920px)
-	.container
+.container
+	@include respond(_1560)
 		width: 1560px
 
-	
 .know_price_btn_wrap
 	position: absolute
 	top: -200%
 	right: 0
+	@include respond(_1440)
+		top: -90%
+	@include respond(_1024)
+		top: -60%
+	
+
 	.know_price_btn
 		font-family: 'Oswald'
 		font-style: normal
@@ -134,6 +157,11 @@ ul
 		height: 367px
 		cursor: pointer
 		transition: all .3s ease
+		@include respond(_1024)
+			font-size: 30px
+			width: 240px
+			height: 240px
+		
 		&:hover
 			background-color: #fff
 			color: #061B38
@@ -155,34 +183,85 @@ div.title_circle
 		h1
 			margin-left: 25px
 	&::before
-		background: #FFC629	
-		border-radius: 0px 150px 150px 0px	
+		background: #FFC629
+		border-radius: 0px 150px 150px 0px
 		width: 50px
 		height: 107px
 		content: ""
 		position: absolute
-
+.mobile_menu
+	display: none
+	.menu_close_btn
+		position: absolute
+		top: -1050%
+		left: 0
+	&.active
+		position: relative
+		z-index: 999
+	@include respond(_1024)
+		display: flex
+		align-items: center
+		justify-content: flex-end
+	.burger_menu
+		position: relative
+		width: 24px
+		height: 18px
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			background: #fff
+			border-radius: 2px
+			width: 24px
+			height: 3px
+			left: 0
+			transition: all 0.4s linear
+		&::before
+			top: 0
+		&::after
+			bottom: 0
+		span
+			position: absolute
+			background: #fff
+			border-radius: 2px
+			left: 0
+			width: 24px
+			height: 3px
+			top: 7px
+			transition: all 0.4s linear
+		&.active
+			span
+				transform: scale(0)
+				transition: all 0.4s linear
+			&::before,
+			&::after
+				top: 9px
+				transition: all 0.3s linear
+				width: 20px
+			&::before
+				transform: rotate(45deg)
+			&::after
+				transform: rotate(-45deg)
 
 .grid
-	.grid-item 
+	.grid-item
 		width: 200px
 	.grid-item--width2
 		width: 400px
 
-				
 .banner-carousel
 	.item
 		img
 			border-radius: 0 0 0 150px
 		&::before
-			background: rgba(0, 0, 0, 0.33)    					
-			background-repeat: no-repeat    					
-			background-position: center center    					
-			background-size: cover    					
-			content: ""    					
-			display: block    					
-			width: 100%    					
-			height: 100%    					
+			background: rgba(0, 0, 0, 0.33)
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: cover
+			content: ""
+			display: block
+			width: 100%
+			height: 100%
 			position: absolute
 			border-radius: 0 0 0 150px
 		.banner_articles
@@ -191,22 +270,29 @@ div.title_circle
 			width: -webkit-fill-available
 			top: 0
 			padding: 12% 11% 0 11%
+			@include respond(_1440)
+				padding: 6%
+
 			.banner_article_left
 				h1
 					color: #fff
 			.banner_articles_call_back
 				position: relative
-				margin: 10px 0 0 0 
+				margin: 10px 0 0 0
 				h3
-					font-family: 'Montserrat'
-					font-style: normal
 					font-weight: 700
 					font-size: 36px
 					line-height: 44px
 					color: #FFFFFF
+					@include respond(_1440)
+						width: 50%
+					@include respond(_1024)
+						font-size: 30px
+					
+
 	.owl-dots
 		position: absolute
-		top:90%
+		top: 90%
 		left: 45%
 		right: 45%
 		display: flex
@@ -220,7 +306,7 @@ div.title_circle
 			span
 				background: #FFC629 !important
 				width: 11px
-				height: 11px 
+				height: 11px
 			&.active
 				span
 					width: 21px
@@ -287,46 +373,104 @@ div.title_circle
 				justify-content: space-between
 				padding: 6px 0
 				position: relative
-				.header_menu
-					display: flex
-					padding: 0
-					list-style: none
-					&>li
-						a
-							font-family: 'Oswald'
-							font-style: normal
-							font-weight: 400
-							font-size: 24.1546px
-							line-height: 36px
-							margin: 0 28px
-						&.active>ul 
-							display: block
-
-							
-						&>ul
-							display: none
+				@include respond(_1024)
+					justify-content: center
+				nav
+					@include respond(_1024)
+						position: absolute
+						right: 0
+					.mobile_menu
+						display: none
+						.menu_close_btn
 							position: absolute
-							background-color: #FFFFFF
-							top: 100%
-							max-width: 297px
-							width: 100%
-							z-index: 99
-							padding: 0
-							list-style: none
-
-							&>li
-								cursor: pointer
-								&:hover
-									background-color: #FFC629
-									&>a 
-										color: white
+							top: -1050%
+							left: 0
+						&.active
+							position: relative
+							z-index: 999
+						@include respond(_1024)
+							display: flex
+							align-items: center
+							justify-content: flex-end
+						.burger_menu
+							position: relative
+							width: 24px
+							height: 18px
+							&::before,
+							&::after
+								content: ''
+								position: absolute
+								background: #fff
+								border-radius: 2px
+								width: 24px
+								height: 3px
+								left: 0
+								transition: all 0.4s linear
+							&::before
+								top: 0
+							&::after
+								bottom: 0
+							span
+								position: absolute
+								background: #fff
+								border-radius: 2px
+								left: 0
+								width: 24px
+								height: 3px
+								top: 7px
+								transition: all 0.4s linear
+							&.active
+								span
+									transform: scale(0)
+									transition: all 0.4s linear
+								&::before,
+								&::after
+									top: 9px
+									transition: all 0.3s linear
+									width: 20px
+								&::before
+									transform: rotate(45deg)
+								&::after
+									transform: rotate(-45deg)
+					.header_menu
+						display: flex
+						padding: 0
+						list-style: none
+						@include respond(_1024)
+							display: none
+						&>li
+							a
+								font-family: 'Oswald'
+								font-style: normal
+								font-weight: 400
+								font-size: 24.1546px
+								line-height: 36px
+								margin: 0 28px
+							&.active>ul
+								display: block
+							&>ul
+								display: none
+								position: absolute
+								background-color: #FFFFFF
+								top: 100%
+								max-width: 297px
+								width: 100%
+								z-index: 99
+								padding: 0
+								list-style: none
+								&>li
+									cursor: pointer
+									&:hover
+										background-color: #FFC629
+										&>a
+											color: white
 
 				.header_contact
 					display: flex
+					@include respond(_1024)
+						display: none
 					a
 						position: relative
-						font-family: 'Montserrat'
-						font-style: normal
 						font-weight: 500
 						font-size: 18.1271px
 						line-height: 22px
@@ -334,14 +478,19 @@ div.title_circle
 						img
 							margin-right: 13px
 				.header_networks
+					@include respond(_1024)
+						display: none
 					a
 						margin: 0 23px
+				.header_search
+					@include respond(_1024)
+						display: none
 	.about_us
 		margin-top: 40px
 		position: relative
 		&::before
-			background: #FFC629	
-			border-radius: 0px 150px 150px 0px	
+			background: #FFC629
+			border-radius: 0px 150px 150px 0px
 			width: 50px
 			height: 107px
 			content: ""
@@ -374,6 +523,24 @@ div.title_circle
 	.trust_us
 		margin-top: 10%
 		position: relative
+		.trust_us_img
+			position: absolute
+			top: 2%
+			right: 0
+			img
+				border-radius: 150px 0px 0px 0px
+				height: 100%
+				width: 100%
+				@include respond(_1440)
+					border-radius: 0
+
+			@include respond(_1440)
+				position: relative
+				max-height: 328px
+				display: flex
+				align-items: center
+				overflow: hidden
+				margin-bottom: 14px
 		.trust_us_inner
 			.trust_us_cards
 				.trust_us_card
@@ -386,23 +553,28 @@ div.title_circle
 					flex-direction: column
 					justify-content: center
 					margin-bottom: 15px
-					h2
+					h4
 						margin-bottom: 20px
-
+						width: fit-content
 					p
 						color: #fff
 						width: 50%
-					&:nth-child(2)				
+						font-weight: 500
+						font-size: 24.1546px
+						line-height: 130.4%
+						@include respond(_1440)
+							width: 100%
+
+					&:nth-child(2)
 						margin-left: 6%
 						background: rgba(240, 129, 67, 0.9)
-					&:nth-child(3)				
+					&:nth-child(3)
 						margin-left: 12%
 						background: rgba(255, 198, 41, 0.9)
-			img
-				position: absolute
-				top:2%
-				right: 0
-				border-radius: 150px 0px 0px 0px
+					@include respond(_1440)
+						&:nth-child(2),&:nth-child(3)
+							margin: 0 0 15px 0
+
 	.our_portfoli
 		.portfolio
 			.grid
@@ -456,9 +628,12 @@ div.title_circle
 				padding: 45px 120px
 		.know_price_inner
 			padding: 66px 120px
-
 			p
 				max-width: 775px
+				font-weight: 700
+				font-size: 32px
+				line-height: 39px
+				color: #061B38
 			.know_price_btn_wrap
 				top: -40%
 				bottom: -40%
@@ -474,16 +649,10 @@ div.title_circle
 							top: 60%
 							background: url("../img/call_back_arrow_blue.png")
 							background-repeat: no-repeat
-			p
-				font-family: 'Montserrat'
-				font-style: normal
-				font-weight: 700
-				font-size: 32px
-				line-height: 39px
-				color: #061B38
 	.our_services
 		margin-top: 72px
 		.our_services_inner
+			margin-top: 84px
 			.our_services_price
 				display: flex
 				flex-wrap: wrap
@@ -491,7 +660,7 @@ div.title_circle
 				.price_box
 					max-width: 504px
 					max-height: 504px
-					padding: 192px 95px
+					padding: 200px 95px
 					border-radius: 50%
 					display: flex
 					flex-direction: column
@@ -499,6 +668,11 @@ div.title_circle
 					justify-content: center
 					transition: all .3s ease
 					margin-bottom: 22px
+					@include respond(_1024)
+						max-width: 136.13px
+						max-height: 93.5px
+						padding: 0
+					
 					img
 						border-radius: 50%
 						position: absolute
@@ -529,7 +703,7 @@ div.title_circle
 				justify-content: space-between
 				width: 84%
 				.row
-					width:50%
+					width: 50%
 					.stages
 						position: relative
 						p
@@ -587,23 +761,27 @@ div.title_circle
 					line-height: 131.4%
 					max-width: 436px
 				a
-					font-family: 'Montserrat'
-					font-style: normal
 					font-weight: 500
 					font-size: 24px
 					line-height: 29px
 					color: #FFFFFF
+					&:hover
+						color: #061B38
 				.footer_title,.footer_contact
 					display: flex
 					flex-direction: column
 				.footer_contact
-					p,a 
+					p,a
 						margin-bottom: 51px
+						img
+							margin-right: 14px
 					.presentation_download
 						display: flex
 						flex-direction: column
 						a
 							margin-bottom: 32px
+							img
+								margin-right: 22px
 				.footer_title
 					p
 						margin-bottom: 35px
@@ -616,13 +794,13 @@ div.title_circle
 						&::before
 							content: ''
 							display: inline-block
-							height:16px
+							height: 16px
 							width: 16px
 							vertical-align: middle
-							border-radius:50%
-							background-color:#fff
-							margin-right:28px
-							
+							border-radius: 50%
+							background-color: #fff
+							margin-right: 28px
+
 			.footer_networks
 				display: flex
 				justify-content: flex-end
@@ -644,9 +822,103 @@ div.title_circle
 					a
 						color: #fff
 						margin-right: 8px
-				
+.call_back_modal_wrapper
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	z-index: 999
+	// overflow-x: hidden
+	// overflow-y: auto
+	background: rgba(44, 44, 44, 0.8)
+	display: none
+	height: -webkit-fill-available
+	.call_back_modal
+		background-color: #fff
+		background: url("../img/modal_bg_img.png") no-repeat #fff
+		background-position: right
+		border-radius: 150px 0px
+		padding: 79px 84px
+		position: relative
+		max-width: 843px
+		max-height: 1013px
+		margin: 58px auto
+		@include respond(_1024)
+			max-width: 100%
+			padding: 20px
+		.close_modal_btn
+			position: absolute
+			right: 26px
+			top: 0
+			cursor: pointer
+		.call_back_success
+			display: none
+			flex-direction: column
+			align-items: center
+			.close_modal_btn
+				float: none
+		.modal_bg_img
+			position: absolute
+			top: 0
+			right: 0
+		.mailing_content
+			h4
+				font-weight: 400
+				font-size: 66.2535px
+				line-height: 98px
+				color: #FFC629
+				text-align: left
+				@include respond(_425)
 
+			p
+				font-weight: 400
+				font-size: 24.15px
+				line-height: 29px
+				color: #515151
+				margin-top: 70px
+				@include respond(_425)
+					font-weight: 400
+					font-size: 15px
+					line-height: 24px
+			.mailing_form
+				display: flex
+				flex-direction: column
+				align-items: center
+				margin-top: 36px
+				.default_btn
+					padding: 27px 117px
+					width: fit-content
+					margin: 0
+				.form_inputs
+					width: 100%
+					margin-bottom: 44px
+					input
+						width: 100%
+						font-weight: 400
+						font-size: 24.15px
+						line-height: 29px
+						color: #515151
+						border: 2px solid #676767
+						box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25)
+						border-radius: 48px
+						padding: 27px
+						margin-top: 36px
+					.checkbox_input
+						font-weight: 700
+						font-size: 24.15px
+						line-height: 29px
+						color: #FFC629
+						margin-top: 29px
+						input
+							margin: 0 8px 0 0
+							border: 0
+							width: 33px
+							height: 33px
+							border: 2px solid #676767
+							filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25))
+							border-radius: 5px
 
-
-			
-	
+					@include respond(_1024)
+						flex-direction: column
+						align-items: center
