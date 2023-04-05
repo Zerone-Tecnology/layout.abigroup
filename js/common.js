@@ -1,23 +1,23 @@
-$(function() {
+$(function () {
 
 	//SVG Fallback
-	if(!Modernizr.svg) {
-		$("img[src*='svg']").attr("src", function() {
+	if (!Modernizr.svg) {
+		$("img[src*='svg']").attr("src", function () {
 			return $(this).attr("src").replace(".svg", ".png");
 		});
 	};
 
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("form").submit(function() { //Change
+	$("form").submit(function () { //Change
 		var th = $(this);
 		$.ajax({
 			type: "POST",
 			url: "mail.php", //Change
 			data: th.serialize()
-		}).done(function() {
+		}).done(function () {
 			alert("Thank you!");
-			setTimeout(function() {
+			setTimeout(function () {
 				// Done Functions
 				th.trigger("reset");
 			}, 1000);
@@ -35,38 +35,45 @@ $(function() {
 
 	// };
 
-	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
-	
+	$("img, a").on("dragstart", function (event) { event.preventDefault(); });
+
 });
 
-$(window).load(function() {
+$(window).load(function () {
 
 	$(".loader_inner").fadeOut();
 	$(".loader").delay(400).fadeOut("slow");
 
-	$("#header_menu > li").click(function(){
+	$("#header_menu > li").click(function () {
 		$(this).toggleClass("active");
 	});
 	$('.review-carousel').owlCarousel({
-		loop:true,
-		margin:100,
-		stagePadding:100,
-		nav:true,
+		loop: true,
+		margin: 100,
+		stagePadding: 100,
+		nav: true,
 		dots: false,
-		navText:['<img src="img/prev_arrow_yellow.png">', '<img src="img/next_arrow_yellow.png">'],
-		items:3
+		navText: ['<img src="img/prev_arrow_yellow.png">', '<img src="img/next_arrow_yellow.png">'],
+		items: 3
 	})
 	$('.banner-carousel').owlCarousel({
-		loop:true,
-		margin:10,
-		nav:true,
-		navText:['<img src="img/left_arrow.png">', '<img src="img/right_arrow.png">'],
-		items:1
+		loop: true,
+		margin: 10,
+		nav: true,
+		navText: ['<img src="img/left_arrow.png">', '<img src="img/right_arrow.png">'],
+		items: 1
 	})
-	
+
 	$('.grid').masonry({
 		itemSelector: '.grid-item',
-		columnWidth: 200
-	  });
-	
+		columnWidth: 100
+	});
+
+	$('.open_modal').click(function () {
+		$('.call_back_modal_wrapper').fadeIn("slow");
+	});
+	$('.close_modal_btn').click(function () {
+		$('.call_back_modal_wrapper').fadeOut("slow");
+	});
+
 });
