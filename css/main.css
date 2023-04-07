@@ -187,6 +187,13 @@ p {
     font-size: 18px;
   }
 }
+@media (max-width: 425px) {
+  p {
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 11px;
+  }
+}
 
 ul {
   list-style: disc;
@@ -443,6 +450,7 @@ input {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: -9;
 }
 
 .review-carousel .item {
@@ -887,6 +895,10 @@ input {
 .wrapper .our_portfoli .portfolio .grid-item:nth-child(1) {
   height: 800px;
 }
+.wrapper .our_portfoli .portfolio .grid-item:nth-child(1) .grid_item_title p {
+  width: -moz-min-content;
+  width: min-content;
+}
 .wrapper .our_portfoli .portfolio .grid-item:nth-child(2) {
   width: 65%;
   height: 800px;
@@ -897,6 +909,10 @@ input {
 }
 .wrapper .our_portfoli .portfolio .grid-item:nth-child(4) {
   border-radius: 50%;
+}
+.wrapper .our_portfoli .portfolio .grid-item:nth-child(4) .grid_item_title p {
+  width: -moz-min-content;
+  width: min-content;
 }
 .wrapper .our_portfoli .portfolio .grid-item .grid_item_title {
   height: inherit;
@@ -917,8 +933,6 @@ input {
   color: #FFFFFF;
   z-index: 9;
   border-bottom: 8px #FFC629 solid;
-  width: -moz-min-content;
-  width: min-content;
 }
 .wrapper .our_portfoli .portfolio .grid-item:hover .grid_item_title {
   display: flex;

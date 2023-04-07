@@ -159,6 +159,11 @@ p
 		font-size: 22px
 	@include respond(_768)
 		font-size: 18px
+	@include respond(_425)
+		font-weight: 500
+		font-size: 9px
+		line-height: 11px
+	
 	
 	
 
@@ -362,6 +367,7 @@ input
 	position: absolute
 	top: 0
 	right: 0
+	z-index: -9
 .review-carousel
 	.item
 		cursor: pointer
@@ -730,6 +736,9 @@ input
 					position: relative
 					&:nth-child(1)
 						height: 800px
+						.grid_item_title
+							p
+								width: min-content
 					&:nth-child(2)
 						width: 65%
 						height: 800px
@@ -738,6 +747,9 @@ input
 						width: 65%
 					&:nth-child(4)
 						border-radius: 50%
+						.grid_item_title
+							p
+								width: min-content
 					.grid_item_title
 						height: inherit    					
 						width: 100%
@@ -755,8 +767,8 @@ input
 							text-transform: uppercase
 							color: #FFFFFF
 							z-index: 9
-							border-bottom: 8px #FFC629 solid	
-							width: min-content	
+							border-bottom: 8px #FFC629 solid
+							// width: min-content
 
 					&:hover
 						.grid_item_title
