@@ -911,6 +911,11 @@ input {
 .wrapper .know_price.leave_request .know_price_inner {
   padding: 45px 120px;
 }
+@media (max-width: 1440px) {
+  .wrapper .know_price.leave_request .know_price_inner {
+    padding: 45px 0;
+  }
+}
 @media (max-width: 1024px) {
   .wrapper .know_price.leave_request .know_price_inner {
     padding: 10px 0;
@@ -923,6 +928,11 @@ input {
 }
 .wrapper .know_price .know_price_inner {
   padding: 66px 120px;
+}
+@media (max-width: 1440px) {
+  .wrapper .know_price .know_price_inner {
+    padding: 60px 0;
+  }
 }
 @media (max-width: 1024px) {
   .wrapper .know_price .know_price_inner {
@@ -943,7 +953,7 @@ input {
 }
 @media (max-width: 1440px) {
   .wrapper .know_price .know_price_inner p {
-    max-width: 64%;
+    max-width: 58%;
     font-size: 26px;
   }
 }
@@ -1069,7 +1079,7 @@ input {
   margin-top: 186px;
   position: relative;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
   .wrapper .working_process .working_process_inner img {
     display: none;
   }
@@ -1079,7 +1089,7 @@ input {
   justify-content: space-between;
   width: 84%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
   .wrapper .working_process .working_process_inner .stages_of_work {
     width: 100%;
   }

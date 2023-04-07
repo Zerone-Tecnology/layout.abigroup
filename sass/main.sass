@@ -752,6 +752,9 @@ input
 		&.leave_request
 			.know_price_inner
 				padding: 45px 120px
+				@include respond(_1440)
+					padding: 45px 0
+				
 				@include respond(_1024)
 					padding: 10px 0
 				@include respond(_768)
@@ -762,6 +765,9 @@ input
 				
 		.know_price_inner
 			padding: 66px 120px
+			@include respond(_1440)
+				padding: 60px 0
+			
 			@include respond(_1024)
 				padding: 25px 0
 			@include respond(_425)
@@ -774,7 +780,7 @@ input
 				line-height: 39px
 				color: #061B38
 				@include respond(_1440)
-					max-width: 64%
+					max-width: 58%
 					font-size: 26px
 				@include respond(_768)
 					font-size: 18px
@@ -796,8 +802,6 @@ input
 					border: 5px solid #061B38
 					@include respond(_425)
 						border: 1.34916px solid #061B38
-					
-
 					&:hover
 						background: #061B38
 						color: #fff
@@ -870,7 +874,7 @@ input
 		margin-top: 186px
 		position: relative
 		.working_process_inner
-			@include respond(_1024)
+			@include respond(_1300)
 				img
 					display: none
 			
@@ -878,7 +882,7 @@ input
 				display: flex
 				justify-content: space-between
 				width: 84%
-				@include respond(_1024)
+				@include respond(_1300)
 					width: 100%
 				@include respond(_768)
 					flex-direction: column
