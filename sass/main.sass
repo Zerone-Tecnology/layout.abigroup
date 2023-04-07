@@ -44,7 +44,10 @@ body textarea:required:valid
 
 // respond mixin
 @mixin respond($size)
-	@if $size == _425
+	@if $size == _320
+		@media (max-width: 320px)
+			@content
+	@else if $size == _425
 		@media (max-width: 425px)
 			@content
 	@else if $size == _768
@@ -120,6 +123,11 @@ h3
 	@include respond(_768)
 		font-size: 40px
 		line-height: 40px
+	@include respond(_425)
+		font-weight: 700
+		font-size: 20px
+		line-height: 20px
+
 	
 	
 	
@@ -135,6 +143,11 @@ h4
 		font-size: 34px
 	@include respond(_768)
 		font-size: 22px
+	@include respond(_425)
+		font-weight: 400
+		font-size: 8.59781px
+		line-height: 115%
+
 	
 
 h5
@@ -143,6 +156,11 @@ h5
 	line-height: 44px
 	@include respond(_1024)
 		font-size: 26px
+	@include respond(_425)
+		font-weight: 700
+		font-size: 16px
+		line-height: 131.4%
+
 	
 h6
 	font-weight: 700
@@ -150,6 +168,11 @@ h6
 	// line-height: 362px
 	text-transform: uppercase
 	color: rgba(255, 198, 41, 0.74)
+	@include respond(_425)
+		font-weight: 700
+		font-size: 69.597px
+		line-height: 85px
+
 p
 	font-weight: 500
 	font-size: 24.15px
@@ -163,6 +186,7 @@ p
 		font-weight: 500
 		font-size: 9px
 		line-height: 11px
+		
 	
 	
 	
@@ -180,6 +204,7 @@ ul
 		font-weight: 500
 		font-size: 9px
 		line-height: 158.9%
+		padding: 0 0 0 15px
 	
 	
 .sm_container
@@ -196,6 +221,9 @@ ul
 		top: -90%
 	@include respond(_1024)
 		top: -60%
+	@include respond(_425)
+		top: -100%
+	
 	
 
 	.know_price_btn
@@ -246,11 +274,21 @@ ul
 				left: -70%
 				top: 45%
 				transition: all .3s ease
+				@include respond(_425)
+					background-image: url('../img/little_callback_arrow.png')					
+					background-repeat: no-repeat
+					left: -70%
+					top: 50%
+					transition: all .3s ease
+				
 div.title_circle
 	h1
 		margin-left: 75px
 		@include respond(_768)
 			margin: 0 0 0 50px
+		@include respond(_425)
+			margin: 0 0 0 28px
+		
 	&::before
 		background: #FFC629
 		border-radius: 0px 150px 150px 0px
@@ -261,6 +299,10 @@ div.title_circle
 		@include respond(_768)
 			width: 36px
 			height: 70px
+		@include respond(_425)
+			width: 9px
+			height: 20px
+		
 		
 
 input
@@ -276,8 +318,13 @@ input
 	margin-top: 36px
 .banner-carousel
 	.item
+		min-height: 240px
+		position: relative
 		img
 			border-radius: 0 0 0 10%
+			height: 100%
+			min-height: 240px
+
 		&::before
 			background: rgba(0, 0, 0, 0.33)
 			background-repeat: no-repeat
@@ -299,6 +346,9 @@ input
 				padding: 6%
 			@include respond(_768)
 				padding: 4% 8%
+			@include respond(_425)
+				padding: 3% 5%
+			
 			
 
 			.banner_article_left
@@ -371,17 +421,18 @@ input
 .review-carousel
 	.item
 		cursor: pointer
-		&:hover
-			&::before
-				content: url("../img/popup_icon.png")
-				width: 100%
-				height: 100%
-				z-index: 9
-				position: absolute
-				background: rgba(255, 198, 41, 0.71)
-				display: flex
-				align-items: center
-				justify-content: center
+		// &:hover
+		// 	&::after
+		// 		content: url("../img/popup_icon.png")
+		// 		width: 100%
+		// 		height: 100%
+		// 		z-index: 9
+		// 		position: absolute
+		// 		background: rgba(255, 198, 41, 0.71)
+		// 		display: flex
+		// 		align-items: center
+		// 		justify-content: center
+		// 		top: 0
 		img
 			// box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.25)
 .owl-nav
@@ -417,10 +468,16 @@ input
 	padding: 46px 0
 	border-radius: 100px
 	margin: auto
-	margin-top: 192px
+	margin-top: 10%
 	display: block
 	@include respond(_1024)
 		font-size: 30px
+	@include respond(_425)	
+		font-weight: 400
+		font-size: 16px
+		line-height: 100.2%
+		width: 80%
+		padding: 14px 0
 	
 .wrapper
 	.header
@@ -608,19 +665,23 @@ input
 			display: flex
 			.about_us_left
 				max-width: 74%
+				@include respond(_1024)
+					max-width: 100%
+				
 				.about_us_title 
 					@include respond(_1024)
 						max-width: 100%
 						p
 							margin-top: 42px
-					@include respond(_425)
-						p
-							margin: 0
+					
 				.about_us_description
 					display: flex
 					flex-wrap: wrap
 					margin-top: 60px
 					justify-content: space-between
+					@include respond(_425)
+						margin: 0
+					
 					.description_blog
 						max-width: 590px
 						margin-bottom: 59px
@@ -658,6 +719,8 @@ input
 					max-width: 100%
 					height: 100%
 
+					
+
 			@include respond(_1440)
 				position: relative
 				max-height: 328px
@@ -665,6 +728,9 @@ input
 				align-items: center
 				overflow: hidden
 				margin: 40px 0 14px 0
+			@include respond(_425)
+				max-height: 100px
+			
 		.trust_us_inner
 			.trust_us_cards
 				.trust_us_card
@@ -736,8 +802,13 @@ input
 					margin-bottom: 15px
 					cursor: pointer
 					position: relative
+					@include respond(_768)
+							height: 200px
 					&:nth-child(1)
 						height: 800px
+						@include respond(_768)
+							height: 400px
+						
 						.grid_item_title
 							p
 								width: min-content
@@ -745,6 +816,8 @@ input
 						width: 65%
 						height: 800px
 						border-radius: 5em
+						@include respond(_768)
+							height: 400px
 					&:nth-child(3)
 						width: 65%
 					&:nth-child(4)
@@ -779,6 +852,9 @@ input
 							filter: blur(14.1582px)
 	.review	
 		margin-top: 83px
+		.review_inner
+			@include respond(_768)
+			margin-top: 10%
 	.know_price
 		background-color: #FFC629
 		overflow: hidden
@@ -843,6 +919,12 @@ input
 							top: 60%
 							background: url("../img/call_back_arrow_blue.png")
 							background-repeat: no-repeat
+							@include respond(_425)
+								background: url("../img/little_call_back_blue.png")
+								background-repeat: no-repeat
+								top: 60%
+
+						
 	.our_services
 		margin-top: 72px
 		.our_services_inner
@@ -871,6 +953,14 @@ input
 					@include respond(_768)
 						width: 200px
 						height: 200px
+					@include respond(_425)
+						width: 100px
+						height: 100px
+					@include respond(_320)
+						width: 91px
+						height: 91px
+					
+					
 					
 					
 					
@@ -890,6 +980,12 @@ input
 						@include respond(_768)
 							width: 200px
 							height: 200px
+						@include respond(_425)
+							width: 100px
+							height: 100px
+						@include respond(_320)
+							width: 91px
+							height: 91px
 
 					h4,p
 						text-align: center
@@ -935,6 +1031,11 @@ input
 							font-size: 36px
 							line-height: 44px
 							color: #515151
+							@include respond(_425)
+								font-weight: 700
+								font-size: 8.42862px
+								line-height: 10px
+
 
 	.company_features
 		background: #FFC629
@@ -951,6 +1052,8 @@ input
 				max-height: 140px
 			@include respond(_768)
 				max-height: 100px
+			@include respond(_425)
+				max-height: 50px	
 			
 			
 			
@@ -974,6 +1077,10 @@ input
 				@include respond(_768)
 					width: 140px
 					height: 140px
+				@include respond(_425)
+					width: 61px
+					height: 61px
+					border: 1.0625px solid #FFFFFF
 				
 				
 				p
@@ -992,6 +1099,11 @@ input
 						line-height: 106.9%
 					@include respond(_768)
 						font-size: 12px
+					@include respond(_425)
+						font-weight: 700
+						font-size: 5.87344px
+						line-height: 106.9%
+
 					
 					
 					
@@ -1011,6 +1123,9 @@ input
 					color: #fff
 					text-transform: uppercase
 					margin-bottom: 51px
+					@include respond(_425)
+						margin: 0 0 15px 0
+					
 				p
 					color: #fff
 					font-weight: 500
@@ -1019,6 +1134,11 @@ input
 					max-width: 436px
 					@include respond(_1024)
 						font-size: 18px
+					@include respond(_425)
+						font-weight: 500
+						font-size: 9px
+						line-height: 131.4%
+
 
 					
 				a
@@ -1028,6 +1148,11 @@ input
 					color: #FFFFFF
 					@include respond(_1024)
 						font-size: 18px
+					@include respond(_425)
+						font-weight: 500
+						font-size: 9px
+						line-height: 131.4%
+
 					&:hover
 						color: #061B38
 				.footer_title,.footer_contact
@@ -1036,10 +1161,16 @@ input
 				.footer_contact
 					p,a
 						margin-bottom: 51px
+						@include respond(_425)
+							margin-bottom: 20px
+						
 						img
 							margin-right: 14px
 							@include respond(_1024)
 								margin-right: 6px
+							@include respond(_425)
+								width: 14px
+							
 							
 					.presentation_download
 						display: flex
@@ -1061,6 +1192,11 @@ input
 						margin-bottom: 35px
 						@include respond(_1024)
 							font-size: 18px
+						@include respond(_425)
+							font-weight: 500
+							font-size: 9px
+							line-height: 131.4%
+
 						&::before
 							content: ''
 							display: inline-block
@@ -1082,16 +1218,35 @@ input
 				a
 					margin-left: 56.84px
 					margin-bottom: 25.5px
+					@include respond(_425)
+						margin: 0 0 10px 10px
+				img 
+					@include respond(_425)
+						width: 14px
+						height: 14px
+					
+					
+
 			.footer_copyright_item
 				img
 					width: 50px
 					height: 50px
+					@include respond(_425)
+						width: 12.33px
+						height: 12.33px
+					
+					
 				p
 					font-weight: 500
 					font-size: 24.1546px
 					line-height: 131.4%
 					color: #fff
 					margin-top: 20px
+					@include respond(_425)
+						font-weight: 500
+						font-size: 9px
+						line-height: 131.4%
+
 					a
 						color: #fff
 						margin-right: 8px

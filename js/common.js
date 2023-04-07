@@ -50,7 +50,7 @@ $(window).load(function () {
 	});
 	$('.review-carousel').owlCarousel({
 		loop: true,
-		margin: 100,
+		// margin: 100,
 		stagePadding: 100,
 		nav: true,
 		dots: false,
@@ -64,6 +64,15 @@ $(window).load(function () {
 		navText: ['<img src="img/left_arrow.png">', '<img src="img/right_arrow.png">'],
 		items: 1
 	})
+	$('.item').click(function () {
+		$(this).find("img").magnificPopup({
+			animateOut: 'animate__fadeIn',
+			items: {
+				src: $(this).find("img").prop("src")
+			},
+			type: 'image'
+		});
+	});
 
 	// $('.grid').masonry({
 	// 	itemSelector: '.grid-item',
