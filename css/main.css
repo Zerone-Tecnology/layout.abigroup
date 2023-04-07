@@ -739,15 +739,15 @@ input {
   max-width: 74%;
 }
 @media (max-width: 1024px) {
-  .wrapper .about_us .about_us_inner .about_us_left {
+  .wrapper .about_us .about_us_inner .about_us_left .about_us_title {
     max-width: 100%;
   }
-  .wrapper .about_us .about_us_inner .about_us_left p {
+  .wrapper .about_us .about_us_inner .about_us_left .about_us_title p {
     margin-top: 42px;
   }
 }
 @media (max-width: 425px) {
-  .wrapper .about_us .about_us_inner .about_us_left p {
+  .wrapper .about_us .about_us_inner .about_us_left .about_us_title p {
     margin: 0;
   }
 }
@@ -793,10 +793,14 @@ input {
   border-radius: 150px 0px 0px 0px;
   height: 100%;
   width: 100%;
+  max-width: 795px;
+  height: 1149px;
 }
 @media (max-width: 1440px) {
   .wrapper .trust_us .trust_us_img img {
     border-radius: 0;
+    max-width: 100%;
+    height: 100%;
   }
 }
 @media (max-width: 1440px) {
