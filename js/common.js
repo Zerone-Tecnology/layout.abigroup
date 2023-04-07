@@ -44,8 +44,9 @@ $(window).load(function () {
 	$(".loader_inner").fadeOut();
 	$(".loader").delay(400).fadeOut("slow");
 
-	$(".two_level_menu").click(function () {
-		$(this).toggleClass("active");
+	$(".header_menu > li").click(function () {
+		$(".header_menu > li").removeClass("active");
+		$(this).addClass("active");
 	});
 	$('.review-carousel').owlCarousel({
 		loop: true,

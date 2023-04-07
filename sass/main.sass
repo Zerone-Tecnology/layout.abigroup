@@ -494,7 +494,6 @@ input
 								background-color: #FFC629
 								&>a
 									color: white
-							
 							a
 								font-family: 'Oswald'
 								font-style: normal
@@ -502,6 +501,9 @@ input
 								font-size: 24.1546px
 								line-height: 36px
 								margin: 0 28px
+								@include respond(_1440)
+									font-size: 16.1546px
+								
 							&.active>ul
 								display: block
 							&>ul
@@ -540,13 +542,21 @@ input
 						font-size: 18.1271px
 						line-height: 22px
 						margin: 0 17.5px
+						@include respond(_1440)
+							font-size: 16.1271px
+						
 						img
 							margin-right: 13px
+							
 				.header_networks
 					@include respond(_1024)
 						display: none
 					a
 						margin: 0 23px
+						@include respond(_1440)
+							margin: 0 14px
+
+						
 				.header_search
 					display: flex
 					align-items: center
@@ -577,7 +587,7 @@ input
 		.about_us_inner
 			display: flex
 			.about_us_left
-				max-width: 65%
+				max-width: 74%
 				@include respond(_1024)
 					max-width: 100%
 					p
@@ -605,13 +615,15 @@ input
 				position: absolute
 				right: 0
 				top: 8%
+				width: 26%
 				img
 					border-radius: 150px 0 0 150px
+					width: -webkit-fill-available
 					@include respond(_1024)
 						display: none
 					
 	.trust_us
-		margin-top: 10%
+		margin-top: 20%
 		position: relative
 		.trust_us_img
 			position: absolute
@@ -751,7 +763,7 @@ input
 		.know_price_inner
 			padding: 66px 120px
 			@include respond(_1024)
-				padding: 30px 0
+				padding: 25px 0
 			@include respond(_425)
 				padding: 15px 0
 			
@@ -761,8 +773,8 @@ input
 				font-size: 32px
 				line-height: 39px
 				color: #061B38
-				@include respond(_1024)
-					max-width: 66%
+				@include respond(_1440)
+					max-width: 64%
 					font-size: 26px
 				@include respond(_768)
 					font-size: 18px
@@ -916,6 +928,9 @@ input
 				border: 6px solid #FFFFFF
 				border-radius: 50%
 				@include respond(_1440)
+					width: 270.57px
+					height: 270.57px
+				@include respond(_1024)
 					width: 190.57px
 					height: 190.57px
 				@include respond(_768)

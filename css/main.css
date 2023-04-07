@@ -610,6 +610,11 @@ input {
   line-height: 36px;
   margin: 0 28px;
 }
+@media (max-width: 1440px) {
+  .wrapper .header .sm_container .header_inner nav .header_menu > li a {
+    font-size: 16.1546px;
+  }
+}
 .wrapper .header .sm_container .header_inner nav .header_menu > li.active > ul {
   display: block;
 }
@@ -659,6 +664,11 @@ input {
   line-height: 22px;
   margin: 0 17.5px;
 }
+@media (max-width: 1440px) {
+  .wrapper .header .sm_container .header_inner .header_contact a {
+    font-size: 16.1271px;
+  }
+}
 .wrapper .header .sm_container .header_inner .header_contact a img {
   margin-right: 13px;
 }
@@ -669,6 +679,11 @@ input {
 }
 .wrapper .header .sm_container .header_inner .header_networks a {
   margin: 0 23px;
+}
+@media (max-width: 1440px) {
+  .wrapper .header .sm_container .header_inner .header_networks a {
+    margin: 0 14px;
+  }
 }
 .wrapper .header .sm_container .header_inner .header_search {
   display: flex;
@@ -695,7 +710,7 @@ input {
   display: flex;
 }
 .wrapper .about_us .about_us_inner .about_us_left {
-  max-width: 65%;
+  max-width: 74%;
 }
 @media (max-width: 1024px) {
   .wrapper .about_us .about_us_inner .about_us_left {
@@ -728,9 +743,11 @@ input {
   position: absolute;
   right: 0;
   top: 8%;
+  width: 26%;
 }
 .wrapper .about_us .about_us_inner .about_us_right img {
   border-radius: 150px 0 0 150px;
+  width: -webkit-fill-available;
 }
 @media (max-width: 1024px) {
   .wrapper .about_us .about_us_inner .about_us_right img {
@@ -738,7 +755,7 @@ input {
   }
 }
 .wrapper .trust_us {
-  margin-top: 10%;
+  margin-top: 20%;
   position: relative;
 }
 .wrapper .trust_us .trust_us_img {
@@ -909,7 +926,7 @@ input {
 }
 @media (max-width: 1024px) {
   .wrapper .know_price .know_price_inner {
-    padding: 30px 0;
+    padding: 25px 0;
   }
 }
 @media (max-width: 425px) {
@@ -924,9 +941,9 @@ input {
   line-height: 39px;
   color: #061B38;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
   .wrapper .know_price .know_price_inner p {
-    max-width: 66%;
+    max-width: 64%;
     font-size: 26px;
   }
 }
@@ -1126,6 +1143,12 @@ input {
   border-radius: 50%;
 }
 @media (max-width: 1440px) {
+  .wrapper .company_features .company_features_inner .features_block {
+    width: 270.57px;
+    height: 270.57px;
+  }
+}
+@media (max-width: 1024px) {
   .wrapper .company_features .company_features_inner .features_block {
     width: 190.57px;
     height: 190.57px;
