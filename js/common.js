@@ -45,8 +45,12 @@ $(window).load(function () {
 	$(".loader").delay(400).fadeOut("slow");
 
 	$(".header_menu > li").click(function () {
-		$(".header_menu > li").removeClass("active");
-		$(this).addClass("active");
+		if($(this).hasClass("active")){
+			$(this).removeClass("active")
+		}else{
+			$(".header_menu > li").removeClass("active");
+			$(this).addClass("active");
+		}		
 	});
 	$('.review-carousel').owlCarousel({
 		loop: true,
