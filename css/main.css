@@ -555,6 +555,16 @@ input {
   font-weight: 700;
 }
 
+.error_404 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 729.851px;
+  line-height: 100%;
+  color: rgba(255, 198, 41, 0.68);
+  text-align: end;
+}
+
 .about_card_wrap {
   display: flex;
   flex-wrap: wrap;
