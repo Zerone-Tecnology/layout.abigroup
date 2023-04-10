@@ -73,6 +73,7 @@ h1 {
   line-height: 114.7%;
   color: #FFC629;
   margin: 0 0 17px 0;
+  text-transform: uppercase;
 }
 @media (max-width: 1300px) {
   h1 {
@@ -200,7 +201,7 @@ h6 {
 }
 
 p {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 24.15px;
   line-height: 29px;
   color: #515151;
@@ -343,15 +344,18 @@ ul {
 }
 
 div.title_circle h1 {
+  margin-left: 25px;
+}
+div.title_circle > h1 {
   margin-left: 75px;
 }
 @media (max-width: 768px) {
-  div.title_circle h1 {
+  div.title_circle > h1 {
     margin: 0 0 0 50px;
   }
 }
 @media (max-width: 425px) {
-  div.title_circle h1 {
+  div.title_circle > h1 {
     margin: 0 0 0 28px;
   }
 }
@@ -387,6 +391,25 @@ input {
   border-radius: 48px;
   padding: 27px;
   margin-top: 36px;
+}
+
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  margin-bottom: 80px;
+}
+.breadcrumb li {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+  color: #515151;
+}
+.breadcrumb li::after {
+  content: ">";
+  margin: 0 12px;
+}
+.breadcrumb li:last-child::after {
+  content: "";
 }
 
 .banner-carousel .item {
@@ -509,6 +532,39 @@ input {
     width: 5.5px;
     height: 5.5px;
   }
+}
+
+.about_card_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about_card_wrap .about_card {
+  width: 25%;
+  padding: 0 13px;
+  display: flex;
+  flex-direction: column;
+}
+.about_card_wrap .about_card p {
+  font-size: 26px;
+  line-height: 32px;
+}
+.about_card_wrap .about_card p.about_card_title {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.about_card_wrap .about_card p.about_card_description {
+  margin-bottom: 50px;
+}
+.about_card_wrap .about_card a {
+  font-weight: 400;
+  font-size: 24.15px;
+  line-height: 29.44px;
+  color: #FFC629;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.about_card_wrap .about_card a[href^="tel:"] {
+  color: #515151;
 }
 
 .bg_right_img {
@@ -1579,6 +1635,26 @@ input {
 .wrapper .footer .footer_inner .footer_copyright_item p a {
   color: #fff;
   margin-right: 8px;
+}
+.wrapper .partners {
+  margin-top: 50px;
+}
+.wrapper .partners h1 {
+  margin-bottom: 0;
+}
+.wrapper .services {
+  margin-top: 95px;
+}
+.wrapper .clients {
+  margin-top: 95px;
+}
+.wrapper .clients .clients_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.wrapper .clients .clients_wrap a {
+  width: 14%;
 }
 
 .call_back_modal_wrapper {

@@ -85,6 +85,7 @@ h1
 	line-height: 114.7%
 	color: #FFC629
 	margin: 0 0 17px 0
+	text-transform: uppercase
 	@include respond(_1300)
 		font-size: 64px
 	@include respond(_768)
@@ -174,7 +175,7 @@ h6
 		line-height: 85px
 
 p
-	font-weight: 500
+	font-weight: 400
 	font-size: 24.15px
 	line-height: 29px
 	color: #515151
@@ -283,6 +284,8 @@ ul
 				
 div.title_circle
 	h1
+		margin-left: 25px
+	& > h1
 		margin-left: 75px
 		@include respond(_768)
 			margin: 0 0 0 50px
@@ -316,6 +319,21 @@ input
 	border-radius: 48px
 	padding: 27px
 	margin-top: 36px
+.breadcrumb
+	list-style: none
+	display: flex
+	margin-bottom: 80px
+	li
+		font-weight: 700
+		font-size: 26px
+		line-height: 32px
+		color: #515151
+		&::after
+			content: ">"
+			margin: 0 12px
+		&:last-child
+			&::after
+				content: ""
 .banner-carousel
 	.item
 		min-height: 240px
@@ -412,7 +430,33 @@ input
 						width: 5.5px
 						height: 5.5px
 						// margin: 0
-					
+.about_card_wrap
+	display: flex
+	flex-wrap: wrap
+	// justify-content: space-between
+	.about_card
+		width: 25%
+		padding: 0 13px
+		display: flex
+		flex-direction: column
+
+		p
+			font-size: 26px
+			line-height: 32px
+			&.about_card_title
+				font-weight: 700
+				margin-bottom: 5px
+			&.about_card_description
+				margin-bottom: 50px
+		a
+			font-weight: 400
+			font-size: 24.15px
+			line-height: 29.44px
+			color: #FFC629
+			width: fit-content
+			&[href^="tel:"]
+				color: #515151
+
 .bg_right_img
 	position: absolute
 	top: 0
@@ -1250,6 +1294,22 @@ input
 					a
 						color: #fff
 						margin-right: 8px
+	.partners
+		margin-top: 50px
+		h1
+			margin-bottom: 0
+	.services
+		margin-top: 95px
+	.clients
+		margin-top: 95px
+		.clients_wrap
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			a
+				width: 14%
+
+
 .call_back_modal_wrapper
 	position: fixed
 	left: 0
