@@ -283,6 +283,7 @@ ul
 					transition: all .3s ease
 				
 div.title_circle
+	margin-top: 50px
 	h1
 		margin-left: 25px
 	& > h1
@@ -430,6 +431,16 @@ input
 						width: 5.5px
 						height: 5.5px
 						// margin: 0
+.card_title
+	font-weight: 700
+	margin-bottom: 5px
+.card_decription
+	font-weight: 500
+.bottom_50
+	margin-bottom: 50px !important
+.yellow_text
+	color: #FFC629
+	font-weight: 700
 .about_card_wrap
 	display: flex
 	flex-wrap: wrap
@@ -443,9 +454,6 @@ input
 		p
 			font-size: 26px
 			line-height: 32px
-			&.about_card_title
-				font-weight: 700
-				margin-bottom: 5px
 			&.about_card_description
 				margin-bottom: 50px
 		a
@@ -460,6 +468,11 @@ input
 .bg_right_img
 	position: absolute
 	top: 0
+	right: 0
+	z-index: -9
+.bg_right_img_mid
+	position: absolute
+	top: 5%
 	right: 0
 	z-index: -9
 .review-carousel
@@ -1308,8 +1321,38 @@ input
 			justify-content: center
 			a
 				width: 14%
-
-
+	.requisites
+		ul
+			margin-bottom: 90px
+			li
+				color: #515151
+				font-weight: 400
+				font-size: 26px
+				line-height: 32px
+		p
+			margin-bottom: 90px
+		.requisites_card_wrap
+			.requisites_card
+				display: flex
+				margin-bottom: 59px
+				.requisites_card_description
+					max-width: 744px
+					margin-left: 178px
+					p
+						margin: 0
+	.contact
+		p
+			margin-bottom: 90px
+		.contact_wrap
+			display: flex
+			justify-content: space-between
+			.contact_left
+				width: 70%
+			.contact_right
+				width: 24%
+			p
+				margin-bottom: 50px
+			
 .call_back_modal_wrapper
 	position: fixed
 	left: 0

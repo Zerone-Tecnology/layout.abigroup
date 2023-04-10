@@ -343,6 +343,9 @@ ul {
   }
 }
 
+div.title_circle {
+  margin-top: 50px;
+}
 div.title_circle h1 {
   margin-left: 25px;
 }
@@ -534,6 +537,24 @@ input {
   }
 }
 
+.card_title {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.card_decription {
+  font-weight: 500;
+}
+
+.bottom_50 {
+  margin-bottom: 50px !important;
+}
+
+.yellow_text {
+  color: #FFC629;
+  font-weight: 700;
+}
+
 .about_card_wrap {
   display: flex;
   flex-wrap: wrap;
@@ -547,10 +568,6 @@ input {
 .about_card_wrap .about_card p {
   font-size: 26px;
   line-height: 32px;
-}
-.about_card_wrap .about_card p.about_card_title {
-  font-weight: 700;
-  margin-bottom: 5px;
 }
 .about_card_wrap .about_card p.about_card_description {
   margin-bottom: 50px;
@@ -570,6 +587,13 @@ input {
 .bg_right_img {
   position: absolute;
   top: 0;
+  right: 0;
+  z-index: -9;
+}
+
+.bg_right_img_mid {
+  position: absolute;
+  top: 5%;
   right: 0;
   z-index: -9;
 }
@@ -1655,6 +1679,45 @@ input {
 }
 .wrapper .clients .clients_wrap a {
   width: 14%;
+}
+.wrapper .requisites ul {
+  margin-bottom: 90px;
+}
+.wrapper .requisites ul li {
+  color: #515151;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 32px;
+}
+.wrapper .requisites p {
+  margin-bottom: 90px;
+}
+.wrapper .requisites .requisites_card_wrap .requisites_card {
+  display: flex;
+  margin-bottom: 59px;
+}
+.wrapper .requisites .requisites_card_wrap .requisites_card .requisites_card_description {
+  max-width: 744px;
+  margin-left: 178px;
+}
+.wrapper .requisites .requisites_card_wrap .requisites_card .requisites_card_description p {
+  margin: 0;
+}
+.wrapper .contact p {
+  margin-bottom: 90px;
+}
+.wrapper .contact .contact_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .contact .contact_wrap .contact_left {
+  width: 70%;
+}
+.wrapper .contact .contact_wrap .contact_right {
+  width: 24%;
+}
+.wrapper .contact .contact_wrap p {
+  margin-bottom: 50px;
 }
 
 .call_back_modal_wrapper {
