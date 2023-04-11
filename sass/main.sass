@@ -325,9 +325,9 @@ input
 	display: flex
 	margin-bottom: 80px
 	li
-		font-weight: 700
-		font-size: 26px
-		line-height: 32px
+		font-weight: 700 !important
+		font-size: 26px	!important
+		line-height: 32px	!important
 		color: #515151
 		&::after
 			content: ">"
@@ -910,7 +910,7 @@ input
 							z-index: 9
 							border-bottom: 8px #FFC629 solid
 							// width: min-content
-
+							
 					&:hover
 						.grid_item_title
 							display: flex
@@ -1388,10 +1388,14 @@ input
 			.review_card
 				display: flex
 				padding: 93px 75px
+				@include respond(_1024)
+					flex-direction: column
 				&:nth-child(even)
 					flex-direction: row-reverse
 					background: rgba(255, 198, 41, 0.75)
 					border-radius: 150px 0px
+					@include respond(_1024)
+						flex-direction: column
 				p
 					margin-bottom: 50px
 .call_back_modal_wrapper
