@@ -1735,6 +1735,27 @@ input {
 .wrapper .about .about_blog {
   display: flex;
 }
+.wrapper .about_features {
+  background-color: transparent;
+}
+.wrapper .about_features p {
+  margin: 0;
+}
+.wrapper .about_features .company_features_inner {
+  justify-content: center;
+  background-color: #FFC629;
+  border-radius: 200px;
+}
+.wrapper .about_features .company_features_inner h3 {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+.wrapper .about_features .company_features_inner h3 p {
+  font-weight: 700;
+  font-size: 24px !important;
+  line-height: 106.9%;
+}
 
 .call_back_modal_wrapper {
   position: fixed;
