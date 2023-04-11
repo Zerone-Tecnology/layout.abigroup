@@ -25,15 +25,15 @@ $(function () {
 		return false;
 	});
 
-	//Chrome Smooth Scroll
-	// try {
-	// 	$.browserSelector();
-	// 	if($("html").hasClass("chrome")) {
-	// 		$.smoothScroll();
-	// 	}
-	// } catch(err) {
+	// Chrome Smooth Scroll
+	try {
+		$.browserSelector();
+		if($("html").hasClass("chrome")) {
+			$.smoothScroll();
+		}
+	} catch(err) {
 
-	// };
+	};
 
 	$("img, a").on("dragstart", function (event) { event.preventDefault(); });
 
@@ -44,12 +44,17 @@ $(window).load(function () {
 	$(".loader_inner").fadeOut();
 	$(".loader").delay(400).fadeOut("slow");
 
-	$("#header_menu > li").click(function () {
-		$(this).toggleClass("active");
+	$(".header_menu > li").click(function () {
+		if($(this).hasClass("active")){
+			$(this).removeClass("active")
+		}else{
+			$(".header_menu > li").removeClass("active");
+			$(this).addClass("active");
+		}		
 	});
 	$('.review-carousel').owlCarousel({
 		loop: true,
-		margin: 100,
+		// margin: 100,
 		stagePadding: 100,
 		nav: true,
 		dots: false,
@@ -63,17 +68,31 @@ $(window).load(function () {
 		navText: ['<img src="img/left_arrow.png">', '<img src="img/right_arrow.png">'],
 		items: 1
 	})
-
-	$('.grid').masonry({
-		itemSelector: '.grid-item',
-		columnWidth: 100
+	$('.item').click(function () {
+		$(this).find("img").magnificPopup({
+			animateOut: 'animate__fadeIn',
+			items: {
+				src: $(this).find("img").prop("src")
+			},
+			type: 'image'
+		});
 	});
+
+	// $('.grid').masonry({
+	// 	itemSelector: '.grid-item',
+	// 	columnWidth: 100
+	// });
 
 	$('.open_modal').click(function () {
 		$('.call_back_modal_wrapper').fadeIn("slow");
 	});
 	$('.close_modal_btn').click(function () {
 		$('.call_back_modal_wrapper').fadeOut("slow");
+	});
+	$('.burger_menu').click(function(){
+		$('.burger_menu').toggleClass("active");
+		$('.header_menu').toggleClass("active");
+		$('.header_search').toggleClass("active");
 	});
 
 });

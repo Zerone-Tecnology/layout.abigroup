@@ -31,7 +31,7 @@ body
 	line-height: 44px
 	min-width: 320px
 	position: relative
-	line-height: 1.6
+	line-height: 1
 	-webkit-font-smoothing: antialiased
 	overflow-x: hidden
 
@@ -44,8 +44,14 @@ body textarea:required:valid
 
 // respond mixin
 @mixin respond($size)
-	@if $size == _599
-		@media (max-width: 599px)
+	@if $size == _320
+		@media (max-width: 320px)
+			@content
+	@else if $size == _425
+		@media (max-width: 425px)
+			@content
+	@else if $size == _768
+		@media (max-width: 768px)
 			@content
 	@else if $size == _1024
 		@media (max-width: 1024px)
@@ -79,20 +85,53 @@ h1
 	line-height: 114.7%
 	color: #FFC629
 	margin: 0 0 17px 0
+	text-transform: uppercase
 	@include respond(_1300)
 		font-size: 64px
+	@include respond(_768)
+		font-size: 40px
+	@include respond(_425)
+		font-weight: 400
+		font-size: 27px
+		line-height: 114.7%
+	
+	
+	
 
 h2
 	font-weight: 700
 	font-size: 50px
 	line-height: 131.4%
 	color: #FFFFFF
+	@include respond(_768)
+		font-weight: 600
+		font-size: 27px
+		line-height:21.03px
+		text-align: right
+		margin-bottom: 5px
+	
 h3
 	font-weight: 700
 	font-size: 115px
 	line-height: 103px
 	text-transform: uppercase
 	color: #FFFFFF
+	@include respond(_1440)
+		font-size: 90px
+	@include respond(_1024)
+		font-size: 65px
+		line-height: 60px
+	@include respond(_768)
+		font-size: 40px
+		line-height: 40px
+	@include respond(_425)
+		font-weight: 700
+		font-size: 20px
+		line-height: 20px
+
+	
+	
+	
 h4
 	font-family: 'Oswald'
 	font-style: normal
@@ -101,22 +140,57 @@ h4
 	line-height: 115%
 	text-align: center
 	color: #FFFFFF
+	@include respond(_1440)
+		font-size: 34px
+	@include respond(_768)
+		font-size: 22px
+	@include respond(_425)
+		font-weight: 400
+		font-size: 8.59781px
+		line-height: 115%
+
+	
 
 h5
 	font-weight: 700
 	font-size: 36px
 	line-height: 44px
+	@include respond(_1024)
+		font-size: 26px
+	@include respond(_425)
+		font-weight: 700
+		font-size: 16px
+		line-height: 131.4%
+
+	
 h6
 	font-weight: 700
 	font-size: 297.26px
 	// line-height: 362px
 	text-transform: uppercase
 	color: rgba(255, 198, 41, 0.74)
+	@include respond(_425)
+		font-weight: 700
+		font-size: 69.597px
+		line-height: 85px
+
 p
-	font-weight: 500
+	font-weight: 400
 	font-size: 24.15px
 	line-height: 29px
 	color: #515151
+	@include respond(_1440)
+		font-size: 22px
+	@include respond(_768)
+		font-size: 18px
+	@include respond(_425)
+		font-weight: 500
+		font-size: 9px
+		line-height: 11px
+		
+	
+	
+	
 
 ul
 	list-style: disc
@@ -125,6 +199,15 @@ ul
 	font-size: 24.1546px
 	line-height: 194.9%
 	color: #FFFFFF
+	@include respond(_768)
+		font-size: 16px
+	@include respond(_425)
+		font-weight: 500
+		font-size: 9px
+		line-height: 158.9%
+		padding: 0 0 0 15px
+	
+	
 .sm_container
 	margin: 0 2.6045%
 .container
@@ -139,6 +222,9 @@ ul
 		top: -90%
 	@include respond(_1024)
 		top: -60%
+	@include respond(_425)
+		top: -100%
+	
 	
 
 	.know_price_btn
@@ -161,6 +247,19 @@ ul
 			font-size: 30px
 			width: 240px
 			height: 240px
+		@include respond(_768)
+			font-size: 24px
+			width: 200px
+			height: 200px
+		@include respond(_425)
+			font-weight: 400
+			font-size: 11.3636px
+			line-height: 115.7%
+			width: 83.41px
+			height: 83.42px
+			border: 1.34916px solid #FFFFFF
+		
+		
 		
 		&:hover
 			background-color: #fff
@@ -176,12 +275,24 @@ ul
 				left: -70%
 				top: 45%
 				transition: all .3s ease
+				@include respond(_425)
+					background-image: url('../img/little_callback_arrow.png')					
+					background-repeat: no-repeat
+					left: -70%
+					top: 50%
+					transition: all .3s ease
+				
 div.title_circle
+	margin-top: 50px
 	h1
+		margin-left: 25px
+	& > h1
 		margin-left: 75px
-	.sm_container
-		h1
-			margin-left: 25px
+		@include respond(_768)
+			margin: 0 0 0 50px
+		@include respond(_425)
+			margin: 0 0 0 28px
+		
 	&::before
 		background: #FFC629
 		border-radius: 0px 150px 150px 0px
@@ -189,70 +300,50 @@ div.title_circle
 		height: 107px
 		content: ""
 		position: absolute
-.mobile_menu
-	display: none
-	.menu_close_btn
-		position: absolute
-		top: -1050%
-		left: 0
-	&.active
-		position: relative
-		z-index: 999
-	@include respond(_1024)
-		display: flex
-		align-items: center
-		justify-content: flex-end
-	.burger_menu
-		position: relative
-		width: 24px
-		height: 18px
-		&::before,
-		&::after
-			content: ''
-			position: absolute
-			background: #fff
-			border-radius: 2px
-			width: 24px
-			height: 3px
-			left: 0
-			transition: all 0.4s linear
-		&::before
-			top: 0
-		&::after
-			bottom: 0
-		span
-			position: absolute
-			background: #fff
-			border-radius: 2px
-			left: 0
-			width: 24px
-			height: 3px
-			top: 7px
-			transition: all 0.4s linear
-		&.active
-			span
-				transform: scale(0)
-				transition: all 0.4s linear
-			&::before,
-			&::after
-				top: 9px
-				transition: all 0.3s linear
-				width: 20px
-			&::before
-				transform: rotate(45deg)
-			&::after
-				transform: rotate(-45deg)
+		@include respond(_768)
+			width: 36px
+			height: 70px
+		@include respond(_425)
+			width: 9px
+			height: 20px
+		
+		
 
-.grid
-	.grid-item
-		width: 200px
-	.grid-item--width2
-		width: 400px
-
+input
+	width: 100%
+	font-weight: 400
+	font-size: 24.15px
+	line-height: 29px
+	color: #515151
+	border: 2px solid #676767
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25)
+	border-radius: 48px
+	padding: 27px
+	margin-top: 36px
+.breadcrumb
+	list-style: none
+	display: flex
+	margin-bottom: 80px
+	li
+		font-weight: 700
+		font-size: 26px
+		line-height: 32px
+		color: #515151
+		&::after
+			content: ">"
+			margin: 0 12px
+		&:last-child
+			&::after
+				content: ""
 .banner-carousel
 	.item
+		min-height: 240px
+		position: relative
 		img
-			border-radius: 0 0 0 150px
+			border-radius: 0 0 0 10%
+			height: 100%
+			min-height: 240px
+
 		&::before
 			background: rgba(0, 0, 0, 0.33)
 			background-repeat: no-repeat
@@ -263,7 +354,7 @@ div.title_circle
 			width: 100%
 			height: 100%
 			position: absolute
-			border-radius: 0 0 0 150px
+			border-radius: 0 0 0 10%
 		.banner_articles
 			position: absolute
 			z-index: 99
@@ -272,6 +363,12 @@ div.title_circle
 			padding: 12% 11% 0 11%
 			@include respond(_1440)
 				padding: 6%
+			@include respond(_768)
+				padding: 4% 8%
+			@include respond(_425)
+				padding: 3% 5%
+			
+			
 
 			.banner_article_left
 				h1
@@ -288,6 +385,16 @@ div.title_circle
 						width: 50%
 					@include respond(_1024)
 						font-size: 30px
+					@include respond(_768)
+						font-size: 18px
+						line-height: 30px
+					@include respond(_425)
+						font-weight: 700
+						font-size: 10.0304px
+						line-height: 12px
+
+					
+					
 					
 
 	.owl-dots
@@ -303,32 +410,94 @@ div.title_circle
 			align-content: center
 			justify-content: center
 			padding: 10px
+			@include respond(_425)
+				padding: 0
+			
 			span
 				background: #FFC629 !important
-				width: 11px
-				height: 11px
+				width: 11px 
+				height: 11px 
+				margin: 5px 7px
+				@include respond(_425)
+					width: 2.88px
+					height: 2.88px
+				
+			
 			&.active
 				span
 					width: 21px
 					height: 21px
+					@include respond(_425)
+						width: 5.5px
+						height: 5.5px
+						// margin: 0
+.card_title
+	font-weight: 700
+	margin-bottom: 5px
+.card_decription
+	font-weight: 500
+.bottom_50
+	margin-bottom: 50px !important
+.yellow_text
+	color: #FFC629
+	font-weight: 700
+.error_404
+	font-family: 'Oswald'
+	font-style: normal
+	font-weight: 400
+	font-size: 729.851px
+	line-height: 100%
+	color: rgba(255, 198, 41, 0.68)
+	text-align: end
+.about_card_wrap
+	display: flex
+	flex-wrap: wrap
+	// justify-content: space-between
+	.about_card
+		width: 25%
+		padding: 0 13px
+		display: flex
+		flex-direction: column
+
+		p
+			font-size: 26px
+			line-height: 32px
+			&.about_card_description
+				margin-bottom: 50px
+		a
+			font-weight: 400
+			font-size: 24.15px
+			line-height: 29.44px
+			color: #FFC629
+			width: fit-content
+			&[href^="tel:"]
+				color: #515151
+
 .bg_right_img
 	position: absolute
 	top: 0
 	right: 0
+	z-index: -9
+.bg_right_img_mid
+	position: absolute
+	top: 5%
+	right: 0
+	z-index: -9
 .review-carousel
 	.item
 		cursor: pointer
-		&:hover
-			&::before
-				content: url("../img/popup_icon.png")
-				width: 100%
-				height: 100%
-				z-index: 9
-				position: absolute
-				background: rgba(255, 198, 41, 0.71)
-				display: flex
-				align-items: center
-				justify-content: center
+		// &:hover
+		// 	&::after
+		// 		content: url("../img/popup_icon.png")
+		// 		width: 100%
+		// 		height: 100%
+		// 		z-index: 9
+		// 		position: absolute
+		// 		background: rgba(255, 198, 41, 0.71)
+		// 		display: flex
+		// 		align-items: center
+		// 		justify-content: center
+		// 		top: 0
 		img
 			// box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.25)
 .owl-nav
@@ -337,6 +506,9 @@ div.title_circle
 	bottom: 45%
 	width: -webkit-fill-available
 	height: min-content
+	@include respond(_768)
+		display: none
+	
 	button
 		&:hover
 			background-color: transparent !important
@@ -357,30 +529,38 @@ div.title_circle
 	color: #162539
 	background: #FFC629
 	border: 0
-	width: 894px
+	width: 50%
 	padding: 46px 0
 	border-radius: 100px
 	margin: auto
-	margin-top: 192px
+	margin-top: 10%
 	display: block
+	@include respond(_1024)
+		font-size: 30px
+	@include respond(_425)	
+		font-weight: 400
+		font-size: 16px
+		line-height: 100.2%
+		width: 80%
+		padding: 14px 0
+	
 .wrapper
 	.header
 		background-color: #FFC629
+		position: relative
 		.sm_container
 			.header_inner
 				display: flex
 				align-items: center
 				justify-content: space-between
 				padding: 6px 0
-				position: relative
 				@include respond(_1024)
 					justify-content: center
 				nav
-					@include respond(_1024)
-						position: absolute
-						right: 0
 					.mobile_menu
 						display: none
+						position: absolute
+						right: 0
 						.menu_close_btn
 							position: absolute
 							top: -1050%
@@ -427,7 +607,7 @@ div.title_circle
 								&::after
 									top: 9px
 									transition: all 0.3s linear
-									width: 20px
+									width: 24px
 								&::before
 									transform: rotate(45deg)
 								&::after
@@ -436,9 +616,26 @@ div.title_circle
 						display: flex
 						padding: 0
 						list-style: none
-						@include respond(_1024)
-							display: none
+						@include respond(_1024)					
+							display: none					
+							position: absolute    				
+							top: 100%    				
+							z-index: 9    				
+							left: 0    				
+							width: -webkit-fill-available    				
+							background: white
+							// padding: 8% 0 0 0
+							&.active
+								display: block
+						@include respond(_768)
+							padding: 25px 0
+						
 						&>li
+							&:hover
+								@include respond(1024)
+								background-color: #FFC629
+								&>a
+									color: white
 							a
 								font-family: 'Oswald'
 								font-style: normal
@@ -446,6 +643,9 @@ div.title_circle
 								font-size: 24.1546px
 								line-height: 36px
 								margin: 0 28px
+								@include respond(_1440)
+									font-size: 20px
+								
 							&.active>ul
 								display: block
 							&>ul
@@ -458,6 +658,15 @@ div.title_circle
 								z-index: 99
 								padding: 0
 								list-style: none
+								@include respond(_1024)
+									position: relative
+									max-width: 100%
+									li
+										&:hover
+										a
+											font-weight: 400
+											font-size: 15px
+											line-height: 20px
 								&>li
 									cursor: pointer
 									&:hover
@@ -475,53 +684,90 @@ div.title_circle
 						font-size: 18.1271px
 						line-height: 22px
 						margin: 0 17.5px
+						@include respond(_1440)
+							font-size: 16.1271px
+						
 						img
 							margin-right: 13px
+							
 				.header_networks
 					@include respond(_1024)
 						display: none
 					a
 						margin: 0 23px
+						@include respond(_1440)
+							margin: 0 14px
+
+						
 				.header_search
+					display: flex
+					align-items: center
+					// input
+					// 	margin: 0
+					// 	padding: 12px
+					// 	display: none
+					// &.active
+					// 	display: flex
+					// 	input
+					// 		display: block
 					@include respond(_1024)
 						display: none
+						position: absolute
+						top: 100%
+						z-index: 9
+						width: 100%
+						margin: 19px 0 0 28px
+						input
+							width: 30%
+						
+							
+
+
 	.about_us
 		margin-top: 40px
 		position: relative
-		&::before
-			background: #FFC629
-			border-radius: 0px 150px 150px 0px
-			width: 50px
-			height: 107px
-			content: ""
-			position: absolute
 		.about_us_inner
 			display: flex
 			.about_us_left
-				max-width: 65%
-				.about_us_title
-					h1
-						margin-left: 25px
-					p
-						margin-top: 42px
+				max-width: 74%
+				@include respond(_1024)
+					max-width: 100%
+				
+				.about_us_title 
+					@include respond(_1024)
+						max-width: 100%
+						p
+							margin-top: 42px
+					
 				.about_us_description
 					display: flex
 					flex-wrap: wrap
 					margin-top: 60px
 					justify-content: space-between
+					@include respond(_425)
+						margin: 0
+					
 					.description_blog
 						max-width: 590px
 						margin-bottom: 59px
+						@include respond(_425)
+						margin-bottom: 10px
+						
 						h5
 							color: #FFC629
 			.about_us_right
 				position: absolute
 				right: 0
 				top: 8%
+				width: 26%
 				img
 					border-radius: 150px 0 0 150px
+					width: -webkit-fill-available
+					@include respond(_1024)
+						display: none
+					
 	.trust_us
-		margin-top: 10%
+		margin-top: 20%
 		position: relative
 		.trust_us_img
 			position: absolute
@@ -531,8 +777,14 @@ div.title_circle
 				border-radius: 150px 0px 0px 0px
 				height: 100%
 				width: 100%
+				max-width: 795px
+				height: 1149px
 				@include respond(_1440)
 					border-radius: 0
+					max-width: 100%
+					height: 100%
+
+					
 
 			@include respond(_1440)
 				position: relative
@@ -540,7 +792,10 @@ div.title_circle
 				display: flex
 				align-items: center
 				overflow: hidden
-				margin-bottom: 14px
+				margin: 40px 0 14px 0
+			@include respond(_425)
+				max-height: 100px
+			
 		.trust_us_inner
 			.trust_us_cards
 				.trust_us_card
@@ -553,6 +808,13 @@ div.title_circle
 					flex-direction: column
 					justify-content: center
 					margin-bottom: 15px
+					@include respond(_768)
+						padding: 24px 60px
+						height: fit-content
+					@include respond(_425)
+						padding: 24px 30px
+					
+					
 					h4
 						margin-bottom: 20px
 						width: fit-content
@@ -564,6 +826,18 @@ div.title_circle
 						line-height: 130.4%
 						@include respond(_1440)
 							width: 100%
+						@include respond(_768)
+							font-weight: 500
+							font-size: 20px
+							line-height:20px
+						@include respond(_425)
+							font-weight: 500
+							font-size: 9px
+							line-height:11.74px
+							text-align: right
+
+							
+						
 
 					&:nth-child(2)
 						margin-left: 6%
@@ -578,6 +852,12 @@ div.title_circle
 	.our_portfoli
 		.portfolio
 			.grid
+				@include respond(_1440)
+					zoom: 0.8
+				@include respond(_1024)
+					// zoom: 0.6
+				
+				
 				&-item
 					width: 25%
 					height: 400px
@@ -586,39 +866,60 @@ div.title_circle
 					display: inline-block
 					margin-bottom: 15px
 					cursor: pointer
-					display: flex
-					align-items: center
-					justify-content: center
+					position: relative
+					@include respond(_768)
+							height: 200px
 					&:nth-child(1)
 						height: 800px
+						@include respond(_768)
+							height: 400px
+						
+						.grid_item_title
+							p
+								width: min-content
 					&:nth-child(2)
 						width: 65%
 						height: 800px
 						border-radius: 5em
+						@include respond(_768)
+							height: 400px
 					&:nth-child(3)
 						width: 65%
 					&:nth-child(4)
 						border-radius: 50%
-					p
-						font-family: 'Oswald'
-						font-weight: 400
-						font-size: 36px
-						line-height: 41px
-						text-align: center
-						text-transform: uppercase
-						color: #FFFFFF
+						.grid_item_title
+							p
+								width: min-content
+					.grid_item_title
+						height: inherit    					
+						width: 100%
+						display: none
 						position: absolute
 						align-items: center
 						justify-content: center
-						z-index: 9
-						display: none
-						border-bottom: 8px #FFC629 solid
+						padding: 0 14px
+						p
+							font-family: 'Oswald'
+							font-weight: 400
+							font-size: 36px
+							line-height: 41px
+							text-align: center
+							text-transform: uppercase
+							color: #FFFFFF
+							z-index: 9
+							border-bottom: 8px #FFC629 solid
+							// width: min-content
 
 					&:hover
-						p
+						.grid_item_title
 							display: flex
 						img
 							filter: blur(14.1582px)
+	.review	
+		margin-top: 83px
+		.review_inner
+			@include respond(_768)
+			margin-top: 10%
 	.know_price
 		background-color: #FFC629
 		overflow: hidden
@@ -626,14 +927,47 @@ div.title_circle
 		&.leave_request
 			.know_price_inner
 				padding: 45px 120px
+				@include respond(_1440)
+					padding: 45px 0
+				
+				@include respond(_1024)
+					padding: 10px 0
+				@include respond(_768)
+					padding: 15px
+				@include respond(_425)
+				
+				
+				
 		.know_price_inner
 			padding: 66px 120px
+			@include respond(_1440)
+				padding: 60px 0
+			
+			@include respond(_1024)
+				padding: 25px 0
+			@include respond(_425)
+				padding: 15px 0
+			
 			p
 				max-width: 775px
 				font-weight: 700
 				font-size: 32px
 				line-height: 39px
 				color: #061B38
+				@include respond(_1440)
+					max-width: 58%
+					font-size: 26px
+				@include respond(_768)
+					font-size: 18px
+					line-height: 24px
+					max-width: 63%
+				@include respond(_425)
+					font-weight: 700
+					font-size: 9px
+					line-height: 9px
+				
+				
+				
 			.know_price_btn_wrap
 				top: -40%
 				bottom: -40%
@@ -641,7 +975,8 @@ div.title_circle
 				.know_price_btn
 					color: #061B38
 					border: 5px solid #061B38
-
+					@include respond(_425)
+						border: 1.34916px solid #061B38
 					&:hover
 						background: #061B38
 						color: #fff
@@ -649,6 +984,12 @@ div.title_circle
 							top: 60%
 							background: url("../img/call_back_arrow_blue.png")
 							background-repeat: no-repeat
+							@include respond(_425)
+								background: url("../img/little_call_back_blue.png")
+								background-repeat: no-repeat
+								top: 60%
+
+						
 	.our_services
 		margin-top: 72px
 		.our_services_inner
@@ -658,9 +999,9 @@ div.title_circle
 				flex-wrap: wrap
 				justify-content: space-between
 				.price_box
-					max-width: 504px
-					max-height: 504px
-					padding: 200px 95px
+					width: 504px
+					height: 504px
+					// padding: 200px 95px
 					border-radius: 50%
 					display: flex
 					flex-direction: column
@@ -668,10 +1009,25 @@ div.title_circle
 					justify-content: center
 					transition: all .3s ease
 					margin-bottom: 22px
+					@include respond(_1440)
+						width: 375px
+						height: 375px
 					@include respond(_1024)
-						max-width: 136.13px
-						max-height: 93.5px
-						padding: 0
+						width: 300px
+						height: 300px
+					@include respond(_768)
+						width: 200px
+						height: 200px
+					@include respond(_425)
+						width: 100px
+						height: 100px
+					@include respond(_320)
+						width: 91px
+						height: 91px
+					
+					
+					
+					
 					
 					img
 						border-radius: 50%
@@ -680,12 +1036,27 @@ div.title_circle
 						filter: blur()
 						max-width: 504px
 						max-height: 504px
-						width: 100%
-						height: 100%
+						@include respond(_1440)
+							width: 375px
+							height: 375px
+						@include respond(_1024)
+							width: 300px
+							height: 300px
+						@include respond(_768)
+							width: 200px
+							height: 200px
+						@include respond(_425)
+							width: 100px
+							height: 100px
+						@include respond(_320)
+							width: 91px
+							height: 91px
 
 					h4,p
 						text-align: center
 						color: #FFFFFF
+						
+						
 					&:hover
 						cursor: pointer
 						background: #FFC629
@@ -698,21 +1069,38 @@ div.title_circle
 		margin-top: 186px
 		position: relative
 		.working_process_inner
+			@include respond(_1300)
+				img
+					display: none
+			
 			.stages_of_work
 				display: flex
 				justify-content: space-between
 				width: 84%
+				@include respond(_1300)
+					width: 100%
+				@include respond(_768)
+					flex-direction: column
+					align-items: center
+				
+				
+				
 				.row
 					width: 50%
 					.stages
 						position: relative
 						p
 							position: absolute
-							bottom: 25%
+							bottom: 10%
 							font-weight: 700
 							font-size: 36px
 							line-height: 44px
 							color: #515151
+							@include respond(_425)
+								font-weight: 700
+								font-size: 8.42862px
+								line-height: 10px
+
 
 	.company_features
 		background: #FFC629
@@ -723,6 +1111,17 @@ div.title_circle
 			align-items: center
 			max-height: 277px
 			overflow: hidden
+			@include respond(_1440)
+				max-height: 210px
+			@include respond(_1024)
+				max-height: 140px
+			@include respond(_768)
+				max-height: 100px
+			@include respond(_425)
+				max-height: 50px	
+			
+			
+			
 			.features_block
 				max-width: 345.57px
 				max-height: 345.57px
@@ -734,6 +1133,21 @@ div.title_circle
 				justify-content: center
 				border: 6px solid #FFFFFF
 				border-radius: 50%
+				@include respond(_1440)
+					width: 270.57px
+					height: 270.57px
+				@include respond(_1024)
+					width: 190.57px
+					height: 190.57px
+				@include respond(_768)
+					width: 140px
+					height: 140px
+				@include respond(_425)
+					width: 61px
+					height: 61px
+					border: 1.0625px solid #FFFFFF
+				
+				
 				p
 					font-weight: 700
 					font-size: 30px
@@ -742,6 +1156,23 @@ div.title_circle
 					text-transform: uppercase
 					color: #FFFFFF
 					max-width: 286px
+					@include respond(_1440)
+						font-size: 26px
+					@include respond(_1024)
+						font-weight: 700
+						font-size: 16px
+						line-height: 106.9%
+					@include respond(_768)
+						font-size: 12px
+					@include respond(_425)
+						font-weight: 700
+						font-size: 5.87344px
+						line-height: 106.9%
+
+					
+					
+					
+					
 	.footer
 		background: #616161
 		margin-top: 36px
@@ -750,21 +1181,43 @@ div.title_circle
 			.footer_info
 				display: flex
 				justify-content: space-between
+				@include respond(_768)
+					flex-direction: column
+				
 				h5
 					color: #fff
 					text-transform: uppercase
 					margin-bottom: 51px
+					@include respond(_425)
+						margin: 0 0 15px 0
+					
 				p
 					color: #fff
 					font-weight: 500
 					font-size: 24.1546px
 					line-height: 131.4%
 					max-width: 436px
+					@include respond(_1024)
+						font-size: 18px
+					@include respond(_425)
+						font-weight: 500
+						font-size: 9px
+						line-height: 131.4%
+
+
+					
 				a
 					font-weight: 500
 					font-size: 24px
 					line-height: 29px
 					color: #FFFFFF
+					@include respond(_1024)
+						font-size: 18px
+					@include respond(_425)
+						font-weight: 500
+						font-size: 9px
+						line-height: 131.4%
+
 					&:hover
 						color: #061B38
 				.footer_title,.footer_contact
@@ -773,8 +1226,17 @@ div.title_circle
 				.footer_contact
 					p,a
 						margin-bottom: 51px
+						@include respond(_425)
+							margin-bottom: 20px
+						
 						img
 							margin-right: 14px
+							@include respond(_1024)
+								margin-right: 6px
+							@include respond(_425)
+								width: 14px
+							
+							
 					.presentation_download
 						display: flex
 						flex-direction: column
@@ -782,6 +1244,8 @@ div.title_circle
 							margin-bottom: 32px
 							img
 								margin-right: 22px
+								@include respond(_1024)
+									margin-right: 6px
 				.footer_title
 					p
 						margin-bottom: 35px
@@ -791,6 +1255,13 @@ div.title_circle
 					margin: 0
 					li
 						margin-bottom: 35px
+						@include respond(_1024)
+							font-size: 18px
+						@include respond(_425)
+							font-weight: 500
+							font-size: 9px
+							line-height: 131.4%
+
 						&::before
 							content: ''
 							display: inline-block
@@ -800,6 +1271,9 @@ div.title_circle
 							border-radius: 50%
 							background-color: #fff
 							margin-right: 28px
+							@include respond(_1024)
+								margin-right: 6px
+							
 
 			.footer_networks
 				display: flex
@@ -809,19 +1283,84 @@ div.title_circle
 				a
 					margin-left: 56.84px
 					margin-bottom: 25.5px
+					@include respond(_425)
+						margin: 0 0 10px 10px
+				img 
+					@include respond(_425)
+						width: 14px
+						height: 14px
+					
+					
+
 			.footer_copyright_item
 				img
 					width: 50px
 					height: 50px
+					@include respond(_425)
+						width: 12.33px
+						height: 12.33px
+					
+					
 				p
 					font-weight: 500
 					font-size: 24.1546px
 					line-height: 131.4%
 					color: #fff
 					margin-top: 20px
+					@include respond(_425)
+						font-weight: 500
+						font-size: 9px
+						line-height: 131.4%
+
 					a
 						color: #fff
 						margin-right: 8px
+	.partners
+		margin-top: 50px
+		h1
+			margin-bottom: 0
+	.services
+		margin-top: 95px
+	.clients
+		margin-top: 95px
+		.clients_wrap
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			a
+				width: 14%
+	.requisites
+		ul
+			margin-bottom: 90px
+			li
+				color: #515151
+				font-weight: 400
+				font-size: 26px
+				line-height: 32px
+		p
+			margin-bottom: 90px
+		.requisites_card_wrap
+			.requisites_card
+				display: flex
+				margin-bottom: 59px
+				.requisites_card_description
+					max-width: 744px
+					margin-left: 178px
+					p
+						margin: 0
+	.contact
+		p
+			margin-bottom: 90px
+		.contact_wrap
+			display: flex
+			justify-content: space-between
+			.contact_left
+				width: 70%
+			.contact_right
+				width: 24%
+			p
+				margin-bottom: 50px
+			
 .call_back_modal_wrapper
 	position: fixed
 	left: 0
@@ -893,17 +1432,6 @@ div.title_circle
 				.form_inputs
 					width: 100%
 					margin-bottom: 44px
-					input
-						width: 100%
-						font-weight: 400
-						font-size: 24.15px
-						line-height: 29px
-						color: #515151
-						border: 2px solid #676767
-						box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25)
-						border-radius: 48px
-						padding: 27px
-						margin-top: 36px
 					.checkbox_input
 						font-weight: 700
 						font-size: 24.15px
