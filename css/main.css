@@ -1729,6 +1729,12 @@ input {
 .wrapper .contact .contact_wrap p {
   margin-bottom: 50px;
 }
+.wrapper .about p {
+  margin-bottom: 60px;
+}
+.wrapper .about .about_blog {
+  display: flex;
+}
 
 .call_back_modal_wrapper {
   position: fixed;
