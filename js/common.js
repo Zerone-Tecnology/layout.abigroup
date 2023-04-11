@@ -59,7 +59,14 @@ $(window).load(function () {
 		nav: true,
 		dots: false,
 		navText: ['<img src="img/prev_arrow_yellow.png">', '<img src="img/next_arrow_yellow.png">'],
-		items: 3
+		responsive : {
+			0 : {
+				items : 1,
+			},
+			768 : {
+				items : 3,
+			}
+		}
 	})
 	$('.banner-carousel').owlCarousel({
 		loop: true,
@@ -77,6 +84,7 @@ $(window).load(function () {
 			type: 'image'
 		});
 	});
+
 
 	// $('.grid').masonry({
 	// 	itemSelector: '.grid-item',
