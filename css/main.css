@@ -1756,6 +1756,22 @@ input {
   font-size: 24px !important;
   line-height: 106.9%;
 }
+.wrapper .review_page .review_blog_wrap {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .review_page .review_blog_wrap .review_card {
+  display: flex;
+  padding: 93px 75px;
+}
+.wrapper .review_page .review_blog_wrap .review_card:nth-child(even) {
+  flex-direction: row-reverse;
+  background: rgba(255, 198, 41, 0.75);
+  border-radius: 150px 0px;
+}
+.wrapper .review_page .review_blog_wrap .review_card p {
+  margin-bottom: 50px;
+}
 
 .call_back_modal_wrapper {
   position: fixed;
