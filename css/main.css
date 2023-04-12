@@ -582,6 +582,26 @@ input {
   color: rgba(255, 198, 41, 0.68);
   text-align: end;
 }
+@media (max-width: 1440px) {
+  .error_404 {
+    font-size: 600px;
+  }
+}
+@media (max-width: 1024px) {
+  .error_404 {
+    font-size: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .error_404 {
+    font-size: 300px;
+  }
+}
+@media (max-width: 425px) {
+  .error_404 {
+    font-size: 150px;
+  }
+}
 
 .about_card_wrap {
   display: flex;
@@ -1790,6 +1810,14 @@ input {
 .wrapper .contact .contact_wrap {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .wrapper .contact .contact_wrap {
+    flex-direction: column;
+  }
+  .wrapper .contact .contact_wrap .contact_left, .wrapper .contact .contact_wrap .contact_right {
+    width: 100% !important;
+  }
 }
 .wrapper .contact .contact_wrap .contact_left {
   width: 70%;

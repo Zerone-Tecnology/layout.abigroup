@@ -458,6 +458,18 @@ input
 	line-height: 100%
 	color: rgba(255, 198, 41, 0.68)
 	text-align: end
+	@include respond(_1440)
+		font-size: 600px
+	@include respond(_1024)
+		font-size: 400px
+	@include respond(_768)
+		font-size: 300px
+	@include respond(_425)
+		font-size: 150px
+	
+	
+	
+	
 .about_card_wrap
 	display: flex
 	flex-wrap: wrap
@@ -1402,6 +1414,11 @@ input
 		.contact_wrap
 			display: flex
 			justify-content: space-between
+			@include respond(_768)
+				flex-direction: column
+				.contact_left,.contact_right
+					width: 100% !important
+			
 			.contact_left
 				width: 70%
 			.contact_right
