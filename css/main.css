@@ -645,6 +645,11 @@ input {
   right: 0;
   z-index: -9;
 }
+@media (max-width: 1024px) {
+  .bg_right_img_mid {
+    display: none;
+  }
+}
 
 .review-carousel .item {
   cursor: pointer;
@@ -1781,17 +1786,17 @@ input {
 .wrapper .clients .clients_wrap a {
   width: 14%;
 }
-.wrapper .requisites ul {
+.wrapper .requisites p {
   margin-bottom: 90px;
 }
-.wrapper .requisites ul li {
+.wrapper .requisites .requisites_card_wrap ul {
+  margin-bottom: 90px;
+}
+.wrapper .requisites .requisites_card_wrap ul li {
   color: #515151;
   font-weight: 400;
   font-size: 26px;
   line-height: 32px;
-}
-.wrapper .requisites p {
-  margin-bottom: 90px;
 }
 .wrapper .requisites .requisites_card_wrap .requisites_card {
   display: flex;
@@ -1801,8 +1806,19 @@ input {
   max-width: 744px;
   margin-left: 178px;
 }
+@media (max-width: 1024px) {
+  .wrapper .requisites .requisites_card_wrap .requisites_card .requisites_card_description {
+    margin: 0;
+  }
+}
 .wrapper .requisites .requisites_card_wrap .requisites_card .requisites_card_description p {
   margin: 0;
+}
+@media (max-width: 1024px) {
+  .wrapper .requisites .requisites_card_wrap .requisites_card img {
+    width: 30%;
+    height: -webkit-fill-available;
+  }
 }
 .wrapper .contact p {
   margin-bottom: 90px;

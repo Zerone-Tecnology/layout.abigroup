@@ -505,6 +505,9 @@ input
 	top: 5%
 	right: 0
 	z-index: -9
+	@include respond(_1024)
+		display: none
+	
 .review-carousel
 	.item
 		cursor: pointer
@@ -1390,24 +1393,32 @@ input
 			a
 				width: 14%
 	.requisites
-		ul
-			margin-bottom: 90px
-			li
-				color: #515151
-				font-weight: 400
-				font-size: 26px
-				line-height: 32px
 		p
 			margin-bottom: 90px
 		.requisites_card_wrap
+			ul
+				margin-bottom: 90px
+				li
+					color: #515151
+					font-weight: 400
+					font-size: 26px
+					line-height: 32px
 			.requisites_card
 				display: flex
 				margin-bottom: 59px
 				.requisites_card_description
 					max-width: 744px
 					margin-left: 178px
+					@include respond(_1024)
+						margin: 0
+					
 					p
 						margin: 0
+				@include respond(_1024)
+					img
+						width: 30%
+						height: -webkit-fill-available
+
 	.contact
 		p
 			margin-bottom: 90px
