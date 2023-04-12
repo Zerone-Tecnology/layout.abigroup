@@ -282,8 +282,11 @@ ul
 				
 div.title_circle
 	margin-top: 50px
+	position: relative
 	h1
 		margin-left: 25px
+		@include respond(_425)
+			margin-left: 5px
 	& > h1
 		margin-left: 75px
 		@include respond(_768)
@@ -304,6 +307,7 @@ div.title_circle
 		@include respond(_425)
 			width: 9px
 			height: 20px
+			top: 6px
 		
 		
 
@@ -323,10 +327,15 @@ input
 	display: flex
 	margin-bottom: 80px
 	li
-		font-weight: 700 !important
-		font-size: 26px	!important
-		line-height: 32px	!important
+		font-weight: 700 
+		font-size: 26px	
+		line-height: 32px	
 		color: #515151
+		@include respond(_768)
+			font-weight: 700
+			font-size: 14px
+			line-height: 11px
+
 		&::after
 			content: ">"
 			margin: 0 12px
@@ -1404,6 +1413,10 @@ input
 			margin-bottom: 60px		
 		.about_blog
 			display: flex
+			.about_blog_right
+				@include respond(_1024)
+					display: none
+				
 	.about_features
 		background-color: transparent
 		p
