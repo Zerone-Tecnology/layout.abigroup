@@ -1929,7 +1929,7 @@ input {
 }
 @media (max-width: 1440px) {
   .wrapper .services_page .services_blog {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .wrapper .services_page .services_blog .services_blog_left, .wrapper .services_page .services_blog .services_blog_right {
     width: 100% !important;
@@ -1955,6 +1955,16 @@ input {
 }
 .wrapper .services_page .services_blog .services_blog_right {
   width: 30%;
+}
+@media (max-width: 1024px) {
+  .wrapper .services_page .services_blog .services_blog_right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .wrapper .services_page .services_blog .services_blog_right .services_btn {
+    width: 33%;
+  }
 }
 .wrapper .services_page .services_blog ul {
   list-style: none;

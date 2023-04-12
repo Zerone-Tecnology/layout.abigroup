@@ -1505,7 +1505,7 @@ input
 			display: flex
 			justify-content: space-between
 			@include respond(_1440)
-				flex-direction: column-reverse
+				flex-direction: column
 				.services_blog_left,.services_blog_right
 					width: 100% !important
 
@@ -1525,6 +1525,13 @@ input
 					padding: 15px 0
 			.services_blog_right
 				width: 30%
+				@include respond(_1024)
+					display: flex
+					flex-wrap: wrap
+					justify-content: space-between
+					.services_btn
+						width: 33%
+				
 			ul
 				list-style: none
 				li
