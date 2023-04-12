@@ -149,8 +149,6 @@ h4
 		font-size: 8.59781px
 		line-height: 115%
 
-	
-
 h5
 	font-weight: 700
 	font-size: 36px
@@ -910,7 +908,7 @@ input
 							z-index: 9
 							border-bottom: 8px #FFC629 solid
 							// width: min-content
-							
+
 					&:hover
 						.grid_item_title
 							display: flex
@@ -1398,6 +1396,38 @@ input
 						flex-direction: column
 				p
 					margin-bottom: 50px
+	.vacancies
+		.vacancies_blog_wrap
+			.vacancies_card
+				display: flex
+				flex-wrap: wrap
+				border-bottom:3px solid #515151
+				padding: 0 0 16px 0
+				margin: 90px 0 181px 0 
+				.card_title
+					color: #000000
+				.vacancies_card_left
+					width: 70%
+					.vacancies_card_description
+						margin-top: 70px
+						ul
+							list-style: none
+							li
+								color: #515151
+								&::before
+									content:  "—"
+									position: relative
+									left:     -5px
+				.vacancies_card_right
+					width: 30%
+					p
+						font-weight: 700
+						font-size: 26px
+						line-height: 32px
+						color: #000000
+				img
+					margin-top: 86px
+
 .call_back_modal_wrapper
 	position: fixed
 	left: 0

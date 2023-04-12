@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html.js .loader {
   background: none repeat scroll 0 0 #ffffff;
   bottom: 0;
@@ -1781,6 +1782,45 @@ input {
 }
 .wrapper .review_page .review_blog_wrap .review_card p {
   margin-bottom: 50px;
+}
+.wrapper .vacancies .vacancies_blog_wrap .vacancies_card {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 3px solid #515151;
+  padding: 0 0 16px 0;
+  margin: 90px 0 181px 0;
+}
+.wrapper .vacancies .vacancies_blog_wrap .vacancies_card .card_title {
+  color: #000000;
+}
+.wrapper .vacancies .vacancies_blog_wrap .vacancies_card .vacancies_card_left {
+  width: 70%;
+}
+.wrapper .vacancies .vacancies_blog_wrap .vacancies_card .vacancies_card_left .vacancies_card_description {
+  margin-top: 70px;
+}
+.wrapper .vacancies .vacancies_blog_wrap .vacancies_card .vacancies_card_left .vacancies_card_description ul {
+  list-style: none;
+}
+.wrapper .vacancies .vacancies_blog_wrap .vacancies_card .vacancies_card_left .vacancies_card_description ul li {
+  color: #515151;
+}
+.wrapper .vacancies .vacancies_blog_wrap .vacancies_card .vacancies_card_left .vacancies_card_description ul li::before {
+  content: "—";
+  position: relative;
+  left: -5px;
+}
+.wrapper .vacancies .vacancies_blog_wrap .vacancies_card .vacancies_card_right {
+  width: 30%;
+}
+.wrapper .vacancies .vacancies_blog_wrap .vacancies_card .vacancies_card_right p {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+  color: #000000;
+}
+.wrapper .vacancies .vacancies_blog_wrap .vacancies_card img {
+  margin-top: 86px;
 }
 
 .call_back_modal_wrapper {
