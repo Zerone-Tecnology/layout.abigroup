@@ -1404,10 +1404,14 @@ input
 				border-bottom:3px solid #515151
 				padding: 0 0 16px 0
 				margin: 90px 0 181px 0 
+				position: relative
 				.card_title
 					color: #000000
 				.vacancies_card_left
 					width: 70%
+					@include respond(_768)
+						width: 100%
+					
 					.vacancies_card_description
 						margin-top: 70px
 						ul
@@ -1420,13 +1424,28 @@ input
 									left:     -5px
 				.vacancies_card_right
 					width: 30%
+					@include respond(_768)
+						position: absolute
+						right: 0
+						top: 0
+					
 					p
 						font-weight: 700
 						font-size: 26px
 						line-height: 32px
 						color: #000000
-				img
-					margin-top: 86px
+						@include respond(_768)
+							font-weight: 700
+							font-size: 14px
+							line-height: 11px
+							
+
+				&::after
+					content: url("../img/vacancies_vector.png")
+					margin-top: 84px
+					@include respond(_768)
+						margin-top: 10px
+					
 
 .call_back_modal_wrapper
 	position: fixed
