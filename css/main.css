@@ -1789,6 +1789,11 @@ input {
 .wrapper .requisites p {
   margin-bottom: 90px;
 }
+@media (max-width: 1024px) {
+  .wrapper .requisites p {
+    margin-bottom: 20px;
+  }
+}
 .wrapper .requisites .requisites_card_wrap ul {
   margin-bottom: 90px;
 }
