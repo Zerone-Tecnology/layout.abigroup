@@ -1828,6 +1828,11 @@ input {
 .wrapper .contact p {
   margin-bottom: 90px;
 }
+@media (max-width: 1024px) {
+  .wrapper .contact p {
+    margin-bottom: 20px;
+  }
+}
 .wrapper .contact .contact_wrap {
   display: flex;
   justify-content: space-between;
@@ -1892,6 +1897,7 @@ input {
 @media (max-width: 1024px) {
   .wrapper .review_page .review_blog_wrap .review_card {
     flex-direction: column;
+    padding: 20px 10px;
   }
 }
 .wrapper .review_page .review_blog_wrap .review_card:nth-child(even) {
@@ -1902,10 +1908,19 @@ input {
 @media (max-width: 1024px) {
   .wrapper .review_page .review_blog_wrap .review_card:nth-child(even) {
     flex-direction: column;
+    border-radius: 0;
   }
 }
 .wrapper .review_page .review_blog_wrap .review_card p {
   margin-bottom: 50px;
+}
+@media (max-width: 1024px) {
+  .wrapper .review_page .review_blog_wrap .review_card p {
+    margin-bottom: 20px;
+  }
+}
+.wrapper .review_page .review_blog_wrap .review_card img {
+  width: 50%;
 }
 .wrapper .vacancies .vacancies_blog_wrap .vacancies_card {
   display: flex;
