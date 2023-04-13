@@ -1785,6 +1785,10 @@ input {
 }
 .wrapper .clients .clients_wrap a {
   width: 14%;
+  padding: 20px;
+}
+.wrapper .clients .clients_wrap a img {
+  width: -webkit-fill-available;
 }
 .wrapper .requisites p {
   margin-bottom: 90px;
