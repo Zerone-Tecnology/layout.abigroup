@@ -1491,9 +1491,10 @@ input
 					margin-bottom: 50px
 					@include respond(_1024)
 						margin-bottom: 20px
-					
-				img
-					width: 50%
+				@include respond(_1024)
+					img
+						width: 50%
+				
 	.vacancies
 		.vacancies_blog_wrap
 			.vacancies_card

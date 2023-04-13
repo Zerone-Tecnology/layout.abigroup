@@ -1923,8 +1923,10 @@ input {
     margin-bottom: 20px;
   }
 }
-.wrapper .review_page .review_blog_wrap .review_card img {
-  width: 50%;
+@media (max-width: 1024px) {
+  .wrapper .review_page .review_blog_wrap .review_card img {
+    width: 50%;
+  }
 }
 .wrapper .vacancies .vacancies_blog_wrap .vacancies_card {
   display: flex;
