@@ -47,6 +47,9 @@ body textarea:required:valid
 	@if $size == _320
 		@media (max-width: 320px)
 			@content
+	@else if $size == _375
+		@media (max-width: 375px)
+			@content
 	@else if $size == _425
 		@media (max-width: 425px)
 			@content
@@ -848,7 +851,7 @@ input
 				overflow: hidden
 				margin: 40px 0 14px 0
 			@include respond(_425)
-				max-height: 100px
+				max-height: 71px
 			
 		.trust_us_inner
 			.trust_us_cards
@@ -869,9 +872,16 @@ input
 						padding: 24px 30px
 					
 					
-					h4
+					h2
 						margin-bottom: 20px
 						width: fit-content
+						text-align: right
+						width: 100%
+
+						@include respond(_768) 
+							font-size: 26px
+						
+						
 					p
 						color: #fff
 						width: 50%
@@ -884,6 +894,7 @@ input
 							font-weight: 500
 							font-size: 20px
 							line-height:20px
+							text-align: right
 						@include respond(_425)
 							font-weight: 500
 							font-size: 9px
@@ -925,25 +936,44 @@ input
 					@include respond(_768)
 							height: 200px
 					&:nth-child(1)
-						height: 800px
+						height: 650px
 						width: 24%
 						margin-right: 10px
 						@include respond(_768)
-							height: 400px
+							height: 350px
+						@include respond(_375)
+							height: 300px
+							margin-right: 4px
 						.grid_item_title
 							p
 								width: min-content
+								@include respond(_320)
+									font-size: 16px
+								
 					&:nth-child(2)
 						width: 74%
-						height: 800px
+						height: 650px
 						border-radius: 5em
 						@include respond(_768)
-							height: 400px
+							height: 350px
+						@include respond(_425)
+							border-radius: 3em
+							width: 73%
+						@include respond(_375)
+							height: 300px
+						
+						
 						img
 							width: 100%
 					&:nth-child(3)
 						width: 64%
 						margin-right: 10px
+						@include respond(_425)
+							border-radius: 3em
+							width: 63%
+						@include respond(_375)
+							margin-right: 4px
+						
 					&:nth-child(4)
 						border-radius: 25em
 						width: 34%
@@ -953,6 +983,8 @@ input
 						.grid_item_title
 							p
 								width: min-content
+								@include respond(_320)
+									font-size: 16px
 					.grid_item_title
 						height: inherit    					
 						width: 100%
@@ -964,14 +996,18 @@ input
 						p
 							font-family: 'Oswald'
 							font-weight: 400
-							font-size: 36px
+							font-size: 24px
 							line-height: 41px
 							text-align: center
 							text-transform: uppercase
 							color: #FFFFFF
 							z-index: 9
 							border-bottom: 8px #FFC629 solid
-							// width: min-content
+							@include respond(_425)
+								font-size: 20px
+							@include respond(_375)
+								font-size: 18px
+							
 
 					&:hover
 						.grid_item_title
@@ -1064,7 +1100,6 @@ input
 				.price_box
 					width: 504px
 					height: 504px
-					// padding: 200px 95px
 					border-radius: 50%
 					display: flex
 					flex-direction: column
@@ -1118,6 +1153,13 @@ input
 					h4,p
 						text-align: center
 						color: #FFFFFF
+					h4
+						@include respond(_425)
+							font-size: 24px
+						@include respond(_375)
+							font-size: 18px
+						@include respond(_320)
+							font-size: 16px
 						
 						
 					&:hover

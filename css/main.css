@@ -1053,7 +1053,7 @@ input {
 }
 @media (max-width: 425px) {
   .wrapper .trust_us .trust_us_img {
-    max-height: 100px;
+    max-height: 71px;
   }
 }
 .wrapper .trust_us .trust_us_inner .trust_us_cards .trust_us_card {
@@ -1079,10 +1079,17 @@ input {
     padding: 24px 30px;
   }
 }
-.wrapper .trust_us .trust_us_inner .trust_us_cards .trust_us_card h4 {
+.wrapper .trust_us .trust_us_inner .trust_us_cards .trust_us_card h2 {
   margin-bottom: 20px;
   width: -moz-fit-content;
   width: fit-content;
+  text-align: right;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .wrapper .trust_us .trust_us_inner .trust_us_cards .trust_us_card h2 {
+    font-size: 26px;
+  }
 }
 .wrapper .trust_us .trust_us_inner .trust_us_cards .trust_us_card p {
   color: #fff;
@@ -1101,6 +1108,7 @@ input {
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
+    text-align: right;
   }
 }
 @media (max-width: 425px) {
@@ -1149,27 +1157,49 @@ input {
   }
 }
 .wrapper .our_portfoli .portfolio .grid-item:nth-child(1) {
-  height: 800px;
+  height: 650px;
   width: 24%;
   margin-right: 10px;
 }
 @media (max-width: 768px) {
   .wrapper .our_portfoli .portfolio .grid-item:nth-child(1) {
-    height: 400px;
+    height: 350px;
+  }
+}
+@media (max-width: 375px) {
+  .wrapper .our_portfoli .portfolio .grid-item:nth-child(1) {
+    height: 300px;
+    margin-right: 4px;
   }
 }
 .wrapper .our_portfoli .portfolio .grid-item:nth-child(1) .grid_item_title p {
   width: -moz-min-content;
   width: min-content;
 }
+@media (max-width: 320px) {
+  .wrapper .our_portfoli .portfolio .grid-item:nth-child(1) .grid_item_title p {
+    font-size: 16px;
+  }
+}
 .wrapper .our_portfoli .portfolio .grid-item:nth-child(2) {
   width: 74%;
-  height: 800px;
+  height: 650px;
   border-radius: 5em;
 }
 @media (max-width: 768px) {
   .wrapper .our_portfoli .portfolio .grid-item:nth-child(2) {
-    height: 400px;
+    height: 350px;
+  }
+}
+@media (max-width: 425px) {
+  .wrapper .our_portfoli .portfolio .grid-item:nth-child(2) {
+    border-radius: 3em;
+    width: 73%;
+  }
+}
+@media (max-width: 375px) {
+  .wrapper .our_portfoli .portfolio .grid-item:nth-child(2) {
+    height: 300px;
   }
 }
 .wrapper .our_portfoli .portfolio .grid-item:nth-child(2) img {
@@ -1178,6 +1208,17 @@ input {
 .wrapper .our_portfoli .portfolio .grid-item:nth-child(3) {
   width: 64%;
   margin-right: 10px;
+}
+@media (max-width: 425px) {
+  .wrapper .our_portfoli .portfolio .grid-item:nth-child(3) {
+    border-radius: 3em;
+    width: 63%;
+  }
+}
+@media (max-width: 375px) {
+  .wrapper .our_portfoli .portfolio .grid-item:nth-child(3) {
+    margin-right: 4px;
+  }
 }
 .wrapper .our_portfoli .portfolio .grid-item:nth-child(4) {
   border-radius: 25em;
@@ -1191,6 +1232,11 @@ input {
   width: -moz-min-content;
   width: min-content;
 }
+@media (max-width: 320px) {
+  .wrapper .our_portfoli .portfolio .grid-item:nth-child(4) .grid_item_title p {
+    font-size: 16px;
+  }
+}
 .wrapper .our_portfoli .portfolio .grid-item .grid_item_title {
   height: inherit;
   width: 100%;
@@ -1203,13 +1249,23 @@ input {
 .wrapper .our_portfoli .portfolio .grid-item .grid_item_title p {
   font-family: "Oswald";
   font-weight: 400;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 41px;
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
   z-index: 9;
   border-bottom: 8px #FFC629 solid;
+}
+@media (max-width: 425px) {
+  .wrapper .our_portfoli .portfolio .grid-item .grid_item_title p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .wrapper .our_portfoli .portfolio .grid-item .grid_item_title p {
+    font-size: 18px;
+  }
 }
 .wrapper .our_portfoli .portfolio .grid-item:hover .grid_item_title {
   display: flex;
@@ -1414,6 +1470,21 @@ input {
 .wrapper .our_services .our_services_inner .our_services_price .price_box h4, .wrapper .our_services .our_services_inner .our_services_price .price_box p {
   text-align: center;
   color: #FFFFFF;
+}
+@media (max-width: 425px) {
+  .wrapper .our_services .our_services_inner .our_services_price .price_box h4 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 375px) {
+  .wrapper .our_services .our_services_inner .our_services_price .price_box h4 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 320px) {
+  .wrapper .our_services .our_services_inner .our_services_price .price_box h4 {
+    font-size: 16px;
+  }
 }
 .wrapper .our_services .our_services_inner .our_services_price .price_box:hover {
   cursor: pointer;
