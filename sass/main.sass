@@ -224,7 +224,7 @@ ul
 	@include respond(_1024)
 		top: -60%
 	@include respond(_425)
-		top: -100%
+		top: 0
 	
 	
 
@@ -387,7 +387,7 @@ input
 					color: #ffffff
 			.banner_articles_call_back
 				position: relative
-				margin: 10px 0 0 0
+				margin: 20px 0 0 0
 				h3
 					font-weight: 700
 					font-size: 36px
@@ -1071,6 +1071,8 @@ input
 				top: -40%
 				bottom: -40%
 				right: 12%
+				display: flex
+				align-items: center
 				.know_price_btn
 					color: #061B38
 					border: 5px solid #061B38
@@ -1083,10 +1085,8 @@ input
 							top: 60%
 							background: url("../img/call_back_arrow_blue.png")
 							background-repeat: no-repeat
-							@include respond(_425)
-								background: url("../img/little_call_back_blue.png")
-								background-repeat: no-repeat
-								top: 60%
+							@include respond(_768)
+								display: none
 
 						
 	.our_services
@@ -1210,6 +1210,9 @@ input
 	.company_features
 		background: #FFC629
 		margin-top: 96px
+		@include respond(_768)
+			display: none
+		
 		.company_features_inner
 			display: flex
 			justify-content: space-between

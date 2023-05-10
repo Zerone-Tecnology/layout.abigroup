@@ -320,11 +320,11 @@ div.title_circle::before{
         height: 390px;
     }
     .wrapper .know_price.leave_request .know_price_inner {
-        padding: 30px 40px;
+        padding: 30px 15px;
     }
     .wrapper .know_price .know_price_inner .know_price_btn_wrap {
-        top: -40%;
-        bottom: -40%;
+        top: 0;
+        bottom: 0;
         right: 4%;
     }
     .wrapper .footer .footer_inner .footer_info .footer_title p {
@@ -359,7 +359,7 @@ div.title_circle::before{
     }
     .know_price_btn_wrap .know_price_btn {
         width: 240px;
-        height: 305px;
+        height: 240px;
     }
     h1 {
         font-size: 48px;
@@ -391,7 +391,7 @@ div.title_circle::before{
 }
 @media (max-width: 924px) {
     .wrapper .know_price .know_price_inner {
-        padding: 30px 0;
+        padding: 30px;
     }
     .wrapper .our_services .our_services_inner .our_services_price .price_box {
         width: 400px;
@@ -415,15 +415,15 @@ div.title_circle::before{
         margin: 0 20px;
     }
     .main_page_banner .know_price_btn_wrap .know_price_btn {
-        width: 188px;
-        height: 188px;
+        width: 150px;
+        height: 150px;
     }
     .main_page_banner .know_price_btn_wrap {
         text-align: center;
     }
     .banner-carousel .item .banner_articles .banner_articles_call_back h3 {
         font-size: 16px;
-        width: 100%;
+        width: 50%;
         line-height: 24px;
     }
     ul {
@@ -437,7 +437,7 @@ div.title_circle::before{
     }
     .banner-carousel .item img {
         object-fit: cover;
-        min-height: 550px;
+        min-height: 430px;
     }
     .wrapper .footer .footer_inner .footer_info ul li {
         font-size: 18px;
@@ -477,28 +477,26 @@ div.title_circle::before{
     }
     .wrapper .know_price .know_price_inner .know_price_btn_wrap .know_price_btn {
         border: 3px solid #061B38;
-        margin-top: 15px;
+        /* margin-top: 15px; */
     }
     .know_price_btn_wrap .know_price_btn {
         width: 190px;
         height: 190px;
     }
     .know_price_btn_wrap {
-        position: unset;
-        top: unset;
-        right: unset;
+        /* position: unset; */
+        /* top: unset;
+        right: unset; */
     }
     .wrapper .know_price .know_price_inner p {
         line-height: 30px;
-        max-width: 100%;
-        text-align: center;
-    }
-    .wrapper .know_price .know_price_inner p {
+        max-width: 50%;
         font-size: 16px;
+
     }
     .know_price_btn_wrap .know_price_btn {
-        width: 180px;
-        height: 180px;
+        width: 150px;
+        height: 150px;
     }
     .know_price_btn_wrap .know_price_btn.secondblocksize{
         width: 180px;
@@ -556,6 +554,8 @@ div.title_circle::before{
     }
     .wrapper .know_price .know_price_inner .know_price_btn_wrap{
         text-align: center;
+        display: flex;
+        align-items: center;
     }
     /* .wrapper .our_portfoli .portfolio .grid-item:nth-child(1),.wrapper .our_portfoli .portfolio .grid-item:nth-child(2),.wrapper .our_portfoli .portfolio .grid-item:nth-child(3),.wrapper .our_portfoli .portfolio .grid-item:nth-child(4){
         border-radius: unset;

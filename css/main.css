@@ -274,7 +274,7 @@ ul {
 }
 @media (max-width: 425px) {
   .know_price_btn_wrap {
-    top: -100%;
+    top: 0;
   }
 }
 .know_price_btn_wrap .know_price_btn {
@@ -481,7 +481,7 @@ input {
 }
 .banner-carousel .item .banner_articles .banner_articles_call_back {
   position: relative;
-  margin: 10px 0 0 0;
+  margin: 20px 0 0 0;
 }
 .banner-carousel .item .banner_articles .banner_articles_call_back h3 {
   font-weight: 700;
@@ -1351,6 +1351,8 @@ input {
   top: -40%;
   bottom: -40%;
   right: 12%;
+  display: flex;
+  align-items: center;
 }
 .wrapper .know_price .know_price_inner .know_price_btn_wrap .know_price_btn {
   color: #061B38;
@@ -1370,11 +1372,9 @@ input {
   background: url("../img/call_back_arrow_blue.png");
   background-repeat: no-repeat;
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .wrapper .know_price .know_price_inner .know_price_btn_wrap .know_price_btn:hover::before {
-    background: url("../img/little_call_back_blue.png");
-    background-repeat: no-repeat;
-    top: 60%;
+    display: none;
   }
 }
 .wrapper .our_services {
@@ -1546,6 +1546,11 @@ input {
 .wrapper .company_features {
   background: #FFC629;
   margin-top: 96px;
+}
+@media (max-width: 768px) {
+  .wrapper .company_features {
+    display: none;
+  }
 }
 .wrapper .company_features .company_features_inner {
   display: flex;
