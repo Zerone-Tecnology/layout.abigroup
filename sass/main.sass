@@ -935,14 +935,14 @@ input
 					position: relative
 					@include respond(_768)
 							height: 200px
-					&:nth-child(1)
+					&:nth-child(4n+1)
 						height: 650px
 						width: 24%
 						margin-right: 10px
 						@include respond(_768)
-							height: 350px
-						@include respond(_375)
 							height: 300px
+						@include respond(_375)
+							height: 250px
 							margin-right: 4px
 						.grid_item_title
 							p
@@ -950,22 +950,22 @@ input
 								@include respond(_320)
 									font-size: 16px
 								
-					&:nth-child(2)
+					&:nth-child(4n+2)
 						width: 74%
 						height: 650px
 						border-radius: 5em
 						@include respond(_768)
-							height: 350px
+							height: 300px
 						@include respond(_425)
 							border-radius: 3em
 							width: 73%
 						@include respond(_375)
-							height: 300px
+							height: 250px
 						
 						
 						img
 							width: 100%
-					&:nth-child(3)
+					&:nth-child(4n+3)
 						width: 64%
 						margin-right: 10px
 						@include respond(_425)
@@ -974,7 +974,7 @@ input
 						@include respond(_375)
 							margin-right: 4px
 						
-					&:nth-child(4)
+					&:nth-child(4n+4)
 						border-radius: 25em
 						width: 34%
 						img
@@ -1004,9 +1004,10 @@ input
 							z-index: 9
 							border-bottom: 8px #FFC629 solid
 							@include respond(_425)
-								font-size: 20px
-							@include respond(_375)
-								font-size: 18px
+								font-size: 16px
+								line-height: 28px
+							// @include respond(_375)
+							// 	font-size: 18px
 							
 
 					&:hover
@@ -1155,11 +1156,13 @@ input
 						color: #FFFFFF
 					h4
 						@include respond(_425)
-							font-size: 24px
+							font-size: 20px
 						@include respond(_375)
 							font-size: 18px
 						@include respond(_320)
 							font-size: 16px
+						a
+							color: #FFFFFF
 						
 						
 					&:hover
@@ -1170,6 +1173,9 @@ input
 							display: none
 						h4,p
 							color: #061B38
+						h4
+							a
+								color: #061B38
 	.working_process
 		margin-top: 186px
 		position: relative
