@@ -918,6 +918,9 @@ div.title_circle::before {
     .wrapper .our_portfoli .portfolio .grid-item img {
         /* filter: blur(14.1582px); */
         min-height: 335px;
+		/* -o-object-fit: cover;
+		object-fit: cover;
+		object-position: center; */
     }
 
     .wrapper .our_portfoli .portfolio .grid-item:hover img {

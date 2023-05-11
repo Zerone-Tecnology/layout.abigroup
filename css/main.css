@@ -1156,6 +1156,12 @@ input {
     height: 200px;
   }
 }
+.wrapper .our_portfoli .portfolio .grid-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
 .wrapper .our_portfoli .portfolio .grid-item:nth-child(4n+1) {
   height: 650px;
   width: 24%;
@@ -1268,12 +1274,6 @@ input {
 }
 .wrapper .our_portfoli .portfolio .grid-item:hover img {
   filter: blur(14.1582px);
-}
-.wrapper .our_portfoli .portfolio .grid-item img {
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
 }
 .wrapper .review {
   margin-top: 83px;

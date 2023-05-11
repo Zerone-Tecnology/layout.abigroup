@@ -935,6 +935,10 @@ input
 					position: relative
 					@include respond(_768)
 							height: 200px
+					img
+						// -o-object-fit: cover
+						object-fit: cover
+						object-position: center
 					&:nth-child(4n+1)
 						height: 650px
 						width: 24%
@@ -1015,10 +1019,7 @@ input
 							display: flex
 						img
 							filter: blur(14.1582px)
-					img
-						-o-object-fit: cover
-						object-fit: cover
-						object-position: center
+					
 	.review	
 		margin-top: 83px
 		.review_inner
