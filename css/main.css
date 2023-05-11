@@ -1087,12 +1087,13 @@ input {
   margin-bottom: 20px;
   width: -moz-fit-content;
   width: fit-content;
-  text-align: right;
+  text-align: left;
   width: 100%;
 }
 @media (max-width: 768px) {
   .wrapper .trust_us .trust_us_inner .trust_us_cards .trust_us_card h2 {
     font-size: 26px;
+    text-align: right;
   }
 }
 .wrapper .trust_us .trust_us_inner .trust_us_cards .trust_us_card p {
