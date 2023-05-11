@@ -278,7 +278,7 @@ ul {
 }
 @media (max-width: 425px) {
   .know_price_btn_wrap {
-    top: -50%;
+    top: -15%;
   }
 }
 .know_price_btn_wrap .know_price_btn {
