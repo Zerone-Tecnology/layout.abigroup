@@ -36,10 +36,6 @@ h5 {
     font-size: 24px;
 }
 
-h6 {
-    font-size: 200px;
-}
-
 p {
     font-size: 18px;
 }
@@ -59,14 +55,6 @@ ul {
 
 .know_price_btn_wrap .know_price_btn {
     font-size: 40px;
-}
-
-/* .wrapper .our_portfoli .portfolio .grid-item .grid_item_title p {
-    font-size: 24px;
-} */
-
-.default_btn {
-    font-size: 30px;
 }
 
 .wrapper .working_process .working_process_inner .stages_of_work .row .stages p {
@@ -182,9 +170,9 @@ ul {
     margin-top: -50px;
 }
 
-.wrapper .about_us .about_us_inner .about_us_left {
+/* .wrapper .about_us .about_us_inner .about_us_left {
     margin-top: 60px;
-}
+} */
 
 .wrapper .trust_us {
     margin-top: 10%;
@@ -215,9 +203,6 @@ div.title_circle::before {
     padding: 10px;
 }
 
-.our_portfoli.title_circle {
-    margin-top: 84px;
-}
 
 .wrapper .our_services .our_services_inner .our_services_price .price_box img {
     max-width: 504px;
@@ -241,10 +226,6 @@ div.title_circle::before {
     margin-top: unset;
 }
 
-.default_btn {
-    width: 35%;
-    padding: 35px 0;
-}
 
 .wrapper .working_process {
     margin-top: 84px;
@@ -400,10 +381,6 @@ div.title_circle::before {
         margin-top: 35%;
     }
 
-    .default_btn {
-        font-size: 32px;
-    }
-
     .wrapper .company_features .company_features_inner .features_block p {
         font-size: 18px;
     }
@@ -487,10 +464,6 @@ div.title_circle::before {
         font-size: 55px;
     }
 
-    .default_btn {
-        font-size: 30px;
-    }
-
     .wrapper .working_process .working_process_inner .stages_of_work .row .stages p {
         font-size: 24px;
     }
@@ -546,7 +519,7 @@ div.title_circle::before {
 
 @media (max-width: 924px) {
     .wrapper .know_price .know_price_inner {
-        padding: 30px;
+        padding: 35px;
     }
 
     .wrapper .our_services .our_services_inner .our_services_price .price_box {
@@ -598,7 +571,7 @@ div.title_circle::before {
     }
 
     .main_page_banner h1 {
-        font-size: 25px;
+        font-size: 33px;
     }
 
     .banner-carousel .item img {
@@ -644,14 +617,6 @@ div.title_circle::before {
         line-height: 60px;
     }
 
-    h6 {
-        line-height: 275px;
-    }
-
-    .default_btn {
-        width: 100%;
-    }
-
     .wrapper .know_price .know_price_inner .know_price_btn_wrap .know_price_btn {
         border: 3px solid #061B38;
         /* margin-top: 15px; */
@@ -669,8 +634,8 @@ div.title_circle::before {
     }
 
     .wrapper .know_price .know_price_inner p {
-        line-height: 30px;
-        max-width: 50%;
+        line-height: 25px;
+        max-width: 55%;
         font-size: 16px;
     }
 
@@ -713,7 +678,7 @@ div.title_circle::before {
     }
 
     h2 {
-        line-height: 42px;
+        line-height: 27px;
         text-align: left;
         font-size: 30px;
     }
@@ -733,6 +698,7 @@ div.title_circle::before {
 
     .wrapper .trust_us .trust_us_inner .trust_us_cards .trust_us_card p {
         font-size: 15px;
+        line-height: 20px;
     }
 
     h5 {
@@ -791,10 +757,6 @@ div.title_circle::before {
         line-height: 31px;
     }
 
-    h6 {
-        line-height: 220px;
-    }
-
     .footer .sm_container {
         padding: 0 18px;
     }
@@ -827,7 +789,8 @@ div.title_circle::before {
     }
 
     div.title_circle::before {
-        width: 5px;
+        width: 30px;
+        height: 60px;
     }
 
     .wrapper .about_features .company_features_inner {
@@ -956,6 +919,25 @@ div.title_circle::before {
         width: 190px;
         height: 190px;
     }
+    div.title_circle::before {
+        width: 20px;
+        height: 40px;
+    }
+    .banner-carousel .item .banner_articles .banner_articles_call_back h3{
+        line-height: 20px;
+    }
+    .wrapper .trust_us .trust_us_inner .trust_us_cards .trust_us_card p{
+        line-height: 20px;
+    }
+    .wrapper .know_price .know_price_inner p{
+        line-height: 20px;
+    }
+    .wrapper .trust_us .trust_us_inner .trust_us_cards .trust_us_card h2{
+        margin-bottom: 10px;
+    }
+    .wrapper .working_process .working_process_inner .stages_of_work .row .stages p{
+        width: 65%;
+    }
 }
 @media (max-width: 389px) {
     .wrapper .about .company_features {
@@ -976,5 +958,14 @@ div.title_circle::before {
     .wrapper .our_services .our_services_inner .our_services_price .price_box img{
         width: 140px;
         height: 140px;
+    }
+    .main_page_banner h1 {
+        font-size: 27px;
+    }
+}
+@media(max-width: 320){
+    div.title_circle::before {
+        width: 9px;
+        height: 20px;
     }
 }

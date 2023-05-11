@@ -166,14 +166,15 @@ h5
 	
 h6
 	font-weight: 700
-	font-size: 297.26px
+	font-size: 200px
 	// line-height: 362px
 	text-transform: uppercase
 	color: rgba(255, 198, 41, 0.74)
+	@include respond(_768)
+		font-size: 100px
+		line-height: 100%
 	@include respond(_425)
-		font-weight: 700
-		font-size: 69.597px
-		line-height: 85px
+		font-size: 60px	
 
 p
 	font-weight: 400
@@ -198,7 +199,7 @@ ul
 	padding: 0 0 0 26px
 	font-weight: 500
 	font-size: 24.1546px
-	line-height: 194.9%
+	line-height: 130%
 	color: #000000
 	@include respond(_768)
 		font-size: 16px
@@ -224,7 +225,7 @@ ul
 	@include respond(_1024)
 		top: -60%
 	@include respond(_425)
-		top: 0
+		top: -50%
 	
 	
 
@@ -286,16 +287,18 @@ ul
 div.title_circle
 	margin-top: 50px
 	position: relative
+	@include respond(_425)
+		margin-top: 40px
+	
 	h1
 		margin-left: 25px
-		@include respond(_425)
-			margin-left: 5px
+		margin-bottom: 40px
 	& > h1
 		margin-left: 75px
 		@include respond(_768)
-			margin: 0 0 0 50px
+			margin: 0 0 30px 50px
 		@include respond(_425)
-			margin: 0 0 0 28px
+			margin: 0 0 18px 28px
 		
 	&::before
 		background: #FFC629
@@ -383,6 +386,7 @@ input
 			.banner_article_left
 				h1
 					color: #fff
+					
 				ul
 					color: #ffffff
 			.banner_articles_call_back
@@ -550,14 +554,14 @@ input
 	font-family: 'Oswald'
 	font-style: normal
 	font-weight: 400
-	font-size: 50px
+	font-size: 30px
 	line-height: 100.2%
 	text-align: center
 	text-transform: uppercase
 	color: #162539
 	background: #FFC629
 	border: 0
-	width: 50%
+	width: 35%
 	padding: 46px 0
 	border-radius: 100px
 	margin: auto
@@ -566,11 +570,9 @@ input
 	@include respond(_1024)
 		font-size: 30px
 	@include respond(_425)	
-		font-weight: 400
-		font-size: 16px
-		line-height: 100.2%
 		width: 80%
 		padding: 14px 0
+		font-size: 24px
 .services_btn
 	padding: 63px 0 63px 30px
 	background-color: #D9D9D9
@@ -794,7 +796,7 @@ input
 					@include respond(_1024)
 						max-width: 100%
 						p
-							margin-top: 42px
+							margin-top: 10px
 					
 				.about_us_description
 					display: flex
@@ -869,7 +871,9 @@ input
 						padding: 24px 60px
 						height: fit-content
 					@include respond(_425)
-						padding: 24px 30px
+						padding: 24px 30px 24px 43px
+						margin-bottom: 5px
+					
 					
 					
 					h2
@@ -910,9 +914,8 @@ input
 					&:nth-child(3)
 						margin-left: 12%
 						background: rgba(255, 198, 41, 0.9)
-					@include respond(_1440)
-						&:nth-child(2),&:nth-child(3)
-							margin: 0 0 15px 0
+						h2,p
+							color: #000
 
 	.our_portfoli
 		.portfolio
@@ -1019,9 +1022,7 @@ input
 							display: flex
 						img
 							filter: blur(14.1582px)
-					
-	.review	
-		margin-top: 83px
+			
 		.review_inner
 			@include respond(_768)
 			margin-top: 10%
@@ -1029,6 +1030,10 @@ input
 		background-color: #FFC629
 		overflow: hidden
 		position: relative
+		margin-top: 84px
+		@include respond(_425)
+			margin-top: 30px
+		
 		&.leave_request
 			.know_price_inner
 				padding: 45px 120px
@@ -1098,7 +1103,7 @@ input
 	.our_services
 		margin-top: 72px
 		.our_services_inner
-			margin-top: 84px
+			// margin-top: 84px
 			.our_services_price
 				display: flex
 				flex-wrap: wrap
@@ -1112,7 +1117,7 @@ input
 					align-items: center
 					justify-content: center
 					transition: all .3s ease
-					margin-bottom: 22px
+					margin-top: 22px
 					@include respond(_1440)
 						width: 375px
 						height: 375px
@@ -1128,11 +1133,9 @@ input
 					@include respond(_320)
 						width: 91px
 						height: 91px
-					
-					
-					
-					
-					
+					&:nth-child(odd)
+						margin-right: 5px
+						
 					img
 						border-radius: 50%
 						position: absolute
@@ -1193,18 +1196,59 @@ input
 				display: flex
 				justify-content: space-between
 				width: 84%
+				position: relative
+				@include respond(_768)
+					margin-left: 30px
+				@include respond(_425)
+					margin-left: 18px
+				
+					&::before
+						content: ""
+						position: absolute
+						width: 8px
+						height: 100%
+						border-right: 8px solid #FFD561
+						left: 13%
+						@include respond(_375)
+							width: 6px
+							border-right: 6px solid #FFD561
+						@include respond(_320)
+							width: 4px
+							border-right: 4px solid #FFD561
+							left: 14%
+
+						
+
+										
 				@include respond(_1300)
 					width: 100%
 				@include respond(_768)
 					flex-direction: column
-					align-items: center
-				
-				
-				
+					align-items: flex-start
 				.row
 					width: 50%
+					@include respond(_768)
+						width: 100%
+					
 					.stages
 						position: relative
+						@include respond(_768)
+							display: flex
+							align-items: center
+							margin-bottom: 20px
+						h6
+							@include respond(_768)
+								width: 80px
+								margin-right: 60px
+								text-align: center
+							@include respond(_425)
+								width: 40px
+							@include respond(_375)
+								margin-right: 40px
+							
+							
+							
+							
 						p
 							position: absolute
 							bottom: 10%
@@ -1212,6 +1256,9 @@ input
 							font-size: 36px
 							line-height: 44px
 							color: #515151
+							@include respond(_768)
+								position: relative
+							
 							@include respond(_425)
 								font-weight: 700
 								font-size: 8.42862px
