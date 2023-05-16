@@ -47,6 +47,9 @@ body textarea:required:valid
 	@if $size == _320
 		@media (max-width: 320px)
 			@content
+	@else if $size == _375
+		@media (max-width: 375px)
+			@content
 	@else if $size == _425
 		@media (max-width: 425px)
 			@content
@@ -149,8 +152,6 @@ h4
 		font-size: 8.59781px
 		line-height: 115%
 
-	
-
 h5
 	font-weight: 700
 	font-size: 36px
@@ -165,14 +166,15 @@ h5
 	
 h6
 	font-weight: 700
-	font-size: 297.26px
+	font-size: 200px
 	// line-height: 362px
 	text-transform: uppercase
 	color: rgba(255, 198, 41, 0.74)
+	@include respond(_768)
+		font-size: 100px
+		line-height: 100%
 	@include respond(_425)
-		font-weight: 700
-		font-size: 69.597px
-		line-height: 85px
+		font-size: 60px	
 
 p
 	font-weight: 400
@@ -197,8 +199,8 @@ ul
 	padding: 0 0 0 26px
 	font-weight: 500
 	font-size: 24.1546px
-	line-height: 194.9%
-	color: #FFFFFF
+	line-height: 130%
+	color: #000000
 	@include respond(_768)
 		font-size: 16px
 	@include respond(_425)
@@ -223,7 +225,7 @@ ul
 	@include respond(_1024)
 		top: -60%
 	@include respond(_425)
-		top: -100%
+		top: -15%
 	
 	
 
@@ -284,14 +286,19 @@ ul
 				
 div.title_circle
 	margin-top: 50px
+	position: relative
+	@include respond(_425)
+		margin-top: 40px
+	
 	h1
 		margin-left: 25px
+		margin-bottom: 40px
 	& > h1
 		margin-left: 75px
 		@include respond(_768)
-			margin: 0 0 0 50px
+			margin: 0 0 30px 50px
 		@include respond(_425)
-			margin: 0 0 0 28px
+			margin: 0 0 18px 28px
 		
 	&::before
 		background: #FFC629
@@ -306,6 +313,7 @@ div.title_circle
 		@include respond(_425)
 			width: 9px
 			height: 20px
+			top: 6px
 		
 		
 
@@ -325,10 +333,15 @@ input
 	display: flex
 	margin-bottom: 80px
 	li
-		font-weight: 700
-		font-size: 26px
-		line-height: 32px
+		font-weight: 700 
+		font-size: 26px	
+		line-height: 32px	
 		color: #515151
+		@include respond(_768)
+			font-weight: 700
+			font-size: 14px
+			line-height: 11px
+
 		&::after
 			content: ">"
 			margin: 0 12px
@@ -373,9 +386,12 @@ input
 			.banner_article_left
 				h1
 					color: #fff
+					
+				ul
+					color: #ffffff
 			.banner_articles_call_back
 				position: relative
-				margin: 10px 0 0 0
+				margin: 20px 0 0 0
 				h3
 					font-weight: 700
 					font-size: 36px
@@ -449,6 +465,18 @@ input
 	line-height: 100%
 	color: rgba(255, 198, 41, 0.68)
 	text-align: end
+	@include respond(_1440)
+		font-size: 600px
+	@include respond(_1024)
+		font-size: 400px
+	@include respond(_768)
+		font-size: 300px
+	@include respond(_425)
+		font-size: 150px
+	
+	
+	
+	
 .about_card_wrap
 	display: flex
 	flex-wrap: wrap
@@ -473,6 +501,7 @@ input
 			&[href^="tel:"]
 				color: #515151
 
+
 .bg_right_img
 	position: absolute
 	top: 0
@@ -483,6 +512,9 @@ input
 	top: 5%
 	right: 0
 	z-index: -9
+	@include respond(_1024)
+		display: none
+	
 .review-carousel
 	.item
 		cursor: pointer
@@ -522,14 +554,14 @@ input
 	font-family: 'Oswald'
 	font-style: normal
 	font-weight: 400
-	font-size: 50px
+	font-size: 30px
 	line-height: 100.2%
 	text-align: center
 	text-transform: uppercase
 	color: #162539
 	background: #FFC629
 	border: 0
-	width: 50%
+	width: 35%
 	padding: 46px 0
 	border-radius: 100px
 	margin: auto
@@ -538,12 +570,39 @@ input
 	@include respond(_1024)
 		font-size: 30px
 	@include respond(_425)	
-		font-weight: 400
-		font-size: 16px
-		line-height: 100.2%
 		width: 80%
 		padding: 14px 0
+		font-size: 24px
+.services_btn
+	padding: 63px 0 63px 30px
+	background-color: #D9D9D9
+	margin: 6px 0
+	cursor: pointer
+	transition: all .3s ease
+	@include respond(_768)
+		padding: 20px 20px
 	
+	&.active,&:hover
+		background: #FFC629
+		transition: all .3s ease
+		a	
+			color: #000000
+			transition: all .3s ease
+
+	a
+		font-family: 'Oswald'
+		font-style: normal
+		font-weight: 400
+		font-size: 36px
+		line-height: 53px
+		color: #515151
+		transition: all .3s ease
+		@include respond(_768)
+			font-weight: 400
+			font-size: 16px
+			line-height: 19px
+
+
 .wrapper
 	.header
 		background-color: #FFC629
@@ -737,7 +796,7 @@ input
 					@include respond(_1024)
 						max-width: 100%
 						p
-							margin-top: 42px
+							margin-top: 10px
 					
 				.about_us_description
 					display: flex
@@ -794,7 +853,7 @@ input
 				overflow: hidden
 				margin: 40px 0 14px 0
 			@include respond(_425)
-				max-height: 100px
+				max-height: 71px
 			
 		.trust_us_inner
 			.trust_us_cards
@@ -812,12 +871,21 @@ input
 						padding: 24px 60px
 						height: fit-content
 					@include respond(_425)
-						padding: 24px 30px
+						padding: 24px 30px 24px 43px
+						margin-bottom: 5px
 					
 					
-					h4
+					
+					h2
 						margin-bottom: 20px
 						width: fit-content
+						text-align: left
+						width: 100%
+						@include respond(_768) 
+							font-size: 26px
+							text-align: right
+						
+						
 					p
 						color: #fff
 						width: 50%
@@ -830,6 +898,7 @@ input
 							font-weight: 500
 							font-size: 20px
 							line-height:20px
+							text-align: right
 						@include respond(_425)
 							font-weight: 500
 							font-size: 9px
@@ -845,9 +914,8 @@ input
 					&:nth-child(3)
 						margin-left: 12%
 						background: rgba(255, 198, 41, 0.9)
-					@include respond(_1440)
-						&:nth-child(2),&:nth-child(3)
-							margin: 0 0 15px 0
+						h2,p
+							color: #000
 
 	.our_portfoli
 		.portfolio
@@ -856,7 +924,8 @@ input
 					zoom: 0.8
 				@include respond(_1024)
 					// zoom: 0.6
-				
+				display: flex
+				flex-wrap: wrap
 				
 				&-item
 					width: 25%
@@ -869,27 +938,60 @@ input
 					position: relative
 					@include respond(_768)
 							height: 200px
-					&:nth-child(1)
-						height: 800px
+					img
+						// -o-object-fit: cover
+						object-fit: cover
+						object-position: center
+					&:nth-child(4n+1)
+						height: 650px
+						width: 24%
+						margin-right: 10px
 						@include respond(_768)
-							height: 400px
-						
+							height: 300px
+						@include respond(_375)
+							height: 250px
+							margin-right: 4px
 						.grid_item_title
 							p
 								width: min-content
-					&:nth-child(2)
-						width: 65%
-						height: 800px
+								@include respond(_320)
+									font-size: 16px
+								
+					&:nth-child(4n+2)
+						width: 74%
+						height: 650px
 						border-radius: 5em
 						@include respond(_768)
-							height: 400px
-					&:nth-child(3)
-						width: 65%
-					&:nth-child(4)
-						border-radius: 50%
+							height: 300px
+						@include respond(_425)
+							border-radius: 3em
+							width: 73%
+						@include respond(_375)
+							height: 250px
+						
+						
+						img
+							width: 100%
+					&:nth-child(4n+3)
+						width: 64%
+						margin-right: 10px
+						@include respond(_425)
+							border-radius: 3em
+							width: 63%
+						@include respond(_375)
+							margin-right: 4px
+						
+					&:nth-child(4n+4)
+						border-radius: 25em
+						width: 34%
+						img
+							width: 100%
+							height: 100%
 						.grid_item_title
 							p
 								width: min-content
+								@include respond(_320)
+									font-size: 16px
 					.grid_item_title
 						height: inherit    					
 						width: 100%
@@ -901,22 +1003,26 @@ input
 						p
 							font-family: 'Oswald'
 							font-weight: 400
-							font-size: 36px
+							font-size: 24px
 							line-height: 41px
 							text-align: center
 							text-transform: uppercase
 							color: #FFFFFF
 							z-index: 9
 							border-bottom: 8px #FFC629 solid
-							// width: min-content
+							@include respond(_425)
+								font-size: 16px
+								line-height: 28px
+							// @include respond(_375)
+							// 	font-size: 18px
+							
 
 					&:hover
 						.grid_item_title
 							display: flex
 						img
 							filter: blur(14.1582px)
-	.review	
-		margin-top: 83px
+			
 		.review_inner
 			@include respond(_768)
 			margin-top: 10%
@@ -924,6 +1030,10 @@ input
 		background-color: #FFC629
 		overflow: hidden
 		position: relative
+		margin-top: 84px
+		@include respond(_425)
+			margin-top: 30px
+		
 		&.leave_request
 			.know_price_inner
 				padding: 45px 120px
@@ -972,6 +1082,8 @@ input
 				top: -40%
 				bottom: -40%
 				right: 12%
+				display: flex
+				align-items: center
 				.know_price_btn
 					color: #061B38
 					border: 5px solid #061B38
@@ -984,16 +1096,14 @@ input
 							top: 60%
 							background: url("../img/call_back_arrow_blue.png")
 							background-repeat: no-repeat
-							@include respond(_425)
-								background: url("../img/little_call_back_blue.png")
-								background-repeat: no-repeat
-								top: 60%
+							@include respond(_768)
+								display: none
 
 						
 	.our_services
 		margin-top: 72px
 		.our_services_inner
-			margin-top: 84px
+			// margin-top: 84px
 			.our_services_price
 				display: flex
 				flex-wrap: wrap
@@ -1001,14 +1111,14 @@ input
 				.price_box
 					width: 504px
 					height: 504px
-					// padding: 200px 95px
 					border-radius: 50%
 					display: flex
 					flex-direction: column
 					align-items: center
 					justify-content: center
 					transition: all .3s ease
-					margin-bottom: 22px
+					margin-top: 22px
+					background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
 					@include respond(_1440)
 						width: 375px
 						height: 375px
@@ -1024,11 +1134,9 @@ input
 					@include respond(_320)
 						width: 91px
 						height: 91px
-					
-					
-					
-					
-					
+					&:nth-child(odd)
+						margin-right: 5px
+						
 					img
 						border-radius: 50%
 						position: absolute
@@ -1055,6 +1163,15 @@ input
 					h4,p
 						text-align: center
 						color: #FFFFFF
+					h4
+						@include respond(_425)
+							font-size: 20px
+						@include respond(_375)
+							font-size: 18px
+						@include respond(_320)
+							font-size: 16px
+						a
+							color: #FFFFFF
 						
 						
 					&:hover
@@ -1065,6 +1182,9 @@ input
 							display: none
 						h4,p
 							color: #061B38
+						h4
+							a
+								color: #061B38
 	.working_process
 		margin-top: 186px
 		position: relative
@@ -1077,18 +1197,59 @@ input
 				display: flex
 				justify-content: space-between
 				width: 84%
+				position: relative
+				@include respond(_768)
+					margin-left: 30px
+				@include respond(_425)
+					margin-left: 18px
+				
+					&::before
+						content: ""
+						position: absolute
+						width: 8px
+						height: 100%
+						border-right: 8px solid #FFD561
+						left: 13%
+						@include respond(_375)
+							width: 6px
+							border-right: 6px solid #FFD561
+						@include respond(_320)
+							width: 4px
+							border-right: 4px solid #FFD561
+							left: 14%
+
+						
+
+										
 				@include respond(_1300)
 					width: 100%
 				@include respond(_768)
 					flex-direction: column
-					align-items: center
-				
-				
-				
+					align-items: flex-start
 				.row
 					width: 50%
+					@include respond(_768)
+						width: 100%
+					
 					.stages
 						position: relative
+						@include respond(_768)
+							display: flex
+							align-items: center
+							margin-bottom: 20px
+						h6
+							@include respond(_768)
+								width: 80px
+								margin-right: 60px
+								text-align: center
+							@include respond(_425)
+								width: 40px
+							@include respond(_375)
+								margin-right: 40px
+							
+							
+							
+							
 						p
 							position: absolute
 							bottom: 10%
@@ -1096,6 +1257,9 @@ input
 							font-size: 36px
 							line-height: 44px
 							color: #515151
+							@include respond(_768)
+								position: relative
+							
 							@include respond(_425)
 								font-weight: 700
 								font-size: 8.42862px
@@ -1105,6 +1269,9 @@ input
 	.company_features
 		background: #FFC629
 		margin-top: 96px
+		@include respond(_768)
+			display: none
+		
 		.company_features_inner
 			display: flex
 			justify-content: space-between
@@ -1146,8 +1313,7 @@ input
 					width: 61px
 					height: 61px
 					border: 1.0625px solid #FFFFFF
-				
-				
+
 				p
 					font-weight: 700
 					font-size: 30px
@@ -1255,6 +1421,7 @@ input
 					margin: 0
 					li
 						margin-bottom: 35px
+						color: #ffffff
 						@include respond(_1024)
 							font-size: 18px
 						@include respond(_425)
@@ -1329,38 +1496,201 @@ input
 			justify-content: center
 			a
 				width: 14%
+				padding: 20px
+				img
+					width: -webkit-fill-available
 	.requisites
-		ul
-			margin-bottom: 90px
-			li
-				color: #515151
-				font-weight: 400
-				font-size: 26px
-				line-height: 32px
 		p
 			margin-bottom: 90px
+			@include respond(_1024)
+				margin-bottom: 20px
+			
 		.requisites_card_wrap
+			ul
+				margin-bottom: 90px
+				li
+					color: #515151
+					font-weight: 400
+					font-size: 26px
+					line-height: 32px
 			.requisites_card
 				display: flex
 				margin-bottom: 59px
 				.requisites_card_description
 					max-width: 744px
 					margin-left: 178px
+					@include respond(_1024)
+						margin: 0
+					
 					p
 						margin: 0
+				@include respond(_1024)
+					img
+						width: 30%
+						height: -webkit-fill-available
+
 	.contact
 		p
 			margin-bottom: 90px
+			@include respond(_1024)
+				margin-bottom: 20px			
 		.contact_wrap
 			display: flex
 			justify-content: space-between
+			@include respond(_768)
+				flex-direction: column
+				.contact_left,.contact_right
+					width: 100% !important
+			
 			.contact_left
 				width: 70%
 			.contact_right
 				width: 24%
 			p
 				margin-bottom: 50px
+	.about
+		p
+			margin-bottom: 60px		
+		.about_blog
+			display: flex
+			.about_blog_right
+				@include respond(_1024)
+					display: none
+				
+	.about_features
+		background-color: transparent
+		p
+			margin: 0
+		.company_features_inner
+			justify-content: center
+			background-color: #FFC629
+			border-radius: 200px
+			h3
+				display: flex
+				align-items: flex-end
+				margin-bottom: 10px
+				p
+					font-weight: 700
+					font-size: 24px !important
+					line-height: 106.9%
+	.review_page
+		.review_blog_wrap
+			display: flex
+			flex-direction: column
+			.review_card
+				display: flex
+				padding: 93px 75px
+				@include respond(_1024)
+					flex-direction: column
+					padding: 20px 10px
+				&:nth-child(even)
+					flex-direction: row-reverse
+					background: rgba(255, 198, 41, 0.75)
+					border-radius: 150px 0px
+					@include respond(_1024)
+						flex-direction: column
+						border-radius: 0
+
+				p
+					margin-bottom: 50px
+					@include respond(_1024)
+						margin-bottom: 20px
+				@include respond(_1024)
+					img
+						width: 50%
+				
+	.vacancies
+		.vacancies_blog_wrap
+			.vacancies_card
+				display: flex
+				flex-wrap: wrap
+				border-bottom:3px solid #515151
+				padding: 0 0 16px 0
+				margin: 90px 0 181px 0 
+				position: relative
+				.card_title
+					color: #000000
+				.vacancies_card_left
+					width: 70%
+					@include respond(_768)
+						width: 100%
+					
+					.vacancies_card_description
+						margin-top: 70px
+						ul
+							list-style: none
+							li
+								color: #515151
+								&::before
+									content:  "—"
+									position: relative
+									left:     -5px
+				.vacancies_card_right
+					width: 30%
+					@include respond(_768)
+						position: absolute
+						right: 0
+						top: 0
+					
+					p
+						font-weight: 700
+						font-size: 26px
+						line-height: 32px
+						color: #000000
+						@include respond(_768)
+							font-weight: 700
+							font-size: 14px
+							line-height: 11px
+							
+
+				&::after
+					content: url("../img/vacancies_vector.png")
+					margin-top: 84px
+					@include respond(_768)
+						margin-top: 10px
+					
+	.services_page
+		.services_blog
+			display: flex
+			justify-content: space-between
+			@include respond(_1024)
+				flex-direction: column
+				.services_blog_left,.services_blog_right
+					width: 100% !important
+
+			.services_blog_left
+				position: relative
+				width: 65%
+				.service_card
+					margin-bottom: 60px
+					h5
+						margin-bottom: 80px
+				.default_btn
+					margin: 0
+					position: absolute
+					top: 2.5%
+					right: 0
+					width: 30%
+					padding: 15px 0
+			.services_blog_right
+				width: 30%
+				@include respond(_1024)
+					display: flex
+					flex-wrap: wrap
+					justify-content: space-between
+					.services_btn
+						width: 33%
+				
+			ul
+				list-style: none
+				li
+					color: #515151
+					&::before
+						content:  "—"
+						position: relative
+						left:     -5px
 			
+
 .call_back_modal_wrapper
 	position: fixed
 	left: 0
