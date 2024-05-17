@@ -1867,6 +1867,10 @@ ul li {
 .btn-pt {
   background-image: url("../img/icons/pinterest.svg");
 }
+.btn-black {
+  background-color: #000;
+  color: #fff;
+}
 
 .icon {
   width: 30px;
@@ -1896,6 +1900,9 @@ ul li {
 
 .title {
   line-height: 1.2em;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 25px;
 }
 
 .header {
@@ -2058,14 +2065,13 @@ ul li {
 }
 .header .slider-main .slide .content .title {
   font-size: 50px;
-  font-weight: 700;
 }
 .header .slider-main .slide .content .desc {
   margin: 25px 0;
 }
 .header .slider-main .slide .content .btn {
   display: inline-block;
-  padding: auto 55px;
+  padding: 15px 55px;
 }
 .header .slider-main .slide .copy {
   width: 60%;
@@ -2156,6 +2162,11 @@ ul li {
   height: 100%;
   object-fit: cover;
 }
+.section .owl-nav {
+  position: absolute;
+  top: -70px;
+  right: 0;
+}
 .section .owl-nav button.owl-prev, .section .owl-nav button.owl-next {
   width: 40px;
   height: 40px;
@@ -2163,6 +2174,10 @@ ul li {
   border-radius: 50%;
   text-align: center;
   color: #fff;
+}
+.section .owl-dots {
+  width: 100%;
+  text-align: center;
 }
 .section .owl-dots .owl-dot span {
   background: #000;
@@ -2246,15 +2261,8 @@ ul li {
   text-align: center;
   width: 100%;
 }
-.service .block-wrap .owl-nav {
-  position: absolute;
-  top: -70px;
-  right: 0;
-}
 
 .about .title {
-  font-size: 34px;
-  font-weight: bold;
   margin-bottom: 45px;
 }
 .about .img-wrap {
@@ -2296,5 +2304,132 @@ ul li {
   color: #fff;
 }
 
+.form {
+  background-image: url("../img/bg-form.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.form .form-wrap {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 5px;
+  width: 50%;
+}
+.form .title {
+  margin-bottom: 15px;
+}
+.form form {
+  width: 90%;
+  padding-top: 25px;
+}
+.form form .input {
+  background-color: #F5F5F5;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.form form .btn {
+  border: none;
+  padding: 15px 55px;
+}
+
+.project .block-wrap .block {
+  background-color: #fff;
+}
+.project .block-wrap .block .info-wrap {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 15px;
+}
+.project .block-wrap .block .info-wrap .info {
+  padding: 0 15px 0 25px;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: left center;
+}
+.project .block-wrap .block .info-wrap .info.type {
+  background-image: url("../img/icons/setting.svg");
+}
+.project .block-wrap .block .info-wrap .info.city {
+  position: relative;
+  padding-left: 15px;
+}
+.project .block-wrap .block .info-wrap .info.city::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 40%;
+  width: 6px;
+  height: 6px;
+  background-color: #FC4C02;
+  border-radius: 50%;
+}
+.project .block-wrap .block .info-wrap .info.square {
+  background-image: url("../img/icons/square.svg");
+}
+
+.stages .block-wrap {
+  flex-wrap: nowrap;
+}
+.stages .block-wrap .block {
+  width: 16.6666666667%;
+}
+.stages .block-wrap .block:last-child {
+  background-color: #FC4C02;
+  color: #fff;
+}
+.stages .block-wrap .block .btn-more {
+  margin-top: 0;
+}
+.stages .img-wrap {
+  margin-top: 45px;
+  height: 350px;
+}
+
+.reviews .block-wrap .slide {
+  display: flex;
+  gap: 15px;
+}
+.reviews .block-wrap .slide .block {
+  width: 70%;
+  display: flex;
+}
+.reviews .block-wrap .slide .block .content {
+  width: 70%;
+}
+.reviews .block-wrap .slide .block .img-wrap {
+  width: 260px;
+  height: 260px;
+  margin-right: 25px;
+}
+.reviews .block-wrap .slide .block:last-child {
+  width: 30%;
+  background-color: #FC4C02;
+  color: #fff;
+}
+.reviews .block-wrap .slide .block:last-child .btn-more {
+  color: #fff;
+}
+
+.partners .block-wrap {
+  gap: 15px;
+  margin-bottom: 45px;
+}
+.partners .block-wrap .block {
+  width: calc(33.3333333333% - 10px);
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease-in-out;
+  filter: grayscale(1);
+}
+.partners .block-wrap .block:hover {
+  box-shadow: 2px 2px 10px #cccccc;
+  filter: grayscale(0);
+}
 /*==========  Desktop First  ==========*/
 /*==========  Mobile First  ==========*//*# sourceMappingURL=main.css.map */
