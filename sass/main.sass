@@ -312,6 +312,14 @@ ul
 				position: absolute
 				left: 0
 	
+	.img-wrap
+		border-radius: 5px
+		overflow: hidden
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
 	.owl-nav
 		button.owl-prev, button.owl-next
 			width: 40px
@@ -398,6 +406,46 @@ ul
 			top: -70px
 			right: 0
 		
+.about
+	.title
+		font-size: 34px
+		font-weight: bold
+		margin-bottom: 45px
+	.img-wrap
+		margin-bottom: 25px
+		height: 350px
+	.block-wrap
+		flex-wrap: nowrap
+		.block:last-child
+			background-color: $accent
+			color: #fff
 
+.why-we
+	.block-wrap
+		gap: 15
+		.block
+			width: calc((100% / 3) - 10px)
+			.content
+				flex: 1
+			&:nth-child(1)
+				width: calc(50% - 15px)
+			&:nth-child(2)
+				width: 50%
+				display: flex
+				.img-wrap
+					// width: 260px
+					// height: 260px
+					margin-right: 25px
+				
+			&:nth-child(3)
+				// width: calc(33% - 15px)
+			&:nth-child(4)
+				// width: calc(33% - 15px)
+			&:last-child
+				// width: 33%
+				background-color: $accent
+				color: #fff
+				.btn-more
+					color: #fff
 
 @import "media" // Always at the end
