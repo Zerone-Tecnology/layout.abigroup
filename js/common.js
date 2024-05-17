@@ -1,5 +1,8 @@
 $(function() {
 
-	// Custom JS
+	$('.slider-wrap').owlCarousel({
+	  loop: true,
+		items: 1,
+	})
 
 });

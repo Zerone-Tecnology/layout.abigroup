@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Mont';
+    src: url('Mont-Heavy.woff2') format('woff2'),
+        url('Mont-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('Mont-ExtraLight.woff2') format('woff2'),
+        url('Mont-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
