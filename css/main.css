@@ -1871,6 +1871,32 @@ ul li {
   background-color: #000;
   color: #fff;
 }
+.btn-dwn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 55px;
+  margin-bottom: 15px;
+  height: 40px;
+  color: #000;
+  text-decoration: none;
+}
+.btn-dwn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("../img/icons/download.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 50%;
+}
+.btn-dwn:hover::before {
+  background-color: #FC4C02;
+}
 
 .icon {
   width: 30px;
@@ -2129,6 +2155,7 @@ ul li {
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 15px;
+  line-height: 1.2em;
 }
 .section .block-wrap .block .img-wrap {
   border-radius: 5px;
@@ -2431,5 +2458,66 @@ ul li {
   box-shadow: 2px 2px 10px #cccccc;
   filter: grayscale(0);
 }
+.news .block-wrap .block {
+  background-color: #fff;
+  width: calc(33.3333333333% - 10px);
+}
+.news .block-wrap .block .img-wrap {
+  height: 370px;
+  margin-bottom: 45px;
+}
+
+.footer {
+  padding: 55px 0;
+}
+.footer .block-wrap .info {
+  margin-bottom: 45px;
+}
+.footer .block-wrap .b-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 55px;
+}
+.footer .block-wrap a {
+  text-decoration: none;
+  color: #000;
+}
+.footer .block-wrap a:hover {
+  color: #FC4C02;
+}
+.footer .block-wrap ul li {
+  padding: 10px 0;
+}
+.footer .block-wrap .block {
+  position: relative;
+  padding-left: 55px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+.footer .block-wrap .block::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background-color: #000;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+}
+.footer .block-wrap .block.phone::before {
+  background-image: url("../img/icons/phone-w.svg");
+}
+.footer .block-wrap .block.email::before {
+  background-image: url("../img/icons/email.svg");
+}
+.footer .block-wrap .block.map::before {
+  background-image: url("../img/icons/pin.svg");
+}
+.footer .block-wrap .block:hover::before {
+  background-color: #FC4C02;
+}
+
 /*==========  Desktop First  ==========*/
 /*==========  Mobile First  ==========*//*# sourceMappingURL=main.css.map */

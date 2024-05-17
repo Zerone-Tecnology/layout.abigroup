@@ -70,6 +70,29 @@ ul
 	&-black
 		background-color: #000
 		color: #fff
+	&-dwn
+		position: relative
+		display: flex
+		align-items: center
+		padding-left: 55px
+		margin-bottom: 15px
+		height: 40px
+		color: #000
+		text-decoration: none
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			background-image: url('../img/icons/download.svg')
+			background-repeat: no-repeat
+			background-position: center
+			width: 40px
+			height: 40px
+			background-color: #000
+			border-radius: 50%
+		&:hover::before
+			background-color: $accent
 
 .icon
 	width: 30px
@@ -298,6 +321,8 @@ ul
 				font-weight: bold
 				font-size: 24px
 				margin-bottom: 15px
+				line-height: 1.2em
+
 			.img-wrap
 				border-radius: 5px
 				overflow: hidden
@@ -557,6 +582,55 @@ ul
 			img
 				// width: 40%
 
+.news
+	.block-wrap
+		.block
+			background-color: #fff
+			width: calc((100% / 3) - 10px)
+			.img-wrap
+				height: 370px
+				margin-bottom: 45px
 
+.footer
+	padding: 55px 0
+	.block-wrap
+		.info
+			margin-bottom: 45px
+		.b-title
+			font-size: 18px
+			font-weight: bold
+			margin-bottom: 55px
+		a
+			text-decoration: none
+			color: #000
+			&:hover
+				color: $accent
+		ul
+			li
+				padding: 10px 0
+		.block
+			position: relative
+			padding-left: 55px
+			height: 40px
+			margin-bottom: 10px
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				height: 40px
+				width: 40px
+				background-color: #000
+				border-radius: 50%
+				background-repeat: no-repeat
+				background-size: 20px
+				background-position: center
+			&.phone::before
+				background-image: url('../img/icons/phone-w.svg')
+			&.email::before
+				background-image: url('../img/icons/email.svg')
+			&.map::before
+				background-image: url('../img/icons/pin.svg')
+			&:hover::before
+				background-color: $accent
 
 @import "media" // Always at the end
