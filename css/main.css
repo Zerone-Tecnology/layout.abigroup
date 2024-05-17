@@ -2045,55 +2045,202 @@ ul li {
   right: 18%;
   top: 67px;
 }
-.header .slider-wrap .slide {
+.header .slider-main .slide {
   height: 90vh;
   background-color: #ccc;
   position: relative;
 }
-.header .slider-wrap .slide .content {
+.header .slider-main .slide .content {
   position: absolute;
   margin-top: 20%;
   color: #fff;
   width: 70%;
 }
-.header .slider-wrap .slide .content .title {
+.header .slider-main .slide .content .title {
   font-size: 50px;
   font-weight: 700;
 }
-.header .slider-wrap .slide .content .desc {
+.header .slider-main .slide .content .desc {
   margin: 25px 0;
 }
-.header .slider-wrap .slide .content .btn {
+.header .slider-main .slide .content .btn {
   display: inline-block;
   padding: auto 55px;
 }
-.header .slider-wrap .slide .copy {
+.header .slider-main .slide .copy {
   width: 60%;
   border-left: 1px solid #fff;
   padding-left: 25px;
   margin-top: 150px;
 }
-.header .slider-wrap .slide img {
+.header .slider-main .slide img {
   height: 100%;
 }
-.header .slider-wrap .owl-dots {
+.header .slider-main .owl-dots {
   position: absolute;
   bottom: 15px;
   left: 0;
   right: 0;
 }
-.header .slider-wrap .owl-dots .owl-dot span {
+.header .slider-main .owl-dots .owl-dot span {
   background: #fff;
 }
-.header .slider-wrap .owl-dots .owl-dot.active span {
+.header .slider-main .owl-dots .owl-dot.active span {
   background: #FC4C02;
 }
 
 .section {
   padding: 55px 0;
+  font-size: 16px;
 }
 .section .s-title {
   font-size: 14px;
+  margin-bottom: 25px;
+  padding-left: 20px;
+  position: relative;
+}
+.section .s-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 40%;
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50%;
+}
+.section .block-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.section .block-wrap .block {
+  background-color: #F5F5F5;
+  border-radius: 5px;
+  padding: 15px;
+}
+.section .block-wrap .block .b-title {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.section .block-wrap .block .img-wrap {
+  border-radius: 5px;
+  overflow: hidden;
+}
+.section .block-wrap .block .img-wrap img {
+  width: 100%;
+}
+.section .block-wrap .block .btn-more {
+  color: #FC4C02;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 45px;
+  display: inline-block;
+}
+.section ul li {
+  position: relative;
+  padding: 5px 5px 5px 15px;
+}
+.section ul li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+}
+.section .owl-nav button.owl-prev, .section .owl-nav button.owl-next {
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+}
+.section .owl-dots .owl-dot span {
+  background: #000;
+}
+.section .owl-dots .owl-dot.active span {
+  background: #FC4C02;
+}
+
+.prepos .block-wrap .block {
+  width: 100%;
+  display: flex;
+}
+.prepos .block-wrap .block:nth-child(1) {
+  width: calc(40% - 15px);
+  background-color: #FC4C02;
+  color: #fff;
+}
+.prepos .block-wrap .block:nth-child(1) .btn-more {
+  color: #fff;
+}
+.prepos .block-wrap .block:nth-child(2) {
+  width: 60%;
+}
+.prepos .block-wrap .block .img-wrap {
+  height: 260px;
+  width: 260px;
+  margin-right: 15px;
+}
+.prepos .block-wrap .block .content {
+  margin-left: 25px;
+}
+
+.service .block-wrap .slide {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.service .block-wrap .slide .block {
+  display: flex;
+  width: 70%;
+}
+.service .block-wrap .slide .block .img-wrap {
+  height: 260px;
+  width: 260px;
+  margin-right: 25px;
+}
+.service .block-wrap .slide .block .content {
+  width: 60%;
+}
+.service .block-wrap .slide .block:last-child {
+  width: 30%;
+  background-color: #FC4C02;
+  color: #fff;
+}
+.service .block-wrap .slide .block:last-child .content {
+  width: 100%;
+}
+.service .block-wrap .slide .block:last-child .content .btn-more {
+  color: #fff;
+}
+.service .block-wrap .owl-item:nth-child(even) .block {
+  width: 30%;
+  background-color: #FC4C02;
+  color: #fff;
+}
+.service .block-wrap .owl-item:nth-child(even) .block .btn-more {
+  color: #fff;
+}
+.service .block-wrap .owl-item:nth-child(even) .block:last-child {
+  width: 70%;
+  background-color: #F5F5F5;
+  color: #000;
+}
+.service .block-wrap .owl-item:nth-child(even) .block:last-child .content {
+  width: 70%;
+}
+.service .block-wrap .owl-item:nth-child(even) .block:last-child .content .btn-more {
+  color: #FC4C02;
+}
+.service .block-wrap .owl-dots {
+  text-align: center;
+  width: 100%;
+}
+.service .block-wrap .owl-nav {
+  position: absolute;
+  top: -70px;
+  right: 0;
 }
 
 /*==========  Desktop First  ==========*/
