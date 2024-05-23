@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<base href="/">
 
-	<title>ABI Group | About</title>
+	<title>ABI Group | Projects</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,7 +42,7 @@
 									<ul>
 										<li><a href="about.html">О компании</a></li>
 										<li><a href="#">Новости</a></li>
-										<li><a href="#">Кейсы</a></li>
+										<li><a href="projects.html">Кейсы</a></li>
 										<li><a href="#">Сертификаты</a></li>
 										<li><a href="#">Партнеры</a></li>
 										<li><a href="#">Отзывы</a></li>
@@ -87,11 +87,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-5">
-					<div class="left-wrap">
+					<div class="left-wrap block-wrap">
 						<div class="block">
 							<div class="b-title">Написать директору</div>
 							<p>Задайте любой интересующий Вас вопрос</p>
-							<a href="#" class="btn">Написать</a>
+							<a href="#popup" class="btn btn-popup">Написать</a>
 						</div>
 					</div>
 				</div>
@@ -327,8 +327,25 @@
 		</div>
 	</footer>
 
+	<!-- popup -->
+	<div id="popup" class="popup-wrap mfp-hide">
+		<div class="content">
+			<div class="form-wrap">
+				<form action="">
+					<div class="f-title">Написать директору</div>
+					<p>Остались вопросы? Задайте любой интересующий Вас вопрос</p>
+					<input type="text" class="input" placeholder="text">
+					<input type="text" class="input" placeholder="text">
+					<input type="text" class="input" placeholder="text">
+					<input type="text" class="btn" value="Отправить">
+				</form>
+			</div>
+		</div>
+	</div>
+
 	<script src="libs/jquery/dist/jquery.min.js"></script>
 	<script src="libs/owlcarousel/owl.carousel.min.js"></script>
+	<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
 	<script src="js/common.js"></script>
 
 </body>

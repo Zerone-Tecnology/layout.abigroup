@@ -1,5 +1,6 @@
 @import "../libs/owlcarousel/owl.carousel.min.css";
 @import "../libs/owlcarousel/owl.theme.default.min.css";
+@import "../libs/magnific-popup/magnific-popup.css";
 @font-face {
   font-family: "roboto-example";
   font-weight: normal;
@@ -2459,6 +2460,31 @@ ul li {
 .project .block-wrap .block .info-wrap .info.square {
   background-image: url("../img/icons/square.svg");
 }
+.project .block-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+.project .block-head .f-item {
+  padding: 15px;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+}
+.project .block-head .f-item.active {
+  background-color: #FC4C02;
+  color: #fff;
+}
+.project .f-block {
+  display: none;
+  width: calc(50% - 10px);
+}
+.project .f-block.show {
+  display: block;
+}
 
 .stages .block-wrap {
   flex-wrap: nowrap;
@@ -2538,14 +2564,70 @@ ul li {
   background-image: url("../img/about-us.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100%;
+  align-items: end;
+}
+.about-us .left-wrap .block {
+  border-radius: 5px;
+  background: #fff;
+  margin: 30px;
+  padding: 30px;
+  width: 100%;
+}
+.about-us .left-wrap .block .btn {
+  width: fit-content;
+  margin-top: 30px;
 }
 
 .present .block-wrap .block {
   width: calc(50% - 10px);
+  padding: 30px;
+}
+.present .block-wrap .block .btn-link {
+  color: #000;
 }
 
 .accred .block-wrap .block {
+  padding: 30px;
   width: calc(50% - 10px);
+}
+.accred .block-wrap .block .btn-dwn {
+  margin-bottom: 0;
+  margin-top: 25px;
+}
+
+.popup-wrap {
+  max-width: 550px;
+  padding: 30px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+}
+.popup-wrap .f-title {
+  font-size: 35px;
+  font-weight: bold;
+}
+.popup-wrap .input {
+  background-color: #F5F5F5;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.popup-wrap .btn {
+  border: none;
+}
+.popup-wrap .mfp-close {
+  background: #FC4C02;
+  border-radius: 50%;
+  color: #fff;
+  right: -55px;
+}
+.popup-wrap .mfp-close:hover {
+  background: #000;
 }
 
 .footer {
