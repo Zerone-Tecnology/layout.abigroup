@@ -1,5 +1,16 @@
 $(function() {
 
+	window.onscroll = function(){
+		var hTop = $('.header-wrap').offset().top;
+		 if(hTop > 100){
+			$('.mainmenu-wrap').addClass('fixed');
+		 } else {
+			$('.mainmenu-wrap').removeClass('fixed');
+		 }
+	}
+
+	
+
 	$('.slider-main').owlCarousel({
 	  loop: true,
 		items: 1,
