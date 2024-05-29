@@ -2541,6 +2541,12 @@ ul li {
 .project-info .slide {
   width: 100%;
 }
+.project-info .slide .block:last-child {
+  order: 1;
+}
+.project-info .slide .block:first-child {
+  order: 2;
+}
 
 .stages .block-wrap {
   flex-wrap: nowrap;
@@ -2650,6 +2656,23 @@ ul li {
 .accred .block-wrap .block .btn-dwn {
   margin-bottom: 0;
   margin-top: 25px;
+}
+
+.certificates .block-wrap .block {
+  background-color: #fff;
+  transition: all 0.25s ease-in-out;
+}
+.certificates .block-wrap .block:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: url("../img/icons/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .popup-wrap {
