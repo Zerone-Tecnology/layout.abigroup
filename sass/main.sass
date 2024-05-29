@@ -702,12 +702,21 @@ ul
 					width: 260px
 					height: 260px
 					margin-right: 25px
+					background-color: #fff
 				&:last-child
 					width: 30%
 					background-color: $accent
 					color: #fff
 					.btn-more
 						color: #fff
+	&.page
+		.block-wrap
+			.block
+				&:last-child
+					background-color: $gray
+					color: #000
+					.btn-more
+						color: #000
 
 .partners
 	.block-wrap
@@ -815,6 +824,97 @@ ul
 			.btn-link
 				display: block
 				color: #000
+
+.contacts
+	.block-wrap
+		flex-wrap: nowrap
+		.block
+			flex: 1
+			line-height: 1.6em
+			p
+				font-size: 14px
+			.link, .info
+				font-size: 22px
+			.link
+				text-decoration: none
+				color: #000
+				font-wight: 500px
+
+	.map-wrap
+		margin-top: 30px
+	
+.req
+	padding-top: 0
+	.block-wrap
+		flex-wrap: nowrap
+		justify-content: space-around
+		.block
+			min-height: 280px
+			flex: 1
+			&:first-child
+				flex: 2
+				background-color: $accent
+				color: #fff
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+			p
+				margin-top: 30px
+
+.lp
+	&.header
+		.slide
+			.copy
+				.price
+					font-size: 24px
+					font-weight: bold
+					margin-top: 0
+				p
+					padding: 0
+	&.service
+		.block-wrap
+			.slide
+				width: 100%
+				.block
+					.content
+						width: 100%
+		.info
+			max-width: 700px
+			margin-bottom: 30px
+
+.c-types
+	.title
+		max-width: 70%
+	.block-wrap
+		flex-wrap: nowrap
+		justify-content: space-between
+		.block
+			flex: 1
+			background-color: #fff
+
+.s-stages
+	padding-top: 0
+	.block-wrap
+		flex-wrap: nowrap
+		.block
+			flex: 1
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			&:first-child
+				background-color: $accent
+				color: #fff
+				.btn-link
+					color: #fff
+			.b-title
+				font-size: 18px
+				display: block
+			.btn-link
+				margin-top: 60px
+				color: #000
+				font-size: 14px
+				padding: 0
+
 
 // popup
 .popup-wrap
