@@ -1,5 +1,15 @@
 $(function() {
 
+	$('.mobile-menu').on('click', function(){
+		$('#mmenu-wrap').addClass('active');
+	});
+	$('.btn-mmenu-close').on('click', function(){
+		$('#mmenu-wrap').removeClass('active');
+	});
+	$('.has-child').on('click', function(){
+		$(this).find('ul').toggleClass('active');
+	});
+
 	filterSelection("all")
 
 	// Add active class to the current button (highlight it)
