@@ -2936,6 +2936,13 @@ ul li {
   padding: 0;
 }
 
+.p-404 {
+  margin: 60px 0;
+}
+.p-404 .btn {
+  display: inline-block;
+}
+
 .popup-wrap {
   max-width: 550px;
   padding: 30px;
