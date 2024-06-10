@@ -28,6 +28,16 @@ $(function() {
 		 }
 	}
 
+
+	if ( $(window).width() < 768 ) {
+		$('.partners .block-wrap').addClass('slider-mobile owl-carousel owl-theme')
+	}
+
+	$('.slider-mobile').owlCarousel({
+	  loop: true,
+		items: 1,
+	});
+
 	$('.slider-main').owlCarousel({
 	  loop: true,
 		items: 1,
@@ -45,6 +55,15 @@ $(function() {
 	  loop: true,
 		nav: true,
 		margin: 15,
+		responsiveClass: true,
+		responsive:{
+			0: {
+				items: 1,
+			},
+			960:{
+				items: 2,
+			}
+		}
 	});
 
 	$('.slider-reviews').owlCarousel({

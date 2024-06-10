@@ -4,9 +4,142 @@
 /*==========  Desktop First  ==========*/
 
 +media-breakpoint-down(xl)
+
 +media-breakpoint-down(lg)
+  .header-wrap
+    .middle-wrap
+      .line-wrap
+        flex-wrap: wrap
+
 +media-breakpoint-down(md)
+  .header-wrap
+    border-bottom: 1px solid rgba(255, 255, 255, .1882352941)
+    .middle-wrap
+      .line-wrap.top
+        border: none
+        height: 100%
+        justify-content: flex-end
+      .menu-wrap
+        display: none
+      .right-wrap
+        .btn-search
+          display: none
+      .bottom
+        display: none
+  .header 
+    .social-wrap
+      display: none
+
+    .slider-main .slide 
+      .content, .copy
+        width: 100%
+
+  .mainmenu-wrap .mobile-menu
+    display: block
+
+  .prepos .block-wrap 
+    .block
+      flex-wrap: wrap
+      .img-wrap
+        width: 100%
+        margin: 0
+        margin-bottom: 30px
+      .content
+        width: 100%
+      &:nth-child(1), &:nth-child(2)
+        width: 100%
+
+  .service .block-wrap 
+    .slide
+      flex-direction: column
+      .block
+        width: 100%
+        flex-wrap: wrap
+        .img-wrap
+          width: 100%
+          margin: 0
+          margin-bottom: 30px
+        .content
+          width: 100%
+        &:last-child
+          width: 100%
+    .owl-item:nth-child(even) 
+      .block
+        width: 100%
+        &:last-child
+          width: 100%
+
+  .about .block-wrap
+    flex-wrap: wrap
+    .block
+      width: calc(50% - 10px)
+      &:last-child
+        width: 100%
+
+  .why-we .block-wrap 
+    .block
+      width: 100%
+      flex-wrap: wrap
+      .img-wrap
+        width: 100%
+        margin: 0
+        margin-bottom: 30px
+        max-height: 300px
+      .content
+        width: 100%
+      &:nth-child(1),
+      &:nth-child(2)
+        width: 100%
+
+  .form .form-wrap
+    width: 100%
+
+  .stages .block-wrap 
+    flex-wrap: wrap
+    .block
+      width: calc(50% - 10px)
+
+  .reviews .block-wrap 
+    .slide 
+      flex-wrap: wrap
+      .block
+        width: 100%
+        flex-wrap: wrap
+        .img-wrap
+          width: 100%
+          margin: 0
+          margin-bottom: 30px
+        .content
+          width: 100%
+        &:last-child
+          width: 100%
+
+  .partners .block-wrap .block
+    width: 100%
+    img
+      width: fit-content
+
+  .news .block-wrap 
+    .block
+      width: 100%
+
 +media-breakpoint-down(sm)
+  body
+    font-size: 14px
+
+  .header 
+    .slider-main .slide 
+      .content
+        margin-top: 40%
+        .title
+          font-size: 35px
+        .desc
+          font-size: 14px
+        .btn
+          width: 100%
+          text-align: center
+          margin-top: 5%
+
 +media-breakpoint-down(xs)
 
 
