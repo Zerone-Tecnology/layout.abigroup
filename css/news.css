@@ -1,11 +1,27 @@
-.container {
-    padding: 0px;
+.details-news p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
 }
-
-.header_news {
+.details-news ul li {
+    list-style-type: disc;
+    font-size: 18px;
+    line-height: 27px;
+}
+.details-news ul{
+    padding-left: 30px;
+}
+.content .text-bold{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    text-align: left;
+}
+.section.details-news ul li::before{
+    content: unset;
 
 }
-
-.name_header {
-    font-size: 35px;
+.section.details-news ul li{
+    padding:unset;
 }
