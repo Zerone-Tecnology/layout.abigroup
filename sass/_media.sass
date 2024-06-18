@@ -11,6 +11,15 @@
       .line-wrap
         flex-wrap: wrap
 
+  .about-us .right-wrap
+    margin-top: 30px
+  .present .block-wrap 
+    .block
+      width: 100%
+  .accred .block-wrap 
+    .block
+      width: 100%
+
 +media-breakpoint-down(md)
   .header-wrap
     border-bottom: 1px solid rgba(255, 255, 255, .1882352941)
@@ -122,6 +131,29 @@
   .news .block-wrap 
     .block
       width: 100%
+
+  .search-wrap .block-wrap 
+    .block
+      width: 100%
+
+  .project 
+    .block-head
+      flex-direction: column
+      &:hover .f-item
+        display: block
+      .f-item
+        display: none
+        &.active
+          display: block
+    .f-block
+      width: 100%
+    &.form
+      .btn-wrap
+        flex-direction: column
+
+  .popup-wrap .mfp-close
+    right: 0
+    top: -55px
 
 +media-breakpoint-down(sm)
   body

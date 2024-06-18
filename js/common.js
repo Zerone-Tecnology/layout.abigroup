@@ -1,5 +1,10 @@
 $(function() {
 
+	$('.reviews .btn-more').on('click', function(){
+		vl = $(this).parent().find('.r-text');
+		vl.toggleClass('active');
+	})
+
 	$('.mobile-menu').on('click', function(){
 		$('#mmenu-wrap').addClass('active');
 	});
@@ -69,9 +74,11 @@ $(function() {
 		responsive:{
 			0: {
 				items: 1,
+				nav: false,
 			},
 			960:{
 				items: 2,
+				nav: true,
 			}
 		}
 	});
@@ -81,6 +88,15 @@ $(function() {
 	  loop: true,
 		nav: true,
 		margin: 15,
+		responsiveClass: true,
+		responsive:{
+			0: {
+				nav: false,
+			},
+			960:{
+				nav: true,
+			}
+		}
 	});
 
 	$('.slider-cert').owlCarousel({
@@ -88,6 +104,41 @@ $(function() {
 	  loop: true,
 		nav: true,
 		margin: 15,
+		responsiveClass: true,
+		responsive:{
+			0: {
+				items: 1,
+				nav: false,
+			},
+			520:{
+				items: 2
+			},
+			960:{
+				items: 3,
+				nav: true,
+			},
+			1024:{
+				items: 4,
+			}
+		}
+	});
+	
+	var owl = $('.owl-carousel');
+
+	owl.on('mousewheel', '.owl-stage', function (e) {
+    if (e.deltaY>0) {
+        owl.trigger('next.owl');
+    } else {
+        owl.trigger('prev.owl');
+    }
+    e.preventDefault();
+	});
+
+	$('.img-popup').magnificPopup({
+		type: 'image',
+		gallery:{
+			enabled: true
+		},
 	});
 
 });
