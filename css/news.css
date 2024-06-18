@@ -25,3 +25,44 @@
 .section.details-news ul li{
     padding:unset;
 }
+
+.article-news {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+}
+.section .article-title {
+    font-size: 14px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+    position: relative;
+}
+.title {
+    line-height: 1.2em;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.section .block-wrap {
+    display: flex;
+    
+    gap: 15px;
+}
+.section .block-wrap .block .a-title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 15px;
+    line-height: 1.2em;
+}
+
+.article-news-cards .block {
+    width: 33.333333%;
+}
+
+.article-news-cards .img-block img {
+    width: 100%;
+}
+
+
